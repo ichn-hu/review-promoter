@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [ master ]
   schedule:
-    # run every 10 a.m. on weekdays
-    - cron:  '0 10 * * 1-5'
+    # run every 10 a.m. on weekdays, which is UTC 2 a.m + 8
+    - cron:  '0 2 * * 1-5'
 
 jobs:
 
@@ -35,6 +35,3 @@ jobs:
 
     - name: run
       run: GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }} SLACK_WEBHOOK=${{ secrets.SLACK_WEBHOOK }} go run main.go
-
-    - name: Test
-      run: go test -v .
