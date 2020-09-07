@@ -34,7 +34,7 @@ jobs:
         fi
 
     - name: run
-      run: GITHUB_TOKEN=${{ GITHUB_TOKEN }} SLACK_WEBHOOK=${{ SLACK_WEBHOOK }} go run main.go
+      run: GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }} SLACK_WEBHOOK=${{ secrets.SLACK_WEBHOOK }} go run main.go
 
     - name: Test
       run: go test -v .
