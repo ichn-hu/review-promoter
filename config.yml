@@ -1,8 +1,8 @@
-track_days: 7
+tracked_days: 7
 
 login_list:
-  - ichn-hu
   - SunRunAway
+  - ichn-hu
   - dyzsr
   - lzmhhh123
   - XuHuaiyu
@@ -17,3 +17,14 @@ login_list:
 org_list:
   - pingcap
   - tikv
+
+tracked_repos:
+  - owner: pingcap
+    name: tidb
+  - owner: pingcap
+    name: parser
+  - owner: tikv
+    name: tikv
+  - owner: tikv
+    name: pd
+

@@ -10,18 +10,18 @@ import (
 	"time"
 
 	"github.com/goccy/go-yaml"
+	"github.com/k0kubun/pp"
 	"github.com/olekukonko/tablewriter"
 	"github.com/shurcooL/githubv4"
 	"golang.org/x/oauth2"
 )
 
-type user struct {
-	Name  string
-	Login string
-}
-type request struct {
+type reviewRequest struct {
 	RequestedReviewer struct {
-		User user `graphql:"... on User"`
+		User struct {
+			Name  string
+			Login string
+		} `graphql:"... on User"`
 	}
 }
 type review struct {
@@ -34,16 +34,22 @@ type review struct {
 			Login githubv4.String
 		}
 		ReviewRequests struct {
-			Nodes []request
+			Nodes []reviewRequest
 		} `graphql:"reviewRequests(first: 10)"`
 	}
 }
 
+type repo struct {
+	Owner string
+	Name  string
+}
+
 type config struct {
-	TrackDays int      `yaml:"track_days"`
-	LoginList []string `yaml:"login_list"`
-	OrgList   []string `yaml:"org_list"`
-	OrgID     map[string]githubv4.ID
+	TrackedDays  int      `yaml:"tracked_days"`
+	TrackedRepos []repo   `yaml:"tracked_repos"`
+	LoginList    []string `yaml:"login_list"`
+	OrgList      []string `yaml:"org_list"`
+	OrgID        map[string]githubv4.ID
 }
 
 var cfg config
@@ -88,7 +94,7 @@ func init() {
 	if err = yaml.Unmarshal(yml, &cfg); err != nil {
 		panic(err)
 	}
-	fmt.Println("parsed configuration: ", cfg)
+	pp.Println(cfg)
 
 	err = initOrgID()
 	if err != nil {
@@ -96,21 +102,47 @@ func init() {
 	}
 }
 
-type Statistics struct {
-	login        string
-	reviewsByDay [][]review
+type pullRequest struct {
+	Title     githubv4.String
+	CreatedAt githubv4.String
+	Labels    struct {
+		Nodes []struct {
+			Name githubv4.String
+		}
+	} `graphql:"labels(last: 10)"`
+	ReviewRequests struct {
+		Nodes []reviewRequest
+	} `graphql:"reviewRequests(first: 10)"`
 }
 
-func NewStatistics(login string) *Statistics {
-	s := Statistics{login: login}
-	s.reviewsByDay = make([][]review, cfg.TrackDays)
-	for i := 0; i < cfg.TrackDays; i++ {
+func (pr *pullRequest) fromContributor() bool {
+	for _, label := range pr.Labels.Nodes {
+		if label.Name == "contributor" {
+			return true
+		}
+	}
+	return false
+}
+
+type statistics struct {
+	login          string
+	reviewsByDay   [][]review
+	total          int
+	reqestedReview []pullRequest
+}
+
+var reviewers map[string]*statistics
+
+func newStatistics(login string) *statistics {
+	s := statistics{login: login}
+	s.reviewsByDay = make([][]review, cfg.TrackedDays)
+	for i := 0; i < cfg.TrackedDays; i++ {
 		s.reviewsByDay[i] = make([]review, 0)
 	}
 	return &s
 }
 
-func (s *Statistics) getReviewRecordByOrg(client *githubv4.Client, userLogin string, organizationID githubv4.ID) error {
+func (s *statistics) getReviewRecordByOrg(client *githubv4.Client, userLogin string, organizationID githubv4.ID) error {
 	type edge struct {
 		Cursor githubv4.String
 		Node   review
@@ -145,17 +177,100 @@ func (s *Statistics) getReviewRecordByOrg(client *githubv4.Client, userLogin str
 				return fmt.Errorf("error parse time: %v", err)
 			}
 			hours := now.Sub(t).Hours()
-			if i == len(contribs)-1 && hours < float64(cfg.TrackDays*24) {
+			if i == len(contribs)-1 && hours < float64(cfg.TrackedDays*24) {
 				cursor = contrib.Cursor
 				contd = true
 			}
 			d := int(hours / 24)
-			if d < cfg.TrackDays {
+			if d < cfg.TrackedDays && string(contrib.Node.PullRequest.Author.Login) != s.login {
 				s.reviewsByDay[d] = append(s.reviewsByDay[d], contrib.Node)
+				s.total++
 			}
 		}
 	}
 	return nil
+}
+
+func getPullRequestByRepo(owner, name string) error {
+	type edge struct {
+		Cursor githubv4.String
+		Node   pullRequest
+	}
+	var query struct {
+		Repository struct {
+			PullRequests struct {
+				Edges []edge
+			} `graphql:"pullRequests(states: OPEN, first: 100, after: $cursor)"`
+		} `graphql:"repository(name: $name, owner: $owner)"`
+	}
+
+	var cursor githubv4.String = ""
+	contd := true
+	total := 0
+
+	for contd {
+		param := map[string]interface{}{
+			"name":  githubv4.String(name),
+			"owner": githubv4.String(owner),
+		}
+
+		if len(cursor) != 0 {
+			param["cursor"] = cursor
+		} else {
+			param["cursor"] = (*githubv4.String)(nil)
+		}
+
+		err := client.Query(context.Background(), &query, param)
+		if err != nil {
+			return err
+		}
+
+		prs := query.Repository.PullRequests.Edges
+		cnt := len(prs)
+		total += cnt
+		contd = cnt == 100
+
+		for _, pr := range prs {
+			for _, req := range pr.Node.ReviewRequests.Nodes {
+				s, ok := reviewers[req.RequestedReviewer.User.Login]
+				if ok {
+					s.reqestedReview = append(s.reqestedReview, pr.Node)
+				}
+			}
+		}
+		if cnt != 0 {
+			cursor = prs[cnt-1].Cursor
+		}
+	}
+
+	fmt.Printf("fetched %d open PRs from %s/%s\n", total, owner, name)
+	return nil
+}
+
+func getPullRequest() error {
+	for _, repo := range cfg.TrackedRepos {
+		err := getPullRequestByRepo(repo.Owner, repo.Name)
+		if err != nil {
+			fmt.Println(err)
+			continue
+		}
+	}
+	return nil
+}
+
+func getReviewRecord() {
+	reviewers = make(map[string]*statistics)
+	for _, user := range cfg.LoginList {
+		s := newStatistics(user)
+		for _, ID := range cfg.OrgID {
+			err := s.getReviewRecordByOrg(client, user, ID)
+			if err != nil {
+				fmt.Println(err)
+			}
+		}
+		fmt.Printf("%s analyzed\n", user)
+		reviewers[user] = s
+	}
 }
 
 func reportToSlack(webhook, message string) error {
@@ -179,45 +294,47 @@ func reportToSlack(webhook, message string) error {
 }
 
 func main() {
-	data := make([][]string, len(cfg.LoginList))
-	for i, user := range cfg.LoginList {
-		data[i] = make([]string, cfg.TrackDays+1)
-		data[i][0] = user
-		s := NewStatistics(user)
-		for _, ID := range cfg.OrgID {
-			err := s.getReviewRecordByOrg(client, user, ID)
-			if err != nil {
-				fmt.Println(err)
-			}
-		}
-		fmt.Printf("%s analyzed\n", user)
-		for j := 0; j < cfg.TrackDays; j++ {
-			data[i][j+1] = fmt.Sprint(len(s.reviewsByDay[j]))
-		}
-	}
+
+	getReviewRecord()
+	getPullRequest()
+
 	var buf bytes.Buffer
 	table := tablewriter.NewWriter(&buf)
-	header := []string{"Contributor"}
-	for i := 1; i <= cfg.TrackDays; i++ {
-		var h string
-		if i == 1 {
-			h = "Yesterday"
-		} else {
-			h = fmt.Sprintf("%d days ago", i)
+	header := []string{"Reviewer", "O(C)"}
+	data := make([][]string, len(cfg.LoginList))
+	numLogin := len(cfg.LoginList)
+	for i := 0; i < numLogin; i++ {
+		d := make([]string, 0)
+		login := cfg.LoginList[i]
+		d = append(d, login)
+		s := reviewers[login]
+		numOpen := len(s.reqestedReview)
+		numCont := 0
+		for _, rr := range s.reqestedReview {
+			if rr.fromContributor() {
+				numCont++
+			}
 		}
-		header = append(header, h)
+		d = append(d, fmt.Sprintf("%2d (%2d)", numOpen, numCont))
+		data[i] = d
+	}
+	for i := 1; i <= cfg.TrackedDays; i++ {
+		header = append(header, fmt.Sprint(i))
+		for j, login := range cfg.LoginList {
+			data[j] = append(data[j], fmt.Sprintf("%d", len(reviewers[login].reviewsByDay[i-1])))
+		}
 	}
 	table.SetHeader(header)
-	for _, v := range data {
-		table.Append(v)
-	}
+	table.SetBorders(tablewriter.Border{Left: true, Top: false, Right: true, Bottom: false})
+	table.SetCenterSeparator("|")
+	table.AppendBulk(data)
 	table.Render() // Send output
 
 	fmt.Println(buf.String())
 	webhook := os.Getenv("SLACK_WEBHOOK")
 	if len(webhook) != 0 {
 		fmt.Println("report to slack")
-		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```")
+		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\n where O stands for number of open PRs that is waiting for review, C means number of PRs out of them are from contributors, then 1 to 7 means number of review contributions made in the last 7 days. For a more detailed report, please see [TBD](a future feature)")
 		if err != nil {
 			panic(err)
 		}

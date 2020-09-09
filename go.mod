@@ -5,6 +5,7 @@ go 1.15
 require (
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/goccy/go-yaml v1.8.1
+	github.com/k0kubun/pp v3.0.1+incompatible
 	github.com/mattn/go-colorable v0.1.7 // indirect
 	github.com/olekukonko/tablewriter v0.0.4
 	github.com/shurcooL/githubv4 v0.0.0-20200802174311-f27d2ca7f6d5
