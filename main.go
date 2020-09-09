@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"sort"
 	"sync"
 	"time"
 
@@ -25,19 +26,42 @@ type reviewRequest struct {
 		} `graphql:"... on User"`
 	}
 }
-type review struct {
-	OccurredAt  githubv4.String
-	PullRequest struct {
-		Number githubv4.Int
-		URL    githubv4.String
-		Title  githubv4.String
-		Author struct {
+
+type pullRequest struct {
+	Title      githubv4.String
+	CreatedAt  githubv4.String
+	Number     githubv4.Int
+	Repository struct {
+		Name  githubv4.String
+		Owner struct {
 			Login githubv4.String
 		}
-		ReviewRequests struct {
-			Nodes []reviewRequest
-		} `graphql:"reviewRequests(first: 10)"`
 	}
+	Labels struct {
+		Nodes []struct {
+			Name githubv4.String
+		}
+	} `graphql:"labels(last: 10)"`
+	Author struct {
+		Login githubv4.String
+	}
+	ReviewRequests struct {
+		Nodes []reviewRequest
+	} `graphql:"reviewRequests(first: 10)"`
+}
+
+func (pr *pullRequest) fromContributor() bool {
+	for _, label := range pr.Labels.Nodes {
+		if label.Name == "contribution" {
+			return true
+		}
+	}
+	return false
+}
+
+type review struct {
+	OccurredAt  githubv4.String
+	PullRequest pullRequest
 }
 
 type repo struct {
@@ -46,11 +70,13 @@ type repo struct {
 }
 
 type config struct {
+	ReportPostTo repo     `yaml:"report_post_to"`
 	TrackedDays  int      `yaml:"tracked_days"`
 	TrackedRepos []repo   `yaml:"tracked_repos"`
 	LoginList    []string `yaml:"login_list"`
 	OrgList      []string `yaml:"org_list"`
 	OrgID        map[string]githubv4.ID
+	PostToRepoID githubv4.ID
 }
 
 var cfg config
@@ -76,6 +102,23 @@ func initOrgID() error {
 	return nil
 }
 
+func initPostRepoID() error {
+	var query struct {
+		Repository struct {
+			ID githubv4.ID
+		} `graphql:"repository(owner: $owner, name: $name)"`
+	}
+	err := client.Query(context.Background(), &query, map[string]interface{}{
+		"name":  githubv4.String(cfg.ReportPostTo.Name),
+		"owner": githubv4.String(cfg.ReportPostTo.Owner),
+	})
+	if err != nil {
+		return err
+	}
+	cfg.PostToRepoID = query.Repository.ID
+	return nil
+}
+
 func init() {
 	at := os.Getenv("GITHUB_TOKEN")
 	if len(at) == 0 {
@@ -96,33 +139,18 @@ func init() {
 		panic(err)
 	}
 	pp.Println(cfg)
+	sort.SliceStable(cfg.LoginList, func(i, j int) bool {
+		return cfg.LoginList[i] < cfg.LoginList[j]
+	})
 
 	err = initOrgID()
 	if err != nil {
 		panic(err)
 	}
-}
-
-type pullRequest struct {
-	Title     githubv4.String
-	CreatedAt githubv4.String
-	Labels    struct {
-		Nodes []struct {
-			Name githubv4.String
-		}
-	} `graphql:"labels(last: 10)"`
-	ReviewRequests struct {
-		Nodes []reviewRequest
-	} `graphql:"reviewRequests(first: 10)"`
-}
-
-func (pr *pullRequest) fromContributor() bool {
-	for _, label := range pr.Labels.Nodes {
-		if label.Name == "contributor" {
-			return true
-		}
+	err = initPostRepoID()
+	if err != nil {
+		panic(err)
 	}
-	return false
 }
 
 type statistics struct {
@@ -190,6 +218,111 @@ func (s *statistics) getReviewRecordByOrg(client *githubv4.Client, userLogin str
 		}
 	}
 	return nil
+}
+
+func (s *statistics) printOpenRequest() string {
+	header := []string{"repo", "PR", "C", "lasted"}
+	data := make([][]string, len(s.reqestedReview))
+	lasted := make([]float64, len(s.reqestedReview))
+	for i, rr := range s.reqestedReview {
+		createdAt, err := time.Parse(time.RFC3339, string(rr.CreatedAt))
+		if err != nil {
+			fmt.Println("time parse err", err)
+		}
+		lasted[i] = time.Now().Sub(createdAt).Hours()
+		hours := int(lasted[i])
+		days := hours / 24
+		lastedStr := ""
+		if days > 0 {
+			lastedStr += fmt.Sprintf("%dd", days)
+		}
+		lastedStr += fmt.Sprintf("%dh", hours%24)
+		data[i] = []string{
+			fmt.Sprintf("%s/%d", rr.Repository.Name, rr.Number),
+			fmt.Sprintf("[%s](https://github.com/%s/%s/pull/%d)", rr.Title, rr.Repository.Owner.Login, rr.Repository.Name, rr.Number),
+			string(" Y"[map[bool]int{false: 0, true: 1}[rr.fromContributor()]]),
+			lastedStr,
+		}
+	}
+	sort.SliceStable(data, func(i, j int) bool {
+		return lasted[i] > lasted[j]
+	})
+	var buf bytes.Buffer
+	table := tablewriter.NewWriter(&buf)
+	table.SetHeader(header)
+	table.SetColWidth(100000) // don't break line
+	table.SetBorders(tablewriter.Border{Left: true, Top: false, Right: true, Bottom: false})
+	table.SetCenterSeparator("|")
+	table.AppendBulk(data)
+	table.Render()
+	return buf.String()
+}
+
+func (s *statistics) printReviewed() string {
+	header := []string{"repo", "PR", "C", "D", "R"}
+	data := make([][]string, s.total)
+	k := 0
+	for i := 0; i < cfg.TrackedDays; i++ {
+		for _, r := range s.reviewsByDay[i] {
+			rr := r.PullRequest
+			createdAt, err := time.Parse(time.RFC3339, string(rr.CreatedAt))
+			if err != nil {
+				fmt.Println("time parse err", err)
+			}
+			occuredAt, err := time.Parse(time.RFC3339, string(r.OccurredAt))
+			if err != nil {
+				fmt.Println("time parsed err", err)
+			}
+			dur := occuredAt.Sub(createdAt).Hours()
+			hours := int(dur)
+			days := hours / 24
+			lastedStr := ""
+			if days > 0 {
+				lastedStr += fmt.Sprintf("%dd", days)
+			}
+			lastedStr += fmt.Sprintf("%dh", hours%24)
+			data[k] = []string{
+				fmt.Sprintf("%s/%d", rr.Repository.Name, rr.Number),
+				fmt.Sprintf("[%s](https://github.com/%s/%s/pull/%d)", rr.Title, rr.Repository.Owner.Login, rr.Repository.Name, rr.Number),
+				string(" Y"[map[bool]int{false: 0, true: 1}[rr.fromContributor()]]),
+				fmt.Sprintf("%d", i+1),
+				lastedStr,
+			}
+			k++
+		}
+	}
+	var buf bytes.Buffer
+	table := tablewriter.NewWriter(&buf)
+	table.SetHeader(header)
+	table.SetColWidth(100000) // don't break line
+	table.SetBorders(tablewriter.Border{Left: true, Top: false, Right: true, Bottom: false})
+	table.SetCenterSeparator("|")
+	table.AppendBulk(data)
+	table.Render()
+	return buf.String()
+}
+
+func (s *statistics) printDetail() string {
+
+	report := fmt.Sprintf(`
+<details> 
+  <summary>%s's detailed review report</summary> 
+
+## To Be Reviewed
+
+%s
+
+## Reviewed in Last 7 Days
+
+%s
+
+</details> 
+
+`, s.login, s.printOpenRequest(), s.printReviewed())
+
+	// yesterday's review
+
+	return report
 }
 
 func getPullRequestByRepo(mutex *sync.Mutex, owner, name string) error {
@@ -306,6 +439,30 @@ func reportToSlack(webhook, message string) error {
 	return nil
 }
 
+func reportToIssue(report string) (url string, err error) {
+	now := time.Now()
+	title := fmt.Sprintf("Detailed Review Report on %d.%d.%d", now.Year(), now.Month(), now.Day())
+
+	var m struct {
+		CreateIssue struct {
+			Issue struct {
+				Url githubv4.String
+			}
+		} `graphql:"createIssue(input: $input)"`
+	}
+	input := githubv4.CreateIssueInput{
+		RepositoryID: cfg.PostToRepoID,
+		Title:        githubv4.String(title),
+		Body:         githubv4.NewString(githubv4.String(report)),
+	}
+	err = client.Mutate(context.Background(), &m, input, nil)
+	if err != nil {
+		return
+	}
+	url = string(m.CreateIssue.Issue.Url)
+	return
+}
+
 func main() {
 
 	getReviewRecord()
@@ -347,11 +504,21 @@ func main() {
 	table.AppendBulk(data)
 	table.Render() // Send output
 
-	fmt.Println(buf.String())
+	report := buf.String() + "\n"
+
+	for _, login := range cfg.LoginList {
+		report += reviewers[login].printDetail()
+	}
+
+	fmt.Println(report)
 	webhook := os.Getenv("SLACK_WEBHOOK")
 	if len(webhook) != 0 {
+		url, err := reportToIssue(report)
+		if err != nil {
+			panic(err)
+		}
 		fmt.Println("report to slack")
-		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\n where O stands for number of open PRs that is waiting for review, C means number of PRs out of them are from contributors, then 1 to 7 means number of review contributions made in the last 7 days, and T means total review contribution in the last 7 days. For a more detailed report, please see [TBD](a future feature)")
+		err = reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\n where O stands for number of open PRs that is waiting for review, C means number of PRs out of them are from contributors, then 1 to 7 means number of review contributions made in the last 7 days, and T means total review contribution in the last 7 days. For a more detailed report, please see "+url)
 		if err != nil {
 			panic(err)
 		}

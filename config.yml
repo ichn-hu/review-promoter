@@ -1,3 +1,7 @@
+report_post_to:
+  owner: ichn-hu
+  name: review-promoter
+
 tracked_days: 7
 
 login_list:
