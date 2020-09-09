@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"sync"
 	"time"
 
 	"github.com/goccy/go-yaml"
@@ -191,7 +192,7 @@ func (s *statistics) getReviewRecordByOrg(client *githubv4.Client, userLogin str
 	return nil
 }
 
-func getPullRequestByRepo(owner, name string) error {
+func getPullRequestByRepo(mutex *sync.Mutex, owner, name string) error {
 	type edge struct {
 		Cursor githubv4.String
 		Node   pullRequest
@@ -204,20 +205,15 @@ func getPullRequestByRepo(owner, name string) error {
 		} `graphql:"repository(name: $name, owner: $owner)"`
 	}
 
-	var cursor githubv4.String = ""
+	cursor := (*githubv4.String)(nil)
 	contd := true
 	total := 0
 
 	for contd {
 		param := map[string]interface{}{
-			"name":  githubv4.String(name),
-			"owner": githubv4.String(owner),
-		}
-
-		if len(cursor) != 0 {
-			param["cursor"] = cursor
-		} else {
-			param["cursor"] = (*githubv4.String)(nil)
+			"name":   githubv4.String(name),
+			"owner":  githubv4.String(owner),
+			"cursor": cursor,
 		}
 
 		err := client.Query(context.Background(), &query, param)
@@ -230,6 +226,7 @@ func getPullRequestByRepo(owner, name string) error {
 		total += cnt
 		contd = cnt == 100
 
+		mutex.Lock()
 		for _, pr := range prs {
 			for _, req := range pr.Node.ReviewRequests.Nodes {
 				s, ok := reviewers[req.RequestedReviewer.User.Login]
@@ -238,8 +235,9 @@ func getPullRequestByRepo(owner, name string) error {
 				}
 			}
 		}
+		mutex.Unlock()
 		if cnt != 0 {
-			cursor = prs[cnt-1].Cursor
+			cursor = &prs[cnt-1].Cursor
 		}
 	}
 
@@ -248,29 +246,44 @@ func getPullRequestByRepo(owner, name string) error {
 }
 
 func getPullRequest() error {
-	for _, repo := range cfg.TrackedRepos {
-		err := getPullRequestByRepo(repo.Owner, repo.Name)
-		if err != nil {
-			fmt.Println(err)
-			continue
-		}
+	var mutex sync.Mutex
+	var wg sync.WaitGroup
+	for _, r := range cfg.TrackedRepos {
+		wg.Add(1)
+		go func(r repo) {
+			err := getPullRequestByRepo(&mutex, r.Owner, r.Name)
+			if err != nil {
+				fmt.Println(err)
+			}
+			wg.Done()
+		}(r)
 	}
+	wg.Wait()
 	return nil
 }
 
 func getReviewRecord() {
 	reviewers = make(map[string]*statistics)
+	var mutex sync.Mutex
+	var wg sync.WaitGroup
 	for _, user := range cfg.LoginList {
-		s := newStatistics(user)
-		for _, ID := range cfg.OrgID {
-			err := s.getReviewRecordByOrg(client, user, ID)
-			if err != nil {
-				fmt.Println(err)
+		wg.Add(1)
+		go func(user string) {
+			s := newStatistics(user)
+			for _, ID := range cfg.OrgID {
+				err := s.getReviewRecordByOrg(client, user, ID)
+				if err != nil {
+					fmt.Println(err)
+				}
 			}
-		}
-		fmt.Printf("%s analyzed\n", user)
-		reviewers[user] = s
+			fmt.Printf("%s analyzed\n", user)
+			mutex.Lock()
+			reviewers[user] = s
+			mutex.Unlock()
+			wg.Done()
+		}(user)
 	}
+	wg.Wait()
 }
 
 func reportToSlack(webhook, message string) error {
@@ -324,6 +337,10 @@ func main() {
 			data[j] = append(data[j], fmt.Sprintf("%d", len(reviewers[login].reviewsByDay[i-1])))
 		}
 	}
+	header = append(header, "T")
+	for i, login := range cfg.LoginList {
+		data[i] = append(data[i], fmt.Sprintf("%d", reviewers[login].total))
+	}
 	table.SetHeader(header)
 	table.SetBorders(tablewriter.Border{Left: true, Top: false, Right: true, Bottom: false})
 	table.SetCenterSeparator("|")
@@ -334,7 +351,7 @@ func main() {
 	webhook := os.Getenv("SLACK_WEBHOOK")
 	if len(webhook) != 0 {
 		fmt.Println("report to slack")
-		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\n where O stands for number of open PRs that is waiting for review, C means number of PRs out of them are from contributors, then 1 to 7 means number of review contributions made in the last 7 days. For a more detailed report, please see [TBD](a future feature)")
+		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\n where O stands for number of open PRs that is waiting for review, C means number of PRs out of them are from contributors, then 1 to 7 means number of review contributions made in the last 7 days, and T means total review contribution in the last 7 days. For a more detailed report, please see [TBD](a future feature)")
 		if err != nil {
 			panic(err)
 		}
