@@ -527,7 +527,7 @@ func main() {
 	webhook := os.Getenv("SLACK_WEBHOOK")
 	if len(webhook) != 0 {
 		fmt.Println("report to slack")
-		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\n where O stands for number of open PRs that is waiting for review, C means number of PRs out of them are from contributors, then 1 to 7 means number of review contributions made in the last 7 days, and T means total review contribution in the last 7 days. For a more detailed report, please see "+url)
+		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\nFor a more detailed report, please see "+url)
 		if err != nil {
 			panic(err)
 		}
