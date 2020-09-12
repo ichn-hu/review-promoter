@@ -67,16 +67,17 @@ type review struct {
 type repo struct {
 	Owner string
 	Name  string
+	Issue int
 }
 
 type config struct {
-	ReportPostTo repo     `yaml:"report_post_to"`
-	TrackedDays  int      `yaml:"tracked_days"`
-	TrackedRepos []repo   `yaml:"tracked_repos"`
-	LoginList    []string `yaml:"login_list"`
-	OrgList      []string `yaml:"org_list"`
-	OrgID        map[string]githubv4.ID
-	PostToRepoID githubv4.ID
+	ReportPostTo  *repo    `yaml:"report_post_to"`
+	TrackedDays   int      `yaml:"tracked_days"`
+	TrackedRepos  []repo   `yaml:"tracked_repos"`
+	LoginList     []string `yaml:"login_list"`
+	OrgList       []string `yaml:"org_list"`
+	OrgID         map[string]githubv4.ID
+	PostToIssueID githubv4.ID
 }
 
 var cfg config
@@ -102,20 +103,23 @@ func initOrgID() error {
 	return nil
 }
 
-func initPostRepoID() error {
+func initPostIssueID() error {
 	var query struct {
 		Repository struct {
-			ID githubv4.ID
+			Issue struct {
+				ID githubv4.ID
+			} `graphql:"issue(number: $number)"`
 		} `graphql:"repository(owner: $owner, name: $name)"`
 	}
 	err := client.Query(context.Background(), &query, map[string]interface{}{
-		"name":  githubv4.String(cfg.ReportPostTo.Name),
-		"owner": githubv4.String(cfg.ReportPostTo.Owner),
+		"name":   githubv4.String(cfg.ReportPostTo.Name),
+		"owner":  githubv4.String(cfg.ReportPostTo.Owner),
+		"number": githubv4.Int(cfg.ReportPostTo.Issue),
 	})
 	if err != nil {
 		return err
 	}
-	cfg.PostToRepoID = query.Repository.ID
+	cfg.PostToIssueID = query.Repository.Issue.ID
 	return nil
 }
 
@@ -147,7 +151,7 @@ func init() {
 	if err != nil {
 		panic(err)
 	}
-	err = initPostRepoID()
+	err = initPostIssueID()
 	if err != nil {
 		panic(err)
 	}
@@ -444,22 +448,22 @@ func reportToIssue(report string) (url string, err error) {
 	title := fmt.Sprintf("Detailed Review Report on %d.%d.%d", now.Year(), now.Month(), now.Day())
 
 	var m struct {
-		CreateIssue struct {
+		UpdateIssue struct {
 			Issue struct {
 				Url githubv4.String
 			}
-		} `graphql:"createIssue(input: $input)"`
+		} `graphql:"updateIssue(input: $input)"`
 	}
-	input := githubv4.CreateIssueInput{
-		RepositoryID: cfg.PostToRepoID,
-		Title:        githubv4.String(title),
-		Body:         githubv4.NewString(githubv4.String(report)),
+	input := githubv4.UpdateIssueInput{
+		ID:    cfg.PostToIssueID,
+		Title: githubv4.NewString(githubv4.String(title)),
+		Body:  githubv4.NewString(githubv4.String(report)),
 	}
 	err = client.Mutate(context.Background(), &m, input, nil)
 	if err != nil {
 		return
 	}
-	url = string(m.CreateIssue.Issue.Url)
+	url = string(m.UpdateIssue.Issue.Url)
 	return
 }
 
@@ -511,14 +515,19 @@ func main() {
 	}
 
 	fmt.Println(report)
-	webhook := os.Getenv("SLACK_WEBHOOK")
-	if len(webhook) != 0 {
-		url, err := reportToIssue(report)
+	var url string
+	var err error
+	if cfg.ReportPostTo != nil {
+		url, err = reportToIssue(report)
 		if err != nil {
 			panic(err)
 		}
+	}
+
+	webhook := os.Getenv("SLACK_WEBHOOK")
+	if len(webhook) != 0 {
 		fmt.Println("report to slack")
-		err = reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\n where O stands for number of open PRs that is waiting for review, C means number of PRs out of them are from contributors, then 1 to 7 means number of review contributions made in the last 7 days, and T means total review contribution in the last 7 days. For a more detailed report, please see "+url)
+		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\n where O stands for number of open PRs that is waiting for review, C means number of PRs out of them are from contributors, then 1 to 7 means number of review contributions made in the last 7 days, and T means total review contribution in the last 7 days. For a more detailed report, please see "+url)
 		if err != nil {
 			panic(err)
 		}
