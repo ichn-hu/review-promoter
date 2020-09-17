@@ -1,7 +1,3 @@
-report_post_to:
-  owner: ichn-hu
-  name: review-promoter
-  issue: 1
 
 tracked_days: 7
 
