@@ -104,6 +104,9 @@ func initOrgID() error {
 }
 
 func initPostIssueID() error {
+	if cfg.ReportPostTo == nil {
+		return nil
+	}
 	var query struct {
 		Repository struct {
 			Issue struct {
