@@ -28,4 +28,8 @@ tracked_repos:
     name: tikv
   - owner: tikv
     name: pd
+  - owner: pingcap
+    name: docs-cn
+  - owner: pingcap
+    name: docs
 
