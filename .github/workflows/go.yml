@@ -3,13 +3,13 @@ name: Go
 on:
   push:
     branches: [ master ]
+    paths-ignore:
+      - 'index.md'
   pull_request:
     branches: [ master ]
   schedule:
     # run every 10 a.m. on weekdays, which is UTC 2 a.m + 8
     - cron:  '0 2 * * 1-5'
-  paths-ignore:
-    - 'index.md'
 
 jobs:
 
