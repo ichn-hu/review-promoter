@@ -1,18 +1,18 @@
 |   REVIEWER    |  O(C)   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | T  |
 |---------------|---------|---|---|---|---|---|---|---|----|
 | Reminiscent   |  1 ( 0) | 1 | 0 | 0 | 0 | 0 | 0 | 0 |  1 |
-| SunRunAway    | 41 ( 5) | 4 | 7 | 6 | 2 | 0 | 3 | 1 | 23 |
+| SunRunAway    | 41 ( 5) | 4 | 6 | 7 | 2 | 0 | 3 | 1 | 23 |
 | XuHuaiyu      | 37 ( 5) | 3 | 0 | 0 | 1 | 0 | 0 | 1 |  5 |
 | dyzsr         |  0 ( 0) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  0 |
-| eurekaka      | 17 ( 5) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  0 |
+| eurekaka      | 16 ( 5) | 1 | 0 | 0 | 0 | 0 | 0 | 0 |  1 |
 | fzhedu        |  3 ( 3) | 0 | 0 | 1 | 0 | 0 | 0 | 0 |  1 |
 | ichn-hu       |  5 ( 2) | 1 | 2 | 0 | 1 | 0 | 3 | 0 |  7 |
 | lzmhhh123     | 36 ( 2) | 7 | 4 | 8 | 3 | 1 | 2 | 7 | 32 |
 | nullnotnil    |  0 ( 0) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  0 |
-| qw4990        | 39 ( 7) | 0 | 3 | 4 | 3 | 0 | 5 | 1 | 16 |
+| qw4990        | 39 ( 7) | 0 | 2 | 5 | 3 | 0 | 5 | 1 | 16 |
 | rebelice      |  0 ( 0) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  0 |
 | time-and-fate |  2 ( 0) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  0 |
-| winoros       | 34 ( 5) | 0 | 0 | 4 | 0 | 0 | 0 | 5 |  9 |
+| winoros       | 34 ( 5) | 0 | 0 | 4 | 0 | 0 | 0 | 4 |  8 |
 | wshwsh12      | 16 ( 4) | 1 | 2 | 6 | 2 | 0 | 1 | 0 | 12 |
 
 
@@ -45,14 +45,14 @@
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|---------|
 | docs-cn/4685 | [sql tuning: add explain walkthrough](https://github.com/pingcap/docs-cn/pull/4685)                                                                                               |   | 35d4h   |
 | docs/4219    | [toc: add sql optimization-related docs](https://github.com/pingcap/docs/pull/4219)                                                                                               |   | 6d15h   |
-| tidb/15370   | [planner,executor: Refactor Shuffle and implement parallel Sort](https://github.com/pingcap/tidb/pull/15370)                                                                      | Y | 249d23h |
+| tidb/15370   | [planner,executor: Refactor Shuffle and implement parallel Sort](https://github.com/pingcap/tidb/pull/15370)                                                                      | Y | 250d0h  |
 | parser/1040  | [digester: consider paramMarker as literal when normalizing SQL](https://github.com/pingcap/parser/pull/1040)                                                                     |   | 52d22h  |
-| docs-cn/4913 | [explain: add indexes](https://github.com/pingcap/docs-cn/pull/4913)                                                                                                              |   | 2d22h   |
+| docs-cn/4913 | [explain: add indexes](https://github.com/pingcap/docs-cn/pull/4913)                                                                                                              |   | 2d23h   |
 | tidb/15462   | [executor: implement `graceHashJoin`](https://github.com/pingcap/tidb/pull/15462)                                                                                                 | Y | 245d22h |
 | tidb/16967   | [executor: Refactor Shuffle and implement parallel sort (executor part)](https://github.com/pingcap/tidb/pull/16967)                                                              | Y | 200d15h |
 | tidb/17238   | [*: refactor table.Allocator to improve readability](https://github.com/pingcap/tidb/pull/17238)                                                                                  |   | 187d23h |
 | tidb/19120   | [executor: Concurrently fetch chunks and insert them to a concurrent hash table in hash build](https://github.com/pingcap/tidb/pull/19120)                                        |   | 100d2h  |
-| tidb/19178   | [executor: Refactor probe channel](https://github.com/pingcap/tidb/pull/19178)                                                                                                    |   | 97d21h  |
+| tidb/19178   | [executor: Refactor probe channel](https://github.com/pingcap/tidb/pull/19178)                                                                                                    |   | 97d22h  |
 | tidb/19347   | [executor: support new syntax `create/drop binding for digest` for tidb dashboard usage](https://github.com/pingcap/tidb/pull/19347)                                              |   | 90d4h   |
 | tidb/19807   | [executor: parallel evaluation for aggregate functions with distinct in hashAgg](https://github.com/pingcap/tidb/pull/19807)                                                      |   | 75d16h  |
 | tidb/19900   | [executor: enable inline projection for sort&topN](https://github.com/pingcap/tidb/pull/19900)                                                                                    | Y | 70d23h  |
@@ -62,7 +62,7 @@
 | tidb/20335   | [planner, executor: enable inline projection for Selection](https://github.com/pingcap/tidb/pull/20335)                                                                           | Y | 46d23h  |
 | tidb/20360   | [planner: refine explain info for batch cop](https://github.com/pingcap/tidb/pull/20360)                                                                                          |   | 41d3h   |
 | tidb/20397   | [parser: replace ast.SelectLockInShareMode with ast.SelectLockForShare](https://github.com/pingcap/tidb/pull/20397)                                                               |   | 38d23h  |
-| tidb/20591   | [server: redact some error code](https://github.com/pingcap/tidb/pull/20591)                                                                                                      |   | 27d21h  |
+| tidb/20591   | [server: redact some error code](https://github.com/pingcap/tidb/pull/20591)                                                                                                      |   | 27d22h  |
 | tidb/20615   | [utils: Avoid panic when getting memory](https://github.com/pingcap/tidb/pull/20615)                                                                                              |   | 26d7h   |
 | tidb/20652   | [ddl: Convert ddl types automatically according to length](https://github.com/pingcap/tidb/pull/20652)                                                                            |   | 23d4h   |
 | tidb/20689   | [expression: make TIME function compatible with MySQL (#19158)](https://github.com/pingcap/tidb/pull/20689)                                                                       |   | 22d1h   |
@@ -100,7 +100,7 @@
 | tidb/21001 | [planner: check view recursion when building source from view (#20398)](https://github.com/pingcap/tidb/pull/21001)                                      |   | 2 | 5d4h   |
 | tidb/21002 | [planner: add missing table lock check for fast plan (#20948)](https://github.com/pingcap/tidb/pull/21002)                                               |   | 2 | 5d3h   |
 | tidb/21050 | [planner, expression: fix a bug causes schema change after DML (#21027)](https://github.com/pingcap/tidb/pull/21050)                                     |   | 2 | 3d19h  |
-| tidb/21045 | [executor: fix show global variables return session variables also (#19341)](https://github.com/pingcap/tidb/pull/21045)                                 |   | 2 | 3d22h  |
+| tidb/21045 | [executor: fix show global variables return session variables also (#19341)](https://github.com/pingcap/tidb/pull/21045)                                 |   | 3 | 3d22h  |
 | tidb/21074 | [executor: fix The JSON Data can not import to TiDB correctly by `load data` (#21043)](https://github.com/pingcap/tidb/pull/21074)                       |   | 3 | 1d3h   |
 | tidb/20413 | [execute: fill arguments when returning `ErrUnknownSystemVar` in `SetSessionSystemVar` (#20102)](https://github.com/pingcap/tidb/pull/20413)             |   | 3 | 35d19h |
 | tidb/21019 | [planner: don't push down null sensitive join conditions (#19620)](https://github.com/pingcap/tidb/pull/21019)                                           |   | 3 | 4d21h  |
@@ -130,11 +130,11 @@
 | tidb/19292 | [planner: suppport left join in join reorder](https://github.com/pingcap/tidb/pull/19292)                                                                    |   | 91d22h  |
 | tidb/19900 | [executor: enable inline projection for sort&topN](https://github.com/pingcap/tidb/pull/19900)                                                               | Y | 70d23h  |
 | tidb/20040 | [planner, expression: take NullFlag into consideration when optimize the `int non-const` <cmp > `non-int const`](https://github.com/pingcap/tidb/pull/20040) | Y | 63d19h  |
-| tidb/20135 | [executor, util: support priority for OOM Action](https://github.com/pingcap/tidb/pull/20135)                                                                |   | 58d4h   |
+| tidb/20135 | [executor, util: support priority for OOM Action](https://github.com/pingcap/tidb/pull/20135)                                                                |   | 58d5h   |
 | tidb/20140 | [expressions: Support `bin-to-uuid` and `uuid-to-bin`](https://github.com/pingcap/tidb/pull/20140)                                                           |   | 58d3h   |
-| tidb/20233 | [expression, types: fix datetime and year comparison error](https://github.com/pingcap/tidb/pull/20233)                                                      | Y | 53d12h  |
+| tidb/20233 | [expression, types: fix datetime and year comparison error](https://github.com/pingcap/tidb/pull/20233)                                                      | Y | 53d13h  |
 | tidb/20311 | [expression: fix overflow error when convert bit to int64 (#20266)](https://github.com/pingcap/tidb/pull/20311)                                              |   | 50d2h   |
-| tidb/20350 | [executor: support read global indexes in IndexMergeReader and index join](https://github.com/pingcap/tidb/pull/20350)                                       | Y | 43d18h  |
+| tidb/20350 | [executor: support read global indexes in IndexMergeReader and index join](https://github.com/pingcap/tidb/pull/20350)                                       | Y | 43d19h  |
 | tidb/20435 | [planner, expression: make non-lookup condition prune ahead and cache partition-by expression](https://github.com/pingcap/tidb/pull/20435)                   |   | 36d17h  |
 | tidb/20505 | [*: Add metrics for oom-action and sql memory usage.](https://github.com/pingcap/tidb/pull/20505)                                                            |   | 31d0h   |
 | tidb/20576 | [*: fix stats feedback after tableReader handle multiple ranges](https://github.com/pingcap/tidb/pull/20576)                                                 |   | 28d18h  |
@@ -143,7 +143,7 @@
 | tidb/20653 | [executor:Add runtime stat for IndexMergeReaderExecutor](https://github.com/pingcap/tidb/pull/20653)                                                         |   | 23d4h   |
 | tidb/20706 | [expression: set IsBooleanFlag for boolean scalar functions](https://github.com/pingcap/tidb/pull/20706)                                                     |   | 21d2h   |
 | tidb/20752 | [*: trace statsCache and preparePlanCache by Global memory tracker.](https://github.com/pingcap/tidb/pull/20752)                                             |   | 17d3h   |
-| tidb/20790 | [collation: add pinyin collation for chinese charset support](https://github.com/pingcap/tidb/pull/20790)                                                    |   | 16d1h   |
+| tidb/20790 | [collation: add pinyin collation for chinese charset support](https://github.com/pingcap/tidb/pull/20790)                                                    |   | 16d2h   |
 | tidb/20793 | [planner, executor: enable inline projection for Apply](https://github.com/pingcap/tidb/pull/20793)                                                          |   | 16d1h   |
 | tidb/20844 | [executor: introduce new variables to control Apply's behaviors and add more tests for it](https://github.com/pingcap/tidb/pull/20844)                       |   | 14d19h  |
 | tidb/20868 | [execution : fix Compatibility between select and mysql](https://github.com/pingcap/tidb/pull/20868)                                                         |   | 13d23h  |
@@ -153,7 +153,7 @@
 | tidb/20959 | [executor: fix bug when parsing the slow logs if the logNum is small](https://github.com/pingcap/tidb/pull/20959)                                            |   | 8d23h   |
 | tidb/20972 | [POC implementation of Vitess hashing algorithm.](https://github.com/pingcap/tidb/pull/20972)                                                                |   | 8d6h    |
 | tidb/20987 | [expression, executor: allow insert strings with overflowed trailing spaces](https://github.com/pingcap/tidb/pull/20987)                                     |   | 7d22h   |
-| tidb/20988 | [store, executor: enhance rateLimitAction](https://github.com/pingcap/tidb/pull/20988)                                                                       |   | 7d21h   |
+| tidb/20988 | [store, executor: enhance rateLimitAction](https://github.com/pingcap/tidb/pull/20988)                                                                       |   | 7d22h   |
 | tidb/21000 | [planner: check view recursion when building source from view (#20398)](https://github.com/pingcap/tidb/pull/21000)                                          |   | 7d4h    |
 | tidb/21058 | [executor: fix sum(double) result if value is +Inf or -Inf](https://github.com/pingcap/tidb/pull/21058)                                                      |   | 4d2h    |
 | tidb/21064 | [planner, executor: fix cast not check error](https://github.com/pingcap/tidb/pull/21064)                                                                    |   | 3d13h   |
@@ -203,29 +203,29 @@
 
 |    REPO    |                                                                  PR                                                                  | C | LASTED  |
 |------------|--------------------------------------------------------------------------------------------------------------------------------------|---|---------|
-| tidb/14729 | [planner: fix constant propagation for PredicatePushDown](https://github.com/pingcap/tidb/pull/14729)                                | Y | 281d22h |
+| tidb/14729 | [planner: fix constant propagation for PredicatePushDown](https://github.com/pingcap/tidb/pull/14729)                                | Y | 281d23h |
 | tidb/14831 | [planner/cascades: add implementationRule for IndexLookUpJoin](https://github.com/pingcap/tidb/pull/14831)                           |   | 274d22h |
 | tidb/15090 | [planner/cascades: refine the row count estimation of TiKV layer Selection](https://github.com/pingcap/tidb/pull/15090)              |   | 260d23h |
 | tidb/15157 | [planner/cascades: implement `HashCode` method for all the LogicalPlans](https://github.com/pingcap/tidb/pull/15157)                 | Y | 258d19h |
-| tidb/15335 | [planner/cascades: add transformation rule PullAggregationUpApply & EliminateMaxOneRow](https://github.com/pingcap/tidb/pull/15335)  |   | 251d22h |
-| tidb/15370 | [planner,executor: Refactor Shuffle and implement parallel Sort](https://github.com/pingcap/tidb/pull/15370)                         | Y | 249d23h |
+| tidb/15335 | [planner/cascades: add transformation rule PullAggregationUpApply & EliminateMaxOneRow](https://github.com/pingcap/tidb/pull/15335)  |   | 251d23h |
+| tidb/15370 | [planner,executor: Refactor Shuffle and implement parallel Sort](https://github.com/pingcap/tidb/pull/15370)                         | Y | 250d0h  |
 | tidb/17276 | [planner/cascades: add rule InjectProjectionBelowSort](https://github.com/pingcap/tidb/pull/17276)                                   | Y | 184d14h |
 | tidb/18882 | [planner, executor: add explain for `MetricSummaryTableExtractor`](https://github.com/pingcap/tidb/pull/18882)                       | Y | 111d22h |
 | tidb/19347 | [executor: support new syntax `create/drop binding for digest` for tidb dashboard usage](https://github.com/pingcap/tidb/pull/19347) |   | 90d4h   |
-| tidb/20478 | [planner: add projection if expand virtual generated column](https://github.com/pingcap/tidb/pull/20478)                             |   | 34d18h  |
+| tidb/20478 | [planner: add projection if expand virtual generated column](https://github.com/pingcap/tidb/pull/20478)                             |   | 34d19h  |
 | tidb/20580 | [statistics: add bucket ndv for index histogram](https://github.com/pingcap/tidb/pull/20580)                                         |   | 28d1h   |
 | tidb/20877 | [statistics: collect index usage information](https://github.com/pingcap/tidb/pull/20877)                                            |   | 13d22h  |
 | tidb/21003 | [planner: fix index merge doesn't take effect when using prefix key (#20425)](https://github.com/pingcap/tidb/pull/21003)            |   | 7d2h    |
 | tidb/21007 | [*: extract topn out of histogram correctly](https://github.com/pingcap/tidb/pull/21007)                                             |   | 7d1h    |
 | tidb/21080 | [planner: detect unknown column in window clause](https://github.com/pingcap/tidb/pull/21080)                                        |   | 3d0h    |
-| tidb/21084 | [planner: fix unexpected bad plan when IndexJoin inner side estRow is 0.](https://github.com/pingcap/tidb/pull/21084)                |   | 2d23h   |
 | tidb/21110 | [planner: Add table engine name check](https://github.com/pingcap/tidb/pull/21110)                                                   |   | 1d22h   |
 
 
 ## Reviewed in Last 7 Days
 
-| REPO | PR | C | D | R |
-|------|----|---|---|---|
+|    REPO    |                                                          PR                                                           | C | D |   R   |
+|------------|-----------------------------------------------------------------------------------------------------------------------|---|---|-------|
+| tidb/21084 | [planner: fix unexpected bad plan when IndexJoin inner side estRow is 0.](https://github.com/pingcap/tidb/pull/21084) |   | 1 | 2d23h |
 
 
 </details> 
@@ -291,8 +291,8 @@
 |     REPO     |                                                                  PR                                                                  | C | LASTED  |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------|---|---------|
 | docs-cn/4912 | [explain: add subqueries](https://github.com/pingcap/docs-cn/pull/4912)                                                              |   | 2d23h   |
-| tidb/14729   | [planner: fix constant propagation for PredicatePushDown](https://github.com/pingcap/tidb/pull/14729)                                | Y | 281d22h |
-| docs-cn/4913 | [explain: add indexes](https://github.com/pingcap/docs-cn/pull/4913)                                                                 |   | 2d22h   |
+| tidb/14729   | [planner: fix constant propagation for PredicatePushDown](https://github.com/pingcap/tidb/pull/14729)                                | Y | 281d23h |
+| docs-cn/4913 | [explain: add indexes](https://github.com/pingcap/docs-cn/pull/4913)                                                                 |   | 2d23h   |
 | tidb/17414   | [add curCost based join reorder algorithm](https://github.com/pingcap/tidb/pull/17414)                                               |   | 176d23h |
 | tidb/19347   | [executor: support new syntax `create/drop binding for digest` for tidb dashboard usage](https://github.com/pingcap/tidb/pull/19347) |   | 90d4h   |
 | tidb/19698   | [*: update test cases to support new collation enabled by default](https://github.com/pingcap/tidb/pull/19698)                       |   | 78d3h   |
@@ -315,7 +315,7 @@
 | tidb/20938   | [planner: fix update statement not blocked by primary (#20842)](https://github.com/pingcap/tidb/pull/20938)                          |   | 9d22h   |
 | tidb/20940   | [expression: keep the original data type when doing date arithmetic operations ](https://github.com/pingcap/tidb/pull/20940)         |   | 9d18h   |
 | tidb/20944   | [executor: fix issue of runtime stats of index merge join is wrong (#20892)](https://github.com/pingcap/tidb/pull/20944)             |   | 9d15h   |
-| tidb/20961   | [expression: convert a date to number if the date is used in numeric context](https://github.com/pingcap/tidb/pull/20961)            |   | 8d22h   |
+| tidb/20961   | [expression: convert a date to number if the date is used in numeric context](https://github.com/pingcap/tidb/pull/20961)            |   | 8d23h   |
 | tidb/21018   | [planner: don't push down null sensitive join conditions (#19620)](https://github.com/pingcap/tidb/pull/21018)                       |   | 6d22h   |
 | tidb/21020   | [planner: generate proper hint for IndexHashJoin / IndexMergeJoin (#20992)](https://github.com/pingcap/tidb/pull/21020)              |   | 6d21h   |
 | tidb/21051   | [executor: change read slow-log file module to concurrent](https://github.com/pingcap/tidb/pull/21051)                               |   | 5d19h   |
@@ -394,7 +394,7 @@
 
 |    REPO    |                                                                                    PR                                                                                     | C | LASTED  |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|---------|
-| tidb/16305 | [expression: separate signatures for `ModInt`](https://github.com/pingcap/tidb/pull/16305)                                                                                | Y | 220d4h  |
+| tidb/16305 | [expression: separate signatures for `ModInt`](https://github.com/pingcap/tidb/pull/16305)                                                                                | Y | 220d5h  |
 | docs/4035  | [add a new document about how to analyze slow queries](https://github.com/pingcap/docs/pull/4035)                                                                         |   | 37d19h  |
 | tidb/16967 | [executor: Refactor Shuffle and implement parallel sort (executor part)](https://github.com/pingcap/tidb/pull/16967)                                                      | Y | 200d15h |
 | tidb/17396 | [types: improve StrToDate performance](https://github.com/pingcap/tidb/pull/17396)                                                                                        | Y | 177d15h |
@@ -411,7 +411,7 @@
 | tidb/20675 | [planner: fix explain-hint panic for joins generated by subquery](https://github.com/pingcap/tidb/pull/20675)                                                             |   | 22d22h  |
 | tidb/20689 | [expression: make TIME function compatible with MySQL (#19158)](https://github.com/pingcap/tidb/pull/20689)                                                               |   | 22d1h   |
 | tidb/20708 | [*: separate auto_increment ID allocator from _tidb_rowid allocator](https://github.com/pingcap/tidb/pull/20708)                                                          |   | 21d1h   |
-| tidb/20747 | [executor: fix LEAD and LAG's default value can not adapt to field type](https://github.com/pingcap/tidb/pull/20747)                                                      |   | 18d0h   |
+| tidb/20747 | [executor: fix LEAD and LAG's default value can not adapt to field type](https://github.com/pingcap/tidb/pull/20747)                                                      |   | 18d1h   |
 | tidb/20750 | [executor, infoschema, planner: optimize query cluster_slow_query](https://github.com/pingcap/tidb/pull/20750)                                                            |   | 17d4h   |
 | tidb/20799 | [planner: bypass the DNF restriction if index merge hint is specified](https://github.com/pingcap/tidb/pull/20799)                                                        |   | 15d22h  |
 | tidb/20836 | [planner: check for decimal format in cast expr](https://github.com/pingcap/tidb/pull/20836)                                                                              |   | 14d21h  |
@@ -441,7 +441,7 @@
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|---|---|---------|
 | tidb/20653 | [executor:Add runtime stat for IndexMergeReaderExecutor](https://github.com/pingcap/tidb/pull/20653)                                                     |   | 2 | 21d5h   |
 | tidb/18973 | [*: differentiate types for user variables](https://github.com/pingcap/tidb/pull/18973)                                                                  |   | 2 | 104d23h |
-| tidb/21045 | [executor: fix show global variables return session variables also (#19341)](https://github.com/pingcap/tidb/pull/21045)                                 |   | 2 | 3d22h   |
+| tidb/21045 | [executor: fix show global variables return session variables also (#19341)](https://github.com/pingcap/tidb/pull/21045)                                 |   | 3 | 3d22h   |
 | tidb/21072 | [distsql: fix issue of table reader runtime stats display wrong result.](https://github.com/pingcap/tidb/pull/21072)                                     |   | 3 | 1d3h    |
 | tidb/21055 | [config: hide & deprecate enable-streaming (#20760)](https://github.com/pingcap/tidb/pull/21055)                                                         |   | 3 | 3d13h   |
 | tidb/21073 | [plannr: build empty range for overflow predicate (#21042)](https://github.com/pingcap/tidb/pull/21073)                                                  |   | 3 | 1d3h    |
@@ -543,17 +543,16 @@
 
 ## Reviewed in Last 7 Days
 
-|      REPO      |                                                              PR                                                              | C | D |   R    |
-|----------------|------------------------------------------------------------------------------------------------------------------------------|---|---|--------|
-| tidb/20686     | [*: support SQL bind for Update / Delete / Insert / Replace](https://github.com/pingcap/tidb/pull/20686)                     |   | 3 | 20d3h  |
-| tidb/21021     | [executor, planner: fix some cases for natural_using_join (#20977)](https://github.com/pingcap/tidb/pull/21021)              |   | 3 | 3d22h  |
-| tidb/21085     | [executor, planner: do not coalesce column for update/delete natural_using_join](https://github.com/pingcap/tidb/pull/21085) |   | 3 | 0h     |
-| tidb/20761     | [*: seperate hash keys from join keys in IndexJoin](https://github.com/pingcap/tidb/pull/20761)                              |   | 3 | 13d23h |
-| tidb/20672     | [planner: add unit test for tidb_opt_prefer_range_scan variable](https://github.com/pingcap/tidb/pull/20672)                 |   | 7 | 16d21h |
-| tidb/21027     | [planner, expression: fix a bug causes schema change after DML](https://github.com/pingcap/tidb/pull/21027)                  |   | 7 | 0h     |
-| tidb/20977     | [executor, planner: fix some cases for natural_using_join](https://github.com/pingcap/tidb/pull/20977)                       |   | 7 | 1d5h   |
-| tidb/19620     | [planner: don't push down null sensitive join conditions](https://github.com/pingcap/tidb/pull/19620)                        |   | 7 | 72d22h |
-| tidb-test/1101 | [fix results for #19620](https://github.com/pingcap/tidb-test/pull/1101)                                                     |   | 7 | 0h     |
+|    REPO    |                                                              PR                                                              | C | D |   R    |
+|------------|------------------------------------------------------------------------------------------------------------------------------|---|---|--------|
+| tidb/20686 | [*: support SQL bind for Update / Delete / Insert / Replace](https://github.com/pingcap/tidb/pull/20686)                     |   | 3 | 20d3h  |
+| tidb/21021 | [executor, planner: fix some cases for natural_using_join (#20977)](https://github.com/pingcap/tidb/pull/21021)              |   | 3 | 3d22h  |
+| tidb/21085 | [executor, planner: do not coalesce column for update/delete natural_using_join](https://github.com/pingcap/tidb/pull/21085) |   | 3 | 0h     |
+| tidb/20761 | [*: seperate hash keys from join keys in IndexJoin](https://github.com/pingcap/tidb/pull/20761)                              |   | 3 | 13d23h |
+| tidb/20672 | [planner: add unit test for tidb_opt_prefer_range_scan variable](https://github.com/pingcap/tidb/pull/20672)                 |   | 7 | 16d21h |
+| tidb/21027 | [planner, expression: fix a bug causes schema change after DML](https://github.com/pingcap/tidb/pull/21027)                  |   | 7 | 0h     |
+| tidb/20977 | [executor, planner: fix some cases for natural_using_join](https://github.com/pingcap/tidb/pull/20977)                       |   | 7 | 1d5h   |
+| tidb/19620 | [planner: don't push down null sensitive join conditions](https://github.com/pingcap/tidb/pull/19620)                        |   | 7 | 72d22h |
 
 
 </details> 
@@ -573,14 +572,14 @@
 | tidb/19807 | [executor: parallel evaluation for aggregate functions with distinct in hashAgg](https://github.com/pingcap/tidb/pull/19807)           |   | 75d16h  |
 | tidb/19957 | [executor: add builtin aggregate function `json_arrayagg`](https://github.com/pingcap/tidb/pull/19957)                                 | Y | 68d19h  |
 | tidb/20044 | [expression: Add column nullability checking before "refine args"](https://github.com/pingcap/tidb/pull/20044)                         | Y | 63d12h  |
-| tidb/20478 | [planner: add projection if expand virtual generated column](https://github.com/pingcap/tidb/pull/20478)                               |   | 34d18h  |
+| tidb/20478 | [planner: add projection if expand virtual generated column](https://github.com/pingcap/tidb/pull/20478)                               |   | 34d19h  |
 | tidb/20503 | [expression: compatible with mysql's NO_ZERO_DATE](https://github.com/pingcap/tidb/pull/20503)                                         |   | 31d17h  |
 | tidb/20580 | [statistics: add bucket ndv for index histogram](https://github.com/pingcap/tidb/pull/20580)                                           |   | 28d1h   |
 | tidb/20664 | [executor, unistore: optimize analyze index by move it to analyze columns](https://github.com/pingcap/tidb/pull/20664)                 |   | 22d23h  |
 | tidb/20844 | [executor: introduce new variables to control Apply's behaviors and add more tests for it](https://github.com/pingcap/tidb/pull/20844) |   | 14d19h  |
 | tidb/20861 | [executor:add runtime information for StreamAggExec](https://github.com/pingcap/tidb/pull/20861)                                       |   | 14d0h   |
 | tidb/20883 | [*: support select from tablesample](https://github.com/pingcap/tidb/pull/20883)                                                       |   | 13d15h  |
-| tidb/21057 | [hptc ycsb-worloade: Implement AppendRows for Chunk ](https://github.com/pingcap/tidb/pull/21057)                                      |   | 4d23h   |
+| tidb/21057 | [hptc ycsb-worloade: Implement AppendRows for Chunk ](https://github.com/pingcap/tidb/pull/21057)                                      |   | 5d0h    |
 | tidb/21099 | [expression: adjust int constant when compare with year type](https://github.com/pingcap/tidb/pull/21099)                              |   | 2d1h    |
 
 
