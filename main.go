@@ -533,7 +533,7 @@ func main() {
 	webhook := os.Getenv("SLACK_WEBHOOK")
 	if len(webhook) != 0 {
 		fmt.Println("report to slack")
-		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\nFor a more detailed report, please see https://ichn-hu.github.io/review-promoter/")
+		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\nFor a more detailed report, please see https://github.com/ichn-hu/review-promoter/blob/master/index.md")
 		if err != nil {
 			panic(err)
 		}

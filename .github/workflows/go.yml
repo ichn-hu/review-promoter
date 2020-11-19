@@ -40,8 +40,8 @@ jobs:
 
     - name: Commit files
       run: |
-        git config --local user.email "zfhu16@gmail.com"
-        git config --local user.name "ichn-hu"
+        git config --local user.email "ci-bot@gmail.com"
+        git config --local user.name "github-ci"
         git commit -m "Add changes" -a
 
     - name: Push changes
