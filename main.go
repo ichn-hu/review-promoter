@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
 	"sort"
@@ -518,10 +519,12 @@ func main() {
 	}
 
 	fmt.Println(report)
-	var url string
+	if err := ioutil.WriteFile("index.md", []byte(report), 0644); err != nil {
+		log.Fatal(err)
+	}
 	var err error
 	if cfg.ReportPostTo != nil {
-		url, err = reportToIssue(report)
+		_, err = reportToIssue(report)
 		if err != nil {
 			panic(err)
 		}
@@ -530,7 +533,7 @@ func main() {
 	webhook := os.Getenv("SLACK_WEBHOOK")
 	if len(webhook) != 0 {
 		fmt.Println("report to slack")
-		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\nFor a more detailed report, please see "+url)
+		err := reportToSlack(webhook, "<!channel>, review reports here\n```\n"+buf.String()+"\n```\nFor a more detailed report, please see https://ichn-hu.github.io/review-promoter/")
 		if err != nil {
 			panic(err)
 		}

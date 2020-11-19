@@ -8,6 +8,8 @@ on:
   schedule:
     # run every 10 a.m. on weekdays, which is UTC 2 a.m + 8
     - cron:  '0 2 * * 1-5'
+  paths-ignore:
+    - 'index.md'
 
 jobs:
 
@@ -35,3 +37,15 @@ jobs:
 
     - name: run
       run: GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }} SLACK_WEBHOOK=${{ secrets.SLACK_WEBHOOK }} go run main.go
+
+    - name: Commit files
+      run: |
+        git config --local user.email "zfhu16@gmail.com"
+        git config --local user.name "ichn-hu"
+        git commit -m "Add changes" -a
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        branch: ${{ github.ref }}
