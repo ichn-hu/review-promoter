@@ -1,19 +1,19 @@
-|   REVIEWER    |  O(C)   | 1 | 2  | 3  | 4 | 5 | 6 | 7 | T  |
-|---------------|---------|---|----|----|---|---|---|---|----|
-| Reminiscent   |  9 ( 0) | 3 |  0 | 14 | 1 | 0 | 0 | 1 | 19 |
-| SunRunAway    | 47 ( 6) | 1 |  0 |  4 | 1 | 0 | 1 | 2 |  9 |
-| XuHuaiyu      | 77 ( 4) | 7 |  4 |  2 | 4 | 0 | 0 | 4 | 21 |
-| dyzsr         |  0 ( 0) | 0 |  0 |  0 | 0 | 0 | 0 | 0 |  0 |
-| eurekaka      | 18 ( 5) | 0 |  1 |  1 | 4 | 0 | 0 | 1 |  7 |
-| fzhedu        |  2 ( 2) | 0 |  1 |  0 | 0 | 0 | 0 | 0 |  1 |
-| ichn-hu       |  4 ( 0) | 0 |  1 |  0 | 2 | 0 | 0 | 0 |  3 |
-| lzmhhh123     | 53 ( 3) | 6 | 12 |  7 | 5 | 0 | 0 | 4 | 34 |
-| nullnotnil    |  0 ( 0) | 0 |  0 |  0 | 0 | 0 | 0 | 0 |  0 |
-| qw4990        | 50 ( 6) | 5 |  3 |  7 | 0 | 0 | 0 | 0 | 15 |
-| rebelice      |  0 ( 0) | 0 |  0 |  0 | 0 | 0 | 0 | 0 |  0 |
-| time-and-fate |  1 ( 0) | 1 |  1 |  1 | 0 | 0 | 0 | 0 |  3 |
-| winoros       | 39 ( 4) | 4 |  0 |  3 | 4 | 0 | 0 | 0 | 11 |
-| wshwsh12      | 18 ( 4) | 1 |  6 |  0 | 7 | 0 | 0 | 0 | 14 |
+|   REVIEWER    |  O(C)   | 1 | 2 | 3 | 4 | 5  | 6  | 7 | T  |
+|---------------|---------|---|---|---|---|----|----|---|----|
+| Reminiscent   |  9 ( 0) | 1 | 0 | 0 | 3 |  0 | 14 | 1 | 19 |
+| SunRunAway    | 49 ( 6) | 0 | 0 | 0 | 1 |  0 |  4 | 1 |  6 |
+| XuHuaiyu      | 75 ( 4) | 0 | 0 | 3 | 6 |  4 |  2 | 4 | 19 |
+| dyzsr         |  0 ( 0) | 0 | 0 | 0 | 0 |  0 |  0 | 0 |  0 |
+| eurekaka      | 18 ( 5) | 0 | 0 | 1 | 0 |  1 |  1 | 4 |  7 |
+| fzhedu        |  2 ( 2) | 0 | 0 | 1 | 0 |  1 |  0 | 0 |  2 |
+| ichn-hu       |  4 ( 0) | 0 | 0 | 0 | 0 |  1 |  0 | 2 |  3 |
+| lzmhhh123     | 51 ( 2) | 0 | 0 | 1 | 5 | 12 |  7 | 5 | 30 |
+| nullnotnil    |  0 ( 0) | 0 | 0 | 0 | 0 |  0 |  0 | 0 |  0 |
+| qw4990        | 52 ( 6) | 0 | 0 | 0 | 5 |  3 |  7 | 0 | 15 |
+| rebelice      |  0 ( 0) | 0 | 0 | 0 | 0 |  0 |  0 | 0 |  0 |
+| time-and-fate |  1 ( 0) | 0 | 0 | 0 | 1 |  1 |  1 | 0 |  3 |
+| winoros       | 40 ( 4) | 0 | 0 | 0 | 4 |  0 |  3 | 4 | 11 |
+| wshwsh12      | 18 ( 4) | 0 | 0 | 0 | 1 |  6 |  0 | 7 | 14 |
 
 
 <details> 
@@ -23,40 +23,40 @@
 
 |    REPO    |                                                                  PR                                                                  | C | LASTED |
 |------------|--------------------------------------------------------------------------------------------------------------------------------------|---|--------|
-| tidb/21137 | [executor: specially handle empty input for apply's outer child aggregate (#20544)](https://github.com/pingcap/tidb/pull/21137)      |   | 35d20h |
-| tidb/21550 | [planner : fix unsigned_decimal_col=-int_cnst access index (#21198)](https://github.com/pingcap/tidb/pull/21550)                     |   | 16d19h |
-| tidb/21614 | [planner: do not propagate column eq with different column types (#21495)](https://github.com/pingcap/tidb/pull/21614)               |   | 15d14h |
-| tidb/21868 | [bindinfo: sync concurrent ops on mysql.bind_info from multiple tidb instances (#21629)](https://github.com/pingcap/tidb/pull/21868) |   | 7d6h   |
-| tidb/21896 | [planner: fix union doesn't handle collate correctly (#21854)](https://github.com/pingcap/tidb/pull/21896)                           |   | 3d19h  |
-| tidb/21931 | [*: support baseline capture for prepared statements (#21271)](https://github.com/pingcap/tidb/pull/21931)                           |   | 2d18h  |
-| tidb/21936 | [expression: fix wrong type inferring for ceiling function. (#21920)](https://github.com/pingcap/tidb/pull/21936)                    |   | 2d17h  |
-| tidb/21957 | [planner: fix unknown columns in join using below agg (#21922)](https://github.com/pingcap/tidb/pull/21957)                          |   | 1d23h  |
-| tidb/21964 | [planner: add plancodec id for all type TableScan/IndexScan. (#21935)](https://github.com/pingcap/tidb/pull/21964)                   |   | 1d18h  |
+| tidb/21137 | [executor: specially handle empty input for apply's outer child aggregate (#20544)](https://github.com/pingcap/tidb/pull/21137)      |   | 38d20h |
+| tidb/21550 | [planner : fix unsigned_decimal_col=-int_cnst access index (#21198)](https://github.com/pingcap/tidb/pull/21550)                     |   | 19d19h |
+| tidb/21614 | [planner: do not propagate column eq with different column types (#21495)](https://github.com/pingcap/tidb/pull/21614)               |   | 18d14h |
+| tidb/21868 | [bindinfo: sync concurrent ops on mysql.bind_info from multiple tidb instances (#21629)](https://github.com/pingcap/tidb/pull/21868) |   | 10d6h  |
+| tidb/21896 | [planner: fix union doesn't handle collate correctly (#21854)](https://github.com/pingcap/tidb/pull/21896)                           |   | 6d19h  |
+| tidb/21931 | [*: support baseline capture for prepared statements (#21271)](https://github.com/pingcap/tidb/pull/21931)                           |   | 5d18h  |
+| tidb/21936 | [expression: fix wrong type inferring for ceiling function. (#21920)](https://github.com/pingcap/tidb/pull/21936)                    |   | 5d17h  |
+| tidb/21957 | [planner: fix unknown columns in join using below agg (#21922)](https://github.com/pingcap/tidb/pull/21957)                          |   | 4d23h  |
+| tidb/21964 | [planner: add plancodec id for all type TableScan/IndexScan. (#21935)](https://github.com/pingcap/tidb/pull/21964)                   |   | 4d18h  |
 
 
 ## Reviewed in Last 7 Days
 
 |      REPO      |                                                                   PR                                                                   | C | D |   R   |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------|---|---|-------|
-| tidb/21782     | [bindinfo: refine logs of SQL bind (#21351)](https://github.com/pingcap/tidb/pull/21782)                                               |   | 1 | 8d23h |
-| tidb/21970     | [planner: generate correct query block name and offset for update / delete (#21823)](https://github.com/pingcap/tidb/pull/21970)       |   | 1 | 17h   |
-| tidb/21941     | [bindinfo: enforce default_db to lower case for SQL bind operations (#21861)](https://github.com/pingcap/tidb/pull/21941)              |   | 1 | 1d15h |
-| tidb/21922     | [planner: fix unknown columns in join using below agg](https://github.com/pingcap/tidb/pull/21922)                                     |   | 3 | 19h   |
-| tidb/21935     | [planner: add plancodec id for all type TableScan/IndexScan.](https://github.com/pingcap/tidb/pull/21935)                              |   | 3 | 17h   |
-| tidb/21467     | [planner: fix explain-hint panic for joins generated by subquery (#20675)](https://github.com/pingcap/tidb/pull/21467)                 |   | 3 | 19d1h |
-| tidb/21861     | [bindinfo: enforce default_db to lower case for SQL bind operations](https://github.com/pingcap/tidb/pull/21861)                       |   | 3 | 4d22h |
-| tidb/21862     | [executor: set StmtType correctly in SummaryStmt for failed queries (#21855)](https://github.com/pingcap/tidb/pull/21862)              |   | 3 | 4d21h |
-| tidb/21823     | [planner: generate correct query block name and offset for update / delete](https://github.com/pingcap/tidb/pull/21823)                |   | 3 | 6d22h |
-| tidb/21920     | [expression: fix wrong type inferring for ceiling function.](https://github.com/pingcap/tidb/pull/21920)                               |   | 3 | 1h    |
-| tidb/21805     | [range:  fix overflow value access index](https://github.com/pingcap/tidb/pull/21805)                                                  |   | 3 | 6d23h |
-| tidb/21809     | [util/ranger: convert range condition like `x >= 2 and x <= 2` to point condition `x = 2`](https://github.com/pingcap/tidb/pull/21809) |   | 3 | 6d19h |
-| tidb/21271     | [*: support baseline capture for prepared statements](https://github.com/pingcap/tidb/pull/21271)                                      |   | 3 | 27d0h |
-| tidb/21893     | [expression: do not rewrite `like` to `=` if new collation is enabled](https://github.com/pingcap/tidb/pull/21893)                     |   | 3 | 23h   |
-| tidb/21832     | [planner: ignore ORDER BY when there is aggregate without GROUP BY](https://github.com/pingcap/tidb/pull/21832)                        |   | 3 | 5d20h |
-| tidb-test/1132 | [mysql_test: update groupby.result for #21832](https://github.com/pingcap/tidb-test/pull/1132)                                         |   | 3 | 5d17h |
-| tidb/21911     | [metrics,planner: add 'pseudo estimation' reason in the metrics](https://github.com/pingcap/tidb/pull/21911)                           |   | 3 | 11h   |
-| tidb-test/1134 | [randgen-test:  fix collation of union statement](https://github.com/pingcap/tidb-test/pull/1134)                                      |   | 4 | 0h    |
-| tidb/21854     | [planner: fix union doesn't handle collate correctly](https://github.com/pingcap/tidb/pull/21854)                                      |   | 7 | 20h   |
+| tidb/22037     | [planner: fix incorrect range for prefix index range scan](https://github.com/pingcap/tidb/pull/22037)                                 |   | 1 | 2d12h |
+| tidb/21782     | [bindinfo: refine logs of SQL bind (#21351)](https://github.com/pingcap/tidb/pull/21782)                                               |   | 4 | 8d23h |
+| tidb/21970     | [planner: generate correct query block name and offset for update / delete (#21823)](https://github.com/pingcap/tidb/pull/21970)       |   | 4 | 17h   |
+| tidb/21941     | [bindinfo: enforce default_db to lower case for SQL bind operations (#21861)](https://github.com/pingcap/tidb/pull/21941)              |   | 4 | 1d15h |
+| tidb/21922     | [planner: fix unknown columns in join using below agg](https://github.com/pingcap/tidb/pull/21922)                                     |   | 6 | 19h   |
+| tidb/21935     | [planner: add plancodec id for all type TableScan/IndexScan.](https://github.com/pingcap/tidb/pull/21935)                              |   | 6 | 17h   |
+| tidb/21467     | [planner: fix explain-hint panic for joins generated by subquery (#20675)](https://github.com/pingcap/tidb/pull/21467)                 |   | 6 | 19d1h |
+| tidb/21861     | [bindinfo: enforce default_db to lower case for SQL bind operations](https://github.com/pingcap/tidb/pull/21861)                       |   | 6 | 4d22h |
+| tidb/21862     | [executor: set StmtType correctly in SummaryStmt for failed queries (#21855)](https://github.com/pingcap/tidb/pull/21862)              |   | 6 | 4d21h |
+| tidb/21823     | [planner: generate correct query block name and offset for update / delete](https://github.com/pingcap/tidb/pull/21823)                |   | 6 | 6d22h |
+| tidb/21920     | [expression: fix wrong type inferring for ceiling function.](https://github.com/pingcap/tidb/pull/21920)                               |   | 6 | 1h    |
+| tidb/21805     | [range:  fix overflow value access index](https://github.com/pingcap/tidb/pull/21805)                                                  |   | 6 | 6d23h |
+| tidb/21809     | [util/ranger: convert range condition like `x >= 2 and x <= 2` to point condition `x = 2`](https://github.com/pingcap/tidb/pull/21809) |   | 6 | 6d19h |
+| tidb/21271     | [*: support baseline capture for prepared statements](https://github.com/pingcap/tidb/pull/21271)                                      |   | 6 | 27d0h |
+| tidb/21893     | [expression: do not rewrite `like` to `=` if new collation is enabled](https://github.com/pingcap/tidb/pull/21893)                     |   | 6 | 23h   |
+| tidb/21832     | [planner: ignore ORDER BY when there is aggregate without GROUP BY](https://github.com/pingcap/tidb/pull/21832)                        |   | 6 | 5d20h |
+| tidb-test/1132 | [mysql_test: update groupby.result for #21832](https://github.com/pingcap/tidb-test/pull/1132)                                         |   | 6 | 5d17h |
+| tidb/21911     | [metrics,planner: add 'pseudo estimation' reason in the metrics](https://github.com/pingcap/tidb/pull/21911)                           |   | 6 | 11h   |
+| tidb-test/1134 | [randgen-test:  fix collation of union statement](https://github.com/pingcap/tidb-test/pull/1134)                                      |   | 7 | 0h    |
 
 
 </details> 
@@ -69,68 +69,67 @@
 
 |     REPO     |                                                                      PR                                                                       | C | LASTED  |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---|---------|
-| docs-cn/4913 | [explain: add indexes](https://github.com/pingcap/docs-cn/pull/4913)                                                                          |   | 38d18h  |
-| tidb/15370   | [planner,executor: Refactor Shuffle and implement parallel Sort](https://github.com/pingcap/tidb/pull/15370)                                  | Y | 285d19h |
-| docs-cn/4933 | [explain: add joins](https://github.com/pingcap/docs-cn/pull/4933)                                                                            |   | 34d20h  |
-| tidb/15462   | [executor: implement `graceHashJoin`](https://github.com/pingcap/tidb/pull/15462)                                                             | Y | 281d17h |
-| tidb/16967   | [executor: Refactor Shuffle and implement parallel sort (executor part)](https://github.com/pingcap/tidb/pull/16967)                          | Y | 236d10h |
-| tidb/17238   | [*: refactor table.Allocator to improve readability](https://github.com/pingcap/tidb/pull/17238)                                              |   | 223d18h |
-| tidb/19120   | [executor: Concurrently fetch chunks and insert them to a concurrent hash table in hash build](https://github.com/pingcap/tidb/pull/19120)    |   | 135d21h |
-| tidb/19178   | [executor: Refactor probe channel](https://github.com/pingcap/tidb/pull/19178)                                                                |   | 133d17h |
-| tidb/19347   | [executor: support new syntax `create/drop binding for digest` for tidb dashboard usage](https://github.com/pingcap/tidb/pull/19347)          |   | 125d23h |
-| tidb/19807   | [executor: parallel evaluation for hash aggregate distinct](https://github.com/pingcap/tidb/pull/19807)                                       |   | 111d11h |
-| tidb/19900   | [executor: enable inline projection for sort&topN](https://github.com/pingcap/tidb/pull/19900)                                                | Y | 106d18h |
-| tidb/20140   | [expressions: Support `bin-to-uuid` and `uuid-to-bin`](https://github.com/pingcap/tidb/pull/20140)                                            |   | 93d22h  |
-| tidb/20220   | [*: new secondary index value format](https://github.com/pingcap/tidb/pull/20220)                                                             |   | 90d16h  |
-| tidb/20316   | [docs/design: add design doc for index usage information](https://github.com/pingcap/tidb/pull/20316)                                         |   | 85d17h  |
-| tidb/20335   | [planner, executor: enable inline projection for Selection](https://github.com/pingcap/tidb/pull/20335)                                       | Y | 82d18h  |
-| tidb/20360   | [planner: refine explain info for batch cop](https://github.com/pingcap/tidb/pull/20360)                                                      |   | 76d22h  |
-| tidb/20397   | [parser: replace ast.SelectLockInShareMode with ast.SelectLockForShare](https://github.com/pingcap/tidb/pull/20397)                           |   | 74d18h  |
-| tidb/20615   | [utils: Avoid panic when getting memory](https://github.com/pingcap/tidb/pull/20615)                                                          |   | 62d2h   |
-| tidb/20689   | [expression: make TIME function compatible with MySQL (#19158)](https://github.com/pingcap/tidb/pull/20689)                                   |   | 57d20h  |
-| tidb/20750   | [executor, infoschema, planner: optimize query cluster_slow_query](https://github.com/pingcap/tidb/pull/20750)                                |   | 52d23h  |
-| tidb/20752   | [*: trace statsCache and preparePlanCache by Global memory tracker.](https://github.com/pingcap/tidb/pull/20752)                              |   | 52d22h  |
-| tidb/20765   | [planner: support stable result mode](https://github.com/pingcap/tidb/pull/20765)                                                             |   | 52d17h  |
-| tidb/20894   | [planner, store/tikv, executor:Support shuffled hash join and refine codes](https://github.com/pingcap/tidb/pull/20894)                       |   | 48d19h  |
-| tidb/21137   | [executor: specially handle empty input for apply's outer child aggregate (#20544)](https://github.com/pingcap/tidb/pull/21137)               |   | 35d20h  |
-| tidb/21207   | [planner: fix the inappropriate out-of-range range estimation rule](https://github.com/pingcap/tidb/pull/21207)                               |   | 31d19h  |
-| tidb/21237   | [executor: fix a bug that can not insert null into a not null column in the empty SQL mode](https://github.com/pingcap/tidb/pull/21237)       |   | 30d22h  |
-| tidb/21277   | [executor: fix split table with large integers](https://github.com/pingcap/tidb/pull/21277)                                                   |   | 29d20h  |
-| tidb/21310   | [types: convert string to MySQL BIT correctly](https://github.com/pingcap/tidb/pull/21310)                                                    |   | 28d22h  |
-| tidb/21364   | [expression: Add test cases to cover the cases when invalid int value is casted as TIME (#18653)](https://github.com/pingcap/tidb/pull/21364) |   | 25d1h   |
-| tidb/21381   | [*: optimize analyze cluster index table](https://github.com/pingcap/tidb/pull/21381)                                                         |   | 24d17h  |
-| tidb/21386   | [expression: Disable cast decimal as string push down to TiFlash](https://github.com/pingcap/tidb/pull/21386)                                 |   | 24d16h  |
-| tidb/21443   | [*: Let binary literal can be convert to enum and set (#20789)](https://github.com/pingcap/tidb/pull/21443)                                   |   | 22d14h  |
-| tidb/21504   | [planner: fix invalid convert type in between...and... (#19820)](https://github.com/pingcap/tidb/pull/21504)                                  | Y | 20d15h  |
-| tidb/21546   | [planner: do not push down the aggregation function with correlated column (#21453)](https://github.com/pingcap/tidb/pull/21546)              |   | 16d23h  |
-| tidb/21562   | [*:Adapt ScanDetailV2 in KvGet and KvBatchGet Response](https://github.com/pingcap/tidb/pull/21562)                                           |   | 16d17h  |
-| tidb/21573   | [expression: fix incorrect result of IsTrue function for time types (#21534)](https://github.com/pingcap/tidb/pull/21573)                     |   | 16d13h  |
-| tidb/21810   | [expression: handle hybrid field types for where clause (#21724)](https://github.com/pingcap/tidb/pull/21810)                                 |   | 9d18h   |
-| tidb/21813   | [expression: handle tp.flen overflow in to_base64 function (#20947)](https://github.com/pingcap/tidb/pull/21813)                              |   | 9d17h   |
-| tidb/21834   | [planner: enhanced index range calculation plan](https://github.com/pingcap/tidb/pull/21834)                                                  |   | 8d18h   |
-| tidb/21876   | [planner: bypass the DNF restriction if index merge hint is specified (#20799)](https://github.com/pingcap/tidb/pull/21876)                   |   | 6d19h   |
-| tidb/21877   | [planner: fix correlated aggregates which should be evaluated in outer query (#21431)](https://github.com/pingcap/tidb/pull/21877)            |   | 6d19h   |
-| tidb/21878   | [planner: do not push down lock to pointGet/bacthPointGet when selection exists](https://github.com/pingcap/tidb/pull/21878)                  |   | 6d18h   |
-| tidb/21890   | [*: redact some error code, part(3/3) (#21866)](https://github.com/pingcap/tidb/pull/21890)                                                   |   | 4d15h   |
-| tidb/21936   | [expression: fix wrong type inferring for ceiling function. (#21920)](https://github.com/pingcap/tidb/pull/21936)                             |   | 2d17h   |
-| tidb/21956   | [planner/preprocessor: disallow into-outfile clause in some place](https://github.com/pingcap/tidb/pull/21956)                                |   | 1d23h   |
-| tidb/21960   | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type. (#21849)](https://github.com/pingcap/tidb/pull/21960)                  |   | 1d21h   |
-| tidb/21982   | [executor: improve the runtime stats of index lookup reader](https://github.com/pingcap/tidb/pull/21982)                                      |   | 1d14h   |
+| docs-cn/4913 | [explain: add indexes](https://github.com/pingcap/docs-cn/pull/4913)                                                                          |   | 41d18h  |
+| tidb/15370   | [planner,executor: Refactor Shuffle and implement parallel Sort](https://github.com/pingcap/tidb/pull/15370)                                  | Y | 288d19h |
+| docs-cn/4933 | [explain: add joins](https://github.com/pingcap/docs-cn/pull/4933)                                                                            |   | 37d20h  |
+| tidb/15462   | [executor: implement `graceHashJoin`](https://github.com/pingcap/tidb/pull/15462)                                                             | Y | 284d18h |
+| tidb/16967   | [executor: Refactor Shuffle and implement parallel sort (executor part)](https://github.com/pingcap/tidb/pull/16967)                          | Y | 239d10h |
+| tidb/17238   | [*: refactor table.Allocator to improve readability](https://github.com/pingcap/tidb/pull/17238)                                              |   | 226d18h |
+| tidb/19120   | [executor: Concurrently fetch chunks and insert them to a concurrent hash table in hash build](https://github.com/pingcap/tidb/pull/19120)    |   | 138d21h |
+| tidb/19178   | [executor: Refactor probe channel](https://github.com/pingcap/tidb/pull/19178)                                                                |   | 136d17h |
+| tidb/19347   | [executor: support new syntax `create/drop binding for digest` for tidb dashboard usage](https://github.com/pingcap/tidb/pull/19347)          |   | 128d23h |
+| tidb/19807   | [executor: parallel evaluation for hash aggregate distinct](https://github.com/pingcap/tidb/pull/19807)                                       |   | 114d11h |
+| tidb/19900   | [executor: enable inline projection for sort&topN](https://github.com/pingcap/tidb/pull/19900)                                                | Y | 109d18h |
+| tidb/20140   | [expressions: Support `bin-to-uuid` and `uuid-to-bin`](https://github.com/pingcap/tidb/pull/20140)                                            |   | 96d22h  |
+| tidb/20220   | [*: new secondary index value format](https://github.com/pingcap/tidb/pull/20220)                                                             |   | 93d16h  |
+| tidb/20316   | [docs/design: add design doc for index usage information](https://github.com/pingcap/tidb/pull/20316)                                         |   | 88d17h  |
+| tidb/20335   | [planner, executor: enable inline projection for Selection](https://github.com/pingcap/tidb/pull/20335)                                       | Y | 85d18h  |
+| tidb/20360   | [planner: refine explain info for batch cop](https://github.com/pingcap/tidb/pull/20360)                                                      |   | 79d22h  |
+| tidb/20397   | [parser: replace ast.SelectLockInShareMode with ast.SelectLockForShare](https://github.com/pingcap/tidb/pull/20397)                           |   | 77d18h  |
+| tidb/20615   | [utils: Avoid panic when getting memory](https://github.com/pingcap/tidb/pull/20615)                                                          |   | 65d2h   |
+| tidb/20689   | [expression: make TIME function compatible with MySQL (#19158)](https://github.com/pingcap/tidb/pull/20689)                                   |   | 60d20h  |
+| tidb/20750   | [executor, infoschema, planner: optimize query cluster_slow_query](https://github.com/pingcap/tidb/pull/20750)                                |   | 55d23h  |
+| tidb/20752   | [*: trace statsCache and preparePlanCache by Global memory tracker.](https://github.com/pingcap/tidb/pull/20752)                              |   | 55d22h  |
+| tidb/20765   | [planner: support stable result mode](https://github.com/pingcap/tidb/pull/20765)                                                             |   | 55d17h  |
+| tidb/20894   | [planner, store/tikv, executor:Support shuffled hash join and refine codes](https://github.com/pingcap/tidb/pull/20894)                       |   | 51d19h  |
+| tidb/21137   | [executor: specially handle empty input for apply's outer child aggregate (#20544)](https://github.com/pingcap/tidb/pull/21137)               |   | 38d20h  |
+| tidb/21207   | [planner: fix the inappropriate out-of-range range estimation rule](https://github.com/pingcap/tidb/pull/21207)                               |   | 34d19h  |
+| tidb/21277   | [executor: fix split table with large integers](https://github.com/pingcap/tidb/pull/21277)                                                   |   | 32d20h  |
+| tidb/21310   | [types: convert string to MySQL BIT correctly](https://github.com/pingcap/tidb/pull/21310)                                                    |   | 31d22h  |
+| tidb/21364   | [expression: Add test cases to cover the cases when invalid int value is casted as TIME (#18653)](https://github.com/pingcap/tidb/pull/21364) |   | 28d1h   |
+| tidb/21381   | [*: optimize analyze cluster index table](https://github.com/pingcap/tidb/pull/21381)                                                         |   | 27d17h  |
+| tidb/21386   | [expression: Disable cast decimal as string push down to TiFlash](https://github.com/pingcap/tidb/pull/21386)                                 |   | 27d16h  |
+| tidb/21443   | [*: Let binary literal can be convert to enum and set (#20789)](https://github.com/pingcap/tidb/pull/21443)                                   |   | 25d14h  |
+| tidb/21504   | [planner: fix invalid convert type in between...and... (#19820)](https://github.com/pingcap/tidb/pull/21504)                                  | Y | 23d15h  |
+| tidb/21546   | [planner: do not push down the aggregation function with correlated column (#21453)](https://github.com/pingcap/tidb/pull/21546)              |   | 19d23h  |
+| tidb/21562   | [*:Adapt ScanDetailV2 in KvGet and KvBatchGet Response](https://github.com/pingcap/tidb/pull/21562)                                           |   | 19d17h  |
+| tidb/21573   | [expression: fix incorrect result of IsTrue function for time types (#21534)](https://github.com/pingcap/tidb/pull/21573)                     |   | 19d13h  |
+| tidb/21810   | [expression: handle hybrid field types for where clause (#21724)](https://github.com/pingcap/tidb/pull/21810)                                 |   | 12d18h  |
+| tidb/21813   | [expression: handle tp.flen overflow in to_base64 function (#20947)](https://github.com/pingcap/tidb/pull/21813)                              |   | 12d17h  |
+| tidb/21834   | [planner: enhanced index range calculation plan](https://github.com/pingcap/tidb/pull/21834)                                                  |   | 11d19h  |
+| tidb/21876   | [planner: bypass the DNF restriction if index merge hint is specified (#20799)](https://github.com/pingcap/tidb/pull/21876)                   |   | 9d19h   |
+| tidb/21877   | [planner: fix correlated aggregates which should be evaluated in outer query (#21431)](https://github.com/pingcap/tidb/pull/21877)            |   | 9d19h   |
+| tidb/21878   | [planner: do not push down lock to pointGet/bacthPointGet when selection exists](https://github.com/pingcap/tidb/pull/21878)                  |   | 9d18h   |
+| tidb/21890   | [*: redact some error code, part(3/3) (#21866)](https://github.com/pingcap/tidb/pull/21890)                                                   |   | 7d15h   |
+| tidb/21936   | [expression: fix wrong type inferring for ceiling function. (#21920)](https://github.com/pingcap/tidb/pull/21936)                             |   | 5d17h   |
+| tidb/21956   | [planner/preprocessor: disallow into-outfile clause in some place](https://github.com/pingcap/tidb/pull/21956)                                |   | 4d23h   |
+| tidb/21960   | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type. (#21849)](https://github.com/pingcap/tidb/pull/21960)                  |   | 4d21h   |
+| tidb/21982   | [executor: improve the runtime stats of index lookup reader](https://github.com/pingcap/tidb/pull/21982)                                      |   | 4d14h   |
+| tidb/22026   | [expression: separated arithmeticPlusIntSig](https://github.com/pingcap/tidb/pull/22026)                                                      |   | 2d20h   |
+| tidb/22039   | [ddl, planner: fix no failure in modifing and creating column DOUBLE(0,0)](https://github.com/pingcap/tidb/pull/22039)                        |   | 2d11h   |
+| tidb/22043   | [planner, executor: enhance the limit pushdown rule.](https://github.com/pingcap/tidb/pull/22043)                                             |   | 10h     |
 
 
 ## Reviewed in Last 7 Days
 
-|     REPO     |                                                                  PR                                                                   | C | D |   R   |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------------|---|---|-------|
-| tidb/21987   | [test: fix globalkilltest](https://github.com/pingcap/tidb/pull/21987)                                                                |   | 1 | 9h    |
-| tidb/21948   | [executor, session, sessionctx: fix the error message of read-only variable is corrupted](https://github.com/pingcap/tidb/pull/21948) |   | 3 | 3h    |
-| docs-cn/5106 | [releases: add tidb 3.0.20 release notes](https://github.com/pingcap/docs-cn/pull/5106)                                               |   | 3 | 6d0h  |
-| docs/4421    | [releases: add tidb 3.0.20 release notes](https://github.com/pingcap/docs/pull/4421)                                                  |   | 3 | 6d1h  |
-| tidb/21926   | [tikv: distinguish server timeout and server busy error for TiKV and TiFlash (#21109)](https://github.com/pingcap/tidb/pull/21926)    |   | 3 | 1h    |
-| tidb/21891   | [server: redact some error code, part(2/3) (#20591)](https://github.com/pingcap/tidb/pull/21891)                                      |   | 4 | 17h   |
-| tidb/21866   | [*: redact some error code, part(3/3)](https://github.com/pingcap/tidb/pull/21866)                                                    |   | 6 | 1d18h |
-| tidb/20591   | [server: redact some error code, part(2/3)](https://github.com/pingcap/tidb/pull/20591)                                               |   | 7 | 57d0h |
-| tidb/21851   | [*: Add start cluster in  run-tests.sh in globalkilltest](https://github.com/pingcap/tidb/pull/21851)                                 |   | 7 | 20h   |
+|     REPO     |                                                                  PR                                                                   | C | D |  R   |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------|---|---|------|
+| tidb/21987   | [test: fix globalkilltest](https://github.com/pingcap/tidb/pull/21987)                                                                |   | 4 | 9h   |
+| tidb/21948   | [executor, session, sessionctx: fix the error message of read-only variable is corrupted](https://github.com/pingcap/tidb/pull/21948) |   | 6 | 3h   |
+| docs-cn/5106 | [releases: add tidb 3.0.20 release notes](https://github.com/pingcap/docs-cn/pull/5106)                                               |   | 6 | 6d0h |
+| docs/4421    | [releases: add tidb 3.0.20 release notes](https://github.com/pingcap/docs/pull/4421)                                                  |   | 6 | 6d1h |
+| tidb/21926   | [tikv: distinguish server timeout and server busy error for TiKV and TiFlash (#21109)](https://github.com/pingcap/tidb/pull/21926)    |   | 6 | 1h   |
+| tidb/21891   | [server: redact some error code, part(2/3) (#20591)](https://github.com/pingcap/tidb/pull/21891)                                      |   | 7 | 17h  |
 
 
 </details> 
@@ -143,110 +142,106 @@
 
 |     REPO     |                                                                              PR                                                                              | C | LASTED  |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---|---------|
-| docs-cn/5139 | [system variable: add tidb_enable_rate_limit_action  (#4975)](https://github.com/pingcap/docs-cn/pull/5139)                                                  |   | 3d14h   |
-| tidb/19292   | [planner: suppport left join in join reorder](https://github.com/pingcap/tidb/pull/19292)                                                                    |   | 127d17h |
-| docs-cn/5159 | [add variable item `tidb_track_aggregate_memory_usage`](https://github.com/pingcap/docs-cn/pull/5159)                                                        |   | 23h     |
-| tidb/19900   | [executor: enable inline projection for sort&topN](https://github.com/pingcap/tidb/pull/19900)                                                               | Y | 106d18h |
-| tidb/20040   | [planner, expression: take NullFlag into consideration when optimize the `int non-const` <cmp > `non-int const`](https://github.com/pingcap/tidb/pull/20040) | Y | 99d14h  |
-| tidb/20140   | [expressions: Support `bin-to-uuid` and `uuid-to-bin`](https://github.com/pingcap/tidb/pull/20140)                                                           |   | 93d22h  |
-| tidb/20311   | [expression: fix overflow error when convert bit to int64 (#20266)](https://github.com/pingcap/tidb/pull/20311)                                              |   | 85d21h  |
-| tidb/20350   | [executor: support read global indexes in IndexMergeReader and index join](https://github.com/pingcap/tidb/pull/20350)                                       | Y | 79d14h  |
-| tidb/20505   | [*: Add metrics for oom-action and sql memory usage.](https://github.com/pingcap/tidb/pull/20505)                                                            |   | 66d19h  |
-| tidb/20576   | [*: fix stats feedback after tableReader handle multiple ranges](https://github.com/pingcap/tidb/pull/20576)                                                 |   | 64d13h  |
-| tidb/20613   | [executor: fix issue of hash join fetch time inaccurate](https://github.com/pingcap/tidb/pull/20613)                                                         |   | 62d13h  |
-| tidb/20752   | [*: trace statsCache and preparePlanCache by Global memory tracker.](https://github.com/pingcap/tidb/pull/20752)                                             |   | 52d22h  |
-| tidb/20790   | [collation: add pinyin collation for chinese charset support](https://github.com/pingcap/tidb/pull/20790)                                                    |   | 51d21h  |
-| tidb/20793   | [planner, executor: enable inline projection for Apply](https://github.com/pingcap/tidb/pull/20793)                                                          |   | 51d21h  |
-| tidb/20905   | [planner: fix statement-optimize not work in `TryFastPlan`](https://github.com/pingcap/tidb/pull/20905)                                                      |   | 48d17h  |
-| tidb/20938   | [planner: fix update statement not blocked by primary (#20842)](https://github.com/pingcap/tidb/pull/20938)                                                  |   | 45d17h  |
-| tidb/20972   | [expression: POC implementation of Vitess hashing algorithm.](https://github.com/pingcap/tidb/pull/20972)                                                    |   | 44d1h   |
-| tidb/21064   | [planner, executor: fix cast not check error](https://github.com/pingcap/tidb/pull/21064)                                                                    |   | 39d9h   |
-| tidb/21149   | [executor:Add runtime stat for IndexMergeReaderExecutor (#20653)](https://github.com/pingcap/tidb/pull/21149)                                                |   | 35d14h  |
-| tidb/21155   | [util/chunk: fix slice out of bound panic](https://github.com/pingcap/tidb/pull/21155)                                                                       |   | 35d12h  |
-| tidb/21228   | [executor: return the result immediately when combining LIMIT row_count with DISTINCT](https://github.com/pingcap/tidb/pull/21228)                           |   | 31d13h  |
-| tidb/21304   | [executor: Add the HashAggExec runtime information (#20577)](https://github.com/pingcap/tidb/pull/21304)                                                     |   | 29d12h  |
-| tidb/21334   | [*: make rollback work on user-defined variables](https://github.com/pingcap/tidb/pull/21334)                                                                |   | 28d14h  |
-| tidb/21340   | [executor: initialize expensive query handler on domain creation](https://github.com/pingcap/tidb/pull/21340)                                                |   | 28d0h   |
-| tidb/21425   | [planner: natural join not consider rowid and null eq not propagate (#21328)](https://github.com/pingcap/tidb/pull/21425)                                    |   | 22d22h  |
-| tidb/21459   | [planner: push down projection for tiflash](https://github.com/pingcap/tidb/pull/21459)                                                                      |   | 21d22h  |
-| tidb/21473   | [ddl: check the generated column offset when modifies column (#21458)](https://github.com/pingcap/tidb/pull/21473)                                           |   | 21d16h  |
-| tidb/21476   | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21476)                                                        |   | 21d15h  |
-| tidb/21477   | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21477)                                                        |   | 21d15h  |
-| tidb/21483   | [executor, store/tikv: locks exist keys for point_get & batch_point_get (#21229)](https://github.com/pingcap/tidb/pull/21483)                                |   | 21d13h  |
-| tidb/21488   | [planner: fix ambiguous field when resolve having expr  (#21165)](https://github.com/pingcap/tidb/pull/21488)                                                |   | 20d22h  |
-| tidb/21504   | [planner: fix invalid convert type in between...and... (#19820)](https://github.com/pingcap/tidb/pull/21504)                                                 | Y | 20d15h  |
-| tidb/21532   | [expression: set IsBooleanFlag for boolean scalar functions (#20706)](https://github.com/pingcap/tidb/pull/21532)                                            |   | 17d17h  |
-| tidb/21536   | [executor: add slow-log file meta cache to avoid repeat read file meta information](https://github.com/pingcap/tidb/pull/21536)                              |   | 17d15h  |
-| tidb/21550   | [planner : fix unsigned_decimal_col=-int_cnst access index (#21198)](https://github.com/pingcap/tidb/pull/21550)                                             |   | 16d19h  |
-| tidb/21564   | [ddl: fix Incorrect behavior of NO_ZERO_DATE when altering table](https://github.com/pingcap/tidb/pull/21564)                                                |   | 16d16h  |
-| tidb/21573   | [expression: fix incorrect result of IsTrue function for time types (#21534)](https://github.com/pingcap/tidb/pull/21573)                                    |   | 16d13h  |
-| tidb/21590   | [expression: fix compatibility behaviors in sec_to_time with MySQL  (#21555)](https://github.com/pingcap/tidb/pull/21590)                                    |   | 15d21h  |
-| tidb/21593   | [expression: fix convert number base for hybrid type (#21554)](https://github.com/pingcap/tidb/pull/21593)                                                   |   | 15d20h  |
-| tidb/21602   | [expression: not evaluate time addition for timestamp with 2 args if 1st arg's year is zero (#21572)](https://github.com/pingcap/tidb/pull/21602)            |   | 15d17h  |
-| tidb/21608   | [expression: fix error "invalid time format: '{0 0 0 0 0 0 0}'" for timestampAdd (#21591)](https://github.com/pingcap/tidb/pull/21608)                       |   | 15d16h  |
-| tidb/21610   | [*: remove needless InInsertStmt (#19787)](https://github.com/pingcap/tidb/pull/21610)                                                                       |   | 15d15h  |
-| tidb/21614   | [planner: do not propagate column eq with different column types (#21495)](https://github.com/pingcap/tidb/pull/21614)                                       |   | 15d14h  |
-| tidb/21626   | [test: convert test to benchmard test to make ci stable (#21616)](https://github.com/pingcap/tidb/pull/21626)                                                |   | 14d23h  |
-| tidb/21635   | [expression: handle invalid argument for addtime and subtime function  (#21600)](https://github.com/pingcap/tidb/pull/21635)                                 |   | 14d19h  |
-| tidb/21673   | [expression, types: fix unexpected result from TIME() when fsp digits > 6 (#21652)](https://github.com/pingcap/tidb/pull/21673)                              |   | 13d17h  |
-| tidb/21676   | [expression: fix compatibility of extract day_time unit functions (#21601)](https://github.com/pingcap/tidb/pull/21676)                                      |   | 13d17h  |
-| tidb/21680   | [planner: report error when ORDER BY conflicts with DISTINCT (#21286)](https://github.com/pingcap/tidb/pull/21680)                                           |   | 13d16h  |
-| tidb/21697   | [planner: check for only_full_group_by in ORDER BY and HAVING (#21216)](https://github.com/pingcap/tidb/pull/21697)                                          |   | 10d19h  |
-| tidb/21711   | [expression: Fix unexpected panic when using IF function. (#21132)](https://github.com/pingcap/tidb/pull/21711)                                              |   | 10d17h  |
-| tidb/21714   | [planner: fix the coercibility of the cast function (#21705)](https://github.com/pingcap/tidb/pull/21714)                                                    |   | 10d17h  |
-| tidb/21718   | [types: fix compare object json type (#21703)](https://github.com/pingcap/tidb/pull/21718)                                                                   |   | 10d16h  |
-| tidb/21785   | [types: fix compare float64 with float64 in json (#21709)](https://github.com/pingcap/tidb/pull/21785)                                                       |   | 9d22h   |
-| tidb/21808   | [planner: fix the fail when we compare multi fields in the subquery (#21699)](https://github.com/pingcap/tidb/pull/21808)                                    |   | 9d18h   |
-| tidb/21810   | [expression: handle hybrid field types for where clause (#21724)](https://github.com/pingcap/tidb/pull/21810)                                                |   | 9d18h   |
-| tidb/21813   | [expression: handle tp.flen overflow in to_base64 function (#20947)](https://github.com/pingcap/tidb/pull/21813)                                             |   | 9d17h   |
-| tidb/21826   | [types: refine JSON conversion, throw err when object/array convert to integer/float/decimal](https://github.com/pingcap/tidb/pull/21826)                    |   | 9d11h   |
-| tidb/21839   | [planner/core: add 'split table using statistics' statement](https://github.com/pingcap/tidb/pull/21839)                                                     |   | 8d15h   |
-| tidb/21853   | [expression: fix compatibility behaviors in time_format with MySQL (#21559)](https://github.com/pingcap/tidb/pull/21853)                                     |   | 7d19h   |
-| tidb/21870   | [types: report error for json object with key length >= 65536 (#21779)](https://github.com/pingcap/tidb/pull/21870)                                          |   | 6d22h   |
-| tidb/21874   | [expression:truncate decimal value instead of return error (#21691)](https://github.com/pingcap/tidb/pull/21874)                                             |   | 6d20h   |
-| tidb/21877   | [planner: fix correlated aggregates which should be evaluated in outer query (#21431)](https://github.com/pingcap/tidb/pull/21877)                           |   | 6d19h   |
-| tidb/21896   | [planner: fix union doesn't handle collate correctly (#21854)](https://github.com/pingcap/tidb/pull/21896)                                                   |   | 3d19h   |
-| tidb/21897   | [executor: support exact staleness begin statement](https://github.com/pingcap/tidb/pull/21897)                                                              |   | 3d18h   |
-| tidb/21916   | [server: double type column from table should ignore its decimal (#21788)](https://github.com/pingcap/tidb/pull/21916)                                       |   | 2d23h   |
-| tidb/21924   | [expression: fix type infer for tidb's builtin compare(least and greatest) (#21150)](https://github.com/pingcap/tidb/pull/21924)                             |   | 2d19h   |
-| tidb/21936   | [expression: fix wrong type inferring for ceiling function. (#21920)](https://github.com/pingcap/tidb/pull/21936)                                            |   | 2d17h   |
-| tidb/21957   | [planner: fix unknown columns in join using below agg (#21922)](https://github.com/pingcap/tidb/pull/21957)                                                  |   | 1d23h   |
-| tidb/21958   | [expression: fix comparing json with string (#21903)](https://github.com/pingcap/tidb/pull/21958)                                                            |   | 1d22h   |
-| tidb/21964   | [planner: add plancodec id for all type TableScan/IndexScan. (#21935)](https://github.com/pingcap/tidb/pull/21964)                                           |   | 1d18h   |
-| tidb/21972   | [executor: throw error when prepared statement is execute, deallocate or prepare (#21962)](https://github.com/pingcap/tidb/pull/21972)                       |   | 1d16h   |
-| tidb/21982   | [executor: improve the runtime stats of index lookup reader](https://github.com/pingcap/tidb/pull/21982)                                                     |   | 1d14h   |
-| tidb/21984   | [executor: fix `update ignore` into not exists partition](https://github.com/pingcap/tidb/pull/21984)                                                        |   | 1d13h   |
-| tidb/22012   | [ddl: fix db_test failure caused by domain reload delay under a high overload (#21928)](https://github.com/pingcap/tidb/pull/22012)                          |   | 17h     |
-| tidb/22013   | [executor: fix unstable test Issue16696 (#22009)](https://github.com/pingcap/tidb/pull/22013)                                                                |   | 17h     |
-| tidb/22014   | [executor: fix unstable test Issue16696 (#22009)](https://github.com/pingcap/tidb/pull/22014)                                                                |   | 17h     |
-| tidb/22022   | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22022)                    |   | 0h      |
+| tidb/19292   | [planner: suppport left join in join reorder](https://github.com/pingcap/tidb/pull/19292)                                                                    |   | 130d17h |
+| docs-cn/5139 | [system variable: add tidb_enable_rate_limit_action  (#4975)](https://github.com/pingcap/docs-cn/pull/5139)                                                  |   | 6d15h   |
+| tidb/19900   | [executor: enable inline projection for sort&topN](https://github.com/pingcap/tidb/pull/19900)                                                               | Y | 109d18h |
+| tidb/20040   | [planner, expression: take NullFlag into consideration when optimize the `int non-const` <cmp > `non-int const`](https://github.com/pingcap/tidb/pull/20040) | Y | 102d14h |
+| tidb/20140   | [expressions: Support `bin-to-uuid` and `uuid-to-bin`](https://github.com/pingcap/tidb/pull/20140)                                                           |   | 96d22h  |
+| tidb/20311   | [expression: fix overflow error when convert bit to int64 (#20266)](https://github.com/pingcap/tidb/pull/20311)                                              |   | 88d21h  |
+| tidb/20350   | [executor: support read global indexes in IndexMergeReader and index join](https://github.com/pingcap/tidb/pull/20350)                                       | Y | 82d14h  |
+| tidb/20505   | [*: Add metrics for oom-action and sql memory usage.](https://github.com/pingcap/tidb/pull/20505)                                                            |   | 69d19h  |
+| tidb/20576   | [*: fix stats feedback after tableReader handle multiple ranges](https://github.com/pingcap/tidb/pull/20576)                                                 |   | 67d13h  |
+| tidb/20613   | [executor: fix issue of hash join fetch time inaccurate](https://github.com/pingcap/tidb/pull/20613)                                                         |   | 65d13h  |
+| tidb/20752   | [*: trace statsCache and preparePlanCache by Global memory tracker.](https://github.com/pingcap/tidb/pull/20752)                                             |   | 55d22h  |
+| tidb/20790   | [collation: add pinyin collation for chinese charset support](https://github.com/pingcap/tidb/pull/20790)                                                    |   | 54d21h  |
+| tidb/20793   | [planner, executor: enable inline projection for Apply](https://github.com/pingcap/tidb/pull/20793)                                                          |   | 54d21h  |
+| tidb/20905   | [planner: fix statement-optimize not work in `TryFastPlan`](https://github.com/pingcap/tidb/pull/20905)                                                      |   | 51d17h  |
+| tidb/20938   | [planner: fix update statement not blocked by primary (#20842)](https://github.com/pingcap/tidb/pull/20938)                                                  |   | 48d17h  |
+| tidb/20972   | [expression: POC implementation of Vitess hashing algorithm.](https://github.com/pingcap/tidb/pull/20972)                                                    |   | 47d1h   |
+| tidb/21064   | [planner, executor: fix cast not check error](https://github.com/pingcap/tidb/pull/21064)                                                                    |   | 42d9h   |
+| tidb/21149   | [executor:Add runtime stat for IndexMergeReaderExecutor (#20653)](https://github.com/pingcap/tidb/pull/21149)                                                |   | 38d14h  |
+| tidb/21155   | [util/chunk: fix slice out of bound panic](https://github.com/pingcap/tidb/pull/21155)                                                                       |   | 38d12h  |
+| tidb/21228   | [executor: return the result immediately when combining LIMIT row_count with DISTINCT](https://github.com/pingcap/tidb/pull/21228)                           |   | 34d13h  |
+| tidb/21304   | [executor: Add the HashAggExec runtime information (#20577)](https://github.com/pingcap/tidb/pull/21304)                                                     |   | 32d12h  |
+| tidb/21334   | [*: make rollback work on user-defined variables](https://github.com/pingcap/tidb/pull/21334)                                                                |   | 31d14h  |
+| tidb/21340   | [executor: initialize expensive query handler on domain creation](https://github.com/pingcap/tidb/pull/21340)                                                |   | 31d0h   |
+| tidb/21425   | [planner: natural join not consider rowid and null eq not propagate (#21328)](https://github.com/pingcap/tidb/pull/21425)                                    |   | 25d22h  |
+| tidb/21459   | [planner: push down projection for tiflash](https://github.com/pingcap/tidb/pull/21459)                                                                      |   | 24d22h  |
+| tidb/21473   | [ddl: check the generated column offset when modifies column (#21458)](https://github.com/pingcap/tidb/pull/21473)                                           |   | 24d17h  |
+| tidb/21476   | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21476)                                                        |   | 24d15h  |
+| tidb/21477   | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21477)                                                        |   | 24d15h  |
+| tidb/21483   | [executor, store/tikv: locks exist keys for point_get & batch_point_get (#21229)](https://github.com/pingcap/tidb/pull/21483)                                |   | 24d13h  |
+| tidb/21488   | [planner: fix ambiguous field when resolve having expr  (#21165)](https://github.com/pingcap/tidb/pull/21488)                                                |   | 23d23h  |
+| tidb/21504   | [planner: fix invalid convert type in between...and... (#19820)](https://github.com/pingcap/tidb/pull/21504)                                                 | Y | 23d15h  |
+| tidb/21532   | [expression: set IsBooleanFlag for boolean scalar functions (#20706)](https://github.com/pingcap/tidb/pull/21532)                                            |   | 20d17h  |
+| tidb/21536   | [executor: add slow-log file meta cache to avoid repeat read file meta information](https://github.com/pingcap/tidb/pull/21536)                              |   | 20d15h  |
+| tidb/21550   | [planner : fix unsigned_decimal_col=-int_cnst access index (#21198)](https://github.com/pingcap/tidb/pull/21550)                                             |   | 19d19h  |
+| tidb/21564   | [ddl: fix Incorrect behavior of NO_ZERO_DATE when altering table](https://github.com/pingcap/tidb/pull/21564)                                                |   | 19d16h  |
+| tidb/21573   | [expression: fix incorrect result of IsTrue function for time types (#21534)](https://github.com/pingcap/tidb/pull/21573)                                    |   | 19d13h  |
+| tidb/21590   | [expression: fix compatibility behaviors in sec_to_time with MySQL  (#21555)](https://github.com/pingcap/tidb/pull/21590)                                    |   | 18d21h  |
+| tidb/21593   | [expression: fix convert number base for hybrid type (#21554)](https://github.com/pingcap/tidb/pull/21593)                                                   |   | 18d20h  |
+| tidb/21602   | [expression: not evaluate time addition for timestamp with 2 args if 1st arg's year is zero (#21572)](https://github.com/pingcap/tidb/pull/21602)            |   | 18d17h  |
+| tidb/21608   | [expression: fix error "invalid time format: '{0 0 0 0 0 0 0}'" for timestampAdd (#21591)](https://github.com/pingcap/tidb/pull/21608)                       |   | 18d16h  |
+| tidb/21610   | [*: remove needless InInsertStmt (#19787)](https://github.com/pingcap/tidb/pull/21610)                                                                       |   | 18d15h  |
+| tidb/21614   | [planner: do not propagate column eq with different column types (#21495)](https://github.com/pingcap/tidb/pull/21614)                                       |   | 18d14h  |
+| tidb/21626   | [test: convert test to benchmard test to make ci stable (#21616)](https://github.com/pingcap/tidb/pull/21626)                                                |   | 17d23h  |
+| tidb/21635   | [expression: handle invalid argument for addtime and subtime function  (#21600)](https://github.com/pingcap/tidb/pull/21635)                                 |   | 17d19h  |
+| tidb/21673   | [expression, types: fix unexpected result from TIME() when fsp digits > 6 (#21652)](https://github.com/pingcap/tidb/pull/21673)                              |   | 16d17h  |
+| tidb/21676   | [expression: fix compatibility of extract day_time unit functions (#21601)](https://github.com/pingcap/tidb/pull/21676)                                      |   | 16d17h  |
+| tidb/21680   | [planner: report error when ORDER BY conflicts with DISTINCT (#21286)](https://github.com/pingcap/tidb/pull/21680)                                           |   | 16d16h  |
+| tidb/21697   | [planner: check for only_full_group_by in ORDER BY and HAVING (#21216)](https://github.com/pingcap/tidb/pull/21697)                                          |   | 13d20h  |
+| tidb/21711   | [expression: Fix unexpected panic when using IF function. (#21132)](https://github.com/pingcap/tidb/pull/21711)                                              |   | 13d17h  |
+| tidb/21714   | [planner: fix the coercibility of the cast function (#21705)](https://github.com/pingcap/tidb/pull/21714)                                                    |   | 13d17h  |
+| tidb/21718   | [types: fix compare object json type (#21703)](https://github.com/pingcap/tidb/pull/21718)                                                                   |   | 13d16h  |
+| tidb/21785   | [types: fix compare float64 with float64 in json (#21709)](https://github.com/pingcap/tidb/pull/21785)                                                       |   | 12d22h  |
+| tidb/21808   | [planner: fix the fail when we compare multi fields in the subquery (#21699)](https://github.com/pingcap/tidb/pull/21808)                                    |   | 12d18h  |
+| tidb/21810   | [expression: handle hybrid field types for where clause (#21724)](https://github.com/pingcap/tidb/pull/21810)                                                |   | 12d18h  |
+| tidb/21813   | [expression: handle tp.flen overflow in to_base64 function (#20947)](https://github.com/pingcap/tidb/pull/21813)                                             |   | 12d17h  |
+| tidb/21826   | [types: refine JSON conversion, throw err when object/array convert to integer/float/decimal](https://github.com/pingcap/tidb/pull/21826)                    |   | 12d11h  |
+| tidb/21839   | [planner/core: add 'split table using statistics' statement](https://github.com/pingcap/tidb/pull/21839)                                                     |   | 11d15h  |
+| tidb/21853   | [expression: fix compatibility behaviors in time_format with MySQL (#21559)](https://github.com/pingcap/tidb/pull/21853)                                     |   | 10d19h  |
+| tidb/21870   | [types: report error for json object with key length >= 65536 (#21779)](https://github.com/pingcap/tidb/pull/21870)                                          |   | 9d22h   |
+| tidb/21874   | [expression:truncate decimal value instead of return error (#21691)](https://github.com/pingcap/tidb/pull/21874)                                             |   | 9d20h   |
+| tidb/21877   | [planner: fix correlated aggregates which should be evaluated in outer query (#21431)](https://github.com/pingcap/tidb/pull/21877)                           |   | 9d19h   |
+| tidb/21896   | [planner: fix union doesn't handle collate correctly (#21854)](https://github.com/pingcap/tidb/pull/21896)                                                   |   | 6d19h   |
+| tidb/21897   | [executor: support exact staleness begin statement](https://github.com/pingcap/tidb/pull/21897)                                                              |   | 6d18h   |
+| tidb/21916   | [server: double type column from table should ignore its decimal (#21788)](https://github.com/pingcap/tidb/pull/21916)                                       |   | 5d23h   |
+| tidb/21924   | [expression: fix type infer for tidb's builtin compare(least and greatest) (#21150)](https://github.com/pingcap/tidb/pull/21924)                             |   | 5d19h   |
+| tidb/21936   | [expression: fix wrong type inferring for ceiling function. (#21920)](https://github.com/pingcap/tidb/pull/21936)                                            |   | 5d17h   |
+| tidb/21957   | [planner: fix unknown columns in join using below agg (#21922)](https://github.com/pingcap/tidb/pull/21957)                                                  |   | 4d23h   |
+| tidb/21958   | [expression: fix comparing json with string (#21903)](https://github.com/pingcap/tidb/pull/21958)                                                            |   | 4d22h   |
+| tidb/21964   | [planner: add plancodec id for all type TableScan/IndexScan. (#21935)](https://github.com/pingcap/tidb/pull/21964)                                           |   | 4d18h   |
+| tidb/21972   | [executor: throw error when prepared statement is execute, deallocate or prepare (#21962)](https://github.com/pingcap/tidb/pull/21972)                       |   | 4d16h   |
+| tidb/21982   | [executor: improve the runtime stats of index lookup reader](https://github.com/pingcap/tidb/pull/21982)                                                     |   | 4d14h   |
+| tidb/21984   | [executor: fix `update ignore` into not exists partition](https://github.com/pingcap/tidb/pull/21984)                                                        |   | 4d13h   |
+| tidb/22013   | [executor: fix unstable test Issue16696 (#22009)](https://github.com/pingcap/tidb/pull/22013)                                                                |   | 3d17h   |
+| tidb/22014   | [executor: fix unstable test Issue16696 (#22009)](https://github.com/pingcap/tidb/pull/22014)                                                                |   | 3d17h   |
+| tidb/22044   | [planner: check if columns count matches for batch point get in TryFastPlan](https://github.com/pingcap/tidb/pull/22044)                                     |   | 10h     |
 
 
 ## Reviewed in Last 7 Days
 
 |      REPO      |                                                                    PR                                                                     | C | D |   R    |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------|---|---|--------|
-| tidb/22019     | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22019) |   | 1 | 13h    |
-| tidb/21937     | [planner/codec: fix issue of decode plan error cause by without escape special char](https://github.com/pingcap/tidb/pull/21937)          |   | 1 | 2d0h   |
-| tidb/22009     | [executor: fix unstable test Issue16696](https://github.com/pingcap/tidb/pull/22009)                                                      |   | 1 | 0h     |
-| tidb/22008     | [ddl: fix db_test failure caused by domain reload delay under a high overload (#21928)](https://github.com/pingcap/tidb/pull/22008)       |   | 1 | 0h     |
-| tidb/21497     | [ddl: add the `not` expression check when creating a partition table](https://github.com/pingcap/tidb/pull/21497)                         |   | 1 | 20d0h  |
-| tidb/21997     | [planner: add special partition pruner for list columns partition (#21577)](https://github.com/pingcap/tidb/pull/21997)                   |   | 1 | 1h     |
-| docs-cn/5159   | [add variable item `tidb_track_aggregate_memory_usage`](https://github.com/pingcap/docs-cn/pull/5159)                                     |   | 1 | 0h     |
-| tidb/21962     | [executor: throw error when prepared statement is execute, deallocate or prepare](https://github.com/pingcap/tidb/pull/21962)             |   | 2 | 1h     |
-| tidb/21805     | [range:  fix overflow value access index](https://github.com/pingcap/tidb/pull/21805)                                                     |   | 2 | 8d0h   |
-| tidb/21935     | [planner: add plancodec id for all type TableScan/IndexScan.](https://github.com/pingcap/tidb/pull/21935)                                 |   | 2 | 22h    |
-| tidb/21929     | [executor: fix data race in extractTxnScope](https://github.com/pingcap/tidb/pull/21929)                                                  |   | 2 | 19h    |
-| tidb/21903     | [expression: fix comparing json with string](https://github.com/pingcap/tidb/pull/21903)                                                  |   | 3 | 1d3h   |
-| tidb/21577     | [planner: add special partition pruner for list columns partition](https://github.com/pingcap/tidb/pull/21577)                            |   | 3 | 13d23h |
-| tidb-test/1137 | [make greatest and least type infer mysql-compatible](https://github.com/pingcap/tidb-test/pull/1137)                                     |   | 4 | 0h     |
-| tidb/21150     | [expression: fix type infer for tidb's builtin compare(least and greatest)](https://github.com/pingcap/tidb/pull/21150)                   |   | 4 | 32d1h  |
-| tidb/21832     | [planner: ignore ORDER BY when there is aggregate without GROUP BY](https://github.com/pingcap/tidb/pull/21832)                           |   | 4 | 5d2h   |
-| tidb/21788     | [server: double type column from table should ignore its decimal](https://github.com/pingcap/tidb/pull/21788)                             |   | 4 | 6d1h   |
-| tidb/20233     | [expression, types: fix datetime and year comparison error](https://github.com/pingcap/tidb/pull/20233)                                   | Y | 7 | 82d14h |
-| tidb-test/1126 | [charset: change set character set test to which we supprot](https://github.com/pingcap/tidb-test/pull/1126)                              |   | 7 | 8d19h  |
-| tidb/21854     | [planner: fix union doesn't handle collate correctly](https://github.com/pingcap/tidb/pull/21854)                                         |   | 7 | 21h    |
-| tidb/20894     | [planner, store/tikv, executor:Support shuffled hash join and refine codes](https://github.com/pingcap/tidb/pull/20894)                   |   | 7 | 41d20h |
+| docs-cn/5159   | [add variable item `tidb_track_aggregate_memory_usage`](https://github.com/pingcap/docs-cn/pull/5159)                                     |   | 3 | 1d6h   |
+| tidb/20894     | [planner, store/tikv, executor:Support shuffled hash join and refine codes](https://github.com/pingcap/tidb/pull/20894)                   |   | 3 | 49d0h  |
+| tidb/22022     | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22022) |   | 3 | 3h     |
+| tidb/22019     | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22019) |   | 4 | 13h    |
+| tidb/21937     | [planner/codec: fix issue of decode plan error cause by without escape special char](https://github.com/pingcap/tidb/pull/21937)          |   | 4 | 2d0h   |
+| tidb/22009     | [executor: fix unstable test Issue16696](https://github.com/pingcap/tidb/pull/22009)                                                      |   | 4 | 0h     |
+| tidb/22008     | [ddl: fix db_test failure caused by domain reload delay under a high overload (#21928)](https://github.com/pingcap/tidb/pull/22008)       |   | 4 | 0h     |
+| tidb/21497     | [ddl: add the `not` expression check when creating a partition table](https://github.com/pingcap/tidb/pull/21497)                         |   | 4 | 20d0h  |
+| tidb/21997     | [planner: add special partition pruner for list columns partition (#21577)](https://github.com/pingcap/tidb/pull/21997)                   |   | 4 | 1h     |
+| tidb/21962     | [executor: throw error when prepared statement is execute, deallocate or prepare](https://github.com/pingcap/tidb/pull/21962)             |   | 5 | 1h     |
+| tidb/21805     | [range:  fix overflow value access index](https://github.com/pingcap/tidb/pull/21805)                                                     |   | 5 | 8d0h   |
+| tidb/21935     | [planner: add plancodec id for all type TableScan/IndexScan.](https://github.com/pingcap/tidb/pull/21935)                                 |   | 5 | 22h    |
+| tidb/21929     | [executor: fix data race in extractTxnScope](https://github.com/pingcap/tidb/pull/21929)                                                  |   | 5 | 19h    |
+| tidb/21903     | [expression: fix comparing json with string](https://github.com/pingcap/tidb/pull/21903)                                                  |   | 6 | 1d3h   |
+| tidb/21577     | [planner: add special partition pruner for list columns partition](https://github.com/pingcap/tidb/pull/21577)                            |   | 6 | 13d23h |
+| tidb-test/1137 | [make greatest and least type infer mysql-compatible](https://github.com/pingcap/tidb-test/pull/1137)                                     |   | 7 | 0h     |
+| tidb/21150     | [expression: fix type infer for tidb's builtin compare(least and greatest)](https://github.com/pingcap/tidb/pull/21150)                   |   | 7 | 32d1h  |
+| tidb/21832     | [planner: ignore ORDER BY when there is aggregate without GROUP BY](https://github.com/pingcap/tidb/pull/21832)                           |   | 7 | 5d2h   |
+| tidb/21788     | [server: double type column from table should ignore its decimal](https://github.com/pingcap/tidb/pull/21788)                             |   | 7 | 6d1h   |
 
 
 </details> 
@@ -277,37 +272,37 @@
 
 |    REPO    |                                                                  PR                                                                  | C | LASTED  |
 |------------|--------------------------------------------------------------------------------------------------------------------------------------|---|---------|
-| tidb/14729 | [planner: fix constant propagation for PredicatePushDown](https://github.com/pingcap/tidb/pull/14729)                                | Y | 317d18h |
-| tidb/14831 | [planner/cascades: add implementationRule for IndexLookUpJoin](https://github.com/pingcap/tidb/pull/14831)                           |   | 310d17h |
-| tidb/15090 | [planner/cascades: refine the row count estimation of TiKV layer Selection](https://github.com/pingcap/tidb/pull/15090)              |   | 296d18h |
-| tidb/15157 | [planner/cascades: implement `HashCode` method for all the LogicalPlans](https://github.com/pingcap/tidb/pull/15157)                 | Y | 294d14h |
-| tidb/15335 | [planner/cascades: add transformation rule PullAggregationUpApply & EliminateMaxOneRow](https://github.com/pingcap/tidb/pull/15335)  |   | 287d18h |
-| tidb/15370 | [planner,executor: Refactor Shuffle and implement parallel Sort](https://github.com/pingcap/tidb/pull/15370)                         | Y | 285d19h |
-| tidb/17276 | [planner/cascades: add rule InjectProjectionBelowSort](https://github.com/pingcap/tidb/pull/17276)                                   | Y | 220d9h  |
-| tidb/18882 | [planner, executor: add explain for `MetricSummaryTableExtractor`](https://github.com/pingcap/tidb/pull/18882)                       | Y | 147d17h |
-| tidb/19347 | [executor: support new syntax `create/drop binding for digest` for tidb dashboard usage](https://github.com/pingcap/tidb/pull/19347) |   | 125d23h |
-| tidb/20580 | [statistics: add bucket ndv for index histogram](https://github.com/pingcap/tidb/pull/20580)                                         |   | 63d20h  |
-| tidb/20877 | [statistics: collect index usage information](https://github.com/pingcap/tidb/pull/20877)                                            |   | 49d17h  |
-| tidb/21444 | [planner: ignore anonymous index while tiflash replica is available](https://github.com/pingcap/tidb/pull/21444)                     |   | 22d12h  |
-| tidb/21459 | [planner: push down projection for tiflash](https://github.com/pingcap/tidb/pull/21459)                                              |   | 21d22h  |
-| tidb/21488 | [planner: fix ambiguous field when resolve having expr  (#21165)](https://github.com/pingcap/tidb/pull/21488)                        |   | 20d22h  |
-| tidb/21573 | [expression: fix incorrect result of IsTrue function for time types (#21534)](https://github.com/pingcap/tidb/pull/21573)            |   | 16d13h  |
-| tidb/21680 | [planner: report error when ORDER BY conflicts with DISTINCT (#21286)](https://github.com/pingcap/tidb/pull/21680)                   |   | 13d16h  |
-| tidb/21697 | [planner: check for only_full_group_by in ORDER BY and HAVING (#21216)](https://github.com/pingcap/tidb/pull/21697)                  |   | 10d19h  |
-| tidb/21994 | [range: fix overflow value access index ](https://github.com/pingcap/tidb/pull/21994)                                                |   | 23h     |
+| tidb/14729 | [planner: fix constant propagation for PredicatePushDown](https://github.com/pingcap/tidb/pull/14729)                                | Y | 320d18h |
+| tidb/14831 | [planner/cascades: add implementationRule for IndexLookUpJoin](https://github.com/pingcap/tidb/pull/14831)                           |   | 313d17h |
+| tidb/15090 | [planner/cascades: refine the row count estimation of TiKV layer Selection](https://github.com/pingcap/tidb/pull/15090)              |   | 299d18h |
+| tidb/15157 | [planner/cascades: implement `HashCode` method for all the LogicalPlans](https://github.com/pingcap/tidb/pull/15157)                 | Y | 297d14h |
+| tidb/15335 | [planner/cascades: add transformation rule PullAggregationUpApply & EliminateMaxOneRow](https://github.com/pingcap/tidb/pull/15335)  |   | 290d18h |
+| tidb/15370 | [planner,executor: Refactor Shuffle and implement parallel Sort](https://github.com/pingcap/tidb/pull/15370)                         | Y | 288d19h |
+| tidb/17276 | [planner/cascades: add rule InjectProjectionBelowSort](https://github.com/pingcap/tidb/pull/17276)                                   | Y | 223d9h  |
+| tidb/18882 | [planner, executor: add explain for `MetricSummaryTableExtractor`](https://github.com/pingcap/tidb/pull/18882)                       | Y | 150d17h |
+| tidb/19347 | [executor: support new syntax `create/drop binding for digest` for tidb dashboard usage](https://github.com/pingcap/tidb/pull/19347) |   | 128d23h |
+| tidb/20580 | [statistics: add bucket ndv for index histogram](https://github.com/pingcap/tidb/pull/20580)                                         |   | 66d20h  |
+| tidb/20877 | [statistics: collect index usage information](https://github.com/pingcap/tidb/pull/20877)                                            |   | 52d17h  |
+| tidb/21444 | [planner: ignore anonymous index while tiflash replica is available](https://github.com/pingcap/tidb/pull/21444)                     |   | 25d12h  |
+| tidb/21459 | [planner: push down projection for tiflash](https://github.com/pingcap/tidb/pull/21459)                                              |   | 24d22h  |
+| tidb/21488 | [planner: fix ambiguous field when resolve having expr  (#21165)](https://github.com/pingcap/tidb/pull/21488)                        |   | 23d23h  |
+| tidb/21573 | [expression: fix incorrect result of IsTrue function for time types (#21534)](https://github.com/pingcap/tidb/pull/21573)            |   | 19d13h  |
+| tidb/21680 | [planner: report error when ORDER BY conflicts with DISTINCT (#21286)](https://github.com/pingcap/tidb/pull/21680)                   |   | 16d16h  |
+| tidb/21697 | [planner: check for only_full_group_by in ORDER BY and HAVING (#21216)](https://github.com/pingcap/tidb/pull/21697)                  |   | 13d20h  |
+| tidb/21994 | [range: fix overflow value access index ](https://github.com/pingcap/tidb/pull/21994)                                                |   | 3d23h   |
 
 
 ## Reviewed in Last 7 Days
 
 |      REPO      |                                                                   PR                                                                   | C | D |   R    |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------|---|---|--------|
-| tidb/21960     | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type. (#21849)](https://github.com/pingcap/tidb/pull/21960)           |   | 2 | 1h     |
-| tidb/21911     | [metrics,planner: add 'pseudo estimation' reason in the metrics](https://github.com/pingcap/tidb/pull/21911)                           |   | 3 | 12h    |
-| tidb-test/1136 | [Revert "make greatest and least type infer mysql-compatible"](https://github.com/pingcap/tidb-test/pull/1136)                         |   | 4 | 0h     |
-| tidb/21849     | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type.](https://github.com/pingcap/tidb/pull/21849)                    |   | 4 | 4d3h   |
-| tidb/21809     | [util/ranger: convert range condition like `x >= 2 and x <= 2` to point condition `x = 2`](https://github.com/pingcap/tidb/pull/21809) |   | 4 | 5d22h  |
-| tidb/21444     | [planner: ignore anonymous index while tiflash replica is available](https://github.com/pingcap/tidb/pull/21444)                       |   | 4 | 18d13h |
-| tidb/21318     | [planner, expression: use the range of column types to simplify expressions](https://github.com/pingcap/tidb/pull/21318)               |   | 7 | 22d0h  |
+| tidb-test/1140 | [mysql_test: update show create table with charset info if column is generate (#1096)](https://github.com/pingcap/tidb-test/pull/1140) |   | 3 | 1h     |
+| tidb/21960     | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type. (#21849)](https://github.com/pingcap/tidb/pull/21960)           |   | 5 | 1h     |
+| tidb/21911     | [metrics,planner: add 'pseudo estimation' reason in the metrics](https://github.com/pingcap/tidb/pull/21911)                           |   | 6 | 12h    |
+| tidb-test/1136 | [Revert "make greatest and least type infer mysql-compatible"](https://github.com/pingcap/tidb-test/pull/1136)                         |   | 7 | 0h     |
+| tidb/21849     | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type.](https://github.com/pingcap/tidb/pull/21849)                    |   | 7 | 4d3h   |
+| tidb/21809     | [util/ranger: convert range condition like `x >= 2 and x <= 2` to point condition `x = 2`](https://github.com/pingcap/tidb/pull/21809) |   | 7 | 5d22h  |
+| tidb/21444     | [planner: ignore anonymous index while tiflash replica is available](https://github.com/pingcap/tidb/pull/21444)                       |   | 7 | 18d13h |
 
 
 </details> 
@@ -320,15 +315,16 @@
 
 |    REPO    |                                                   PR                                                   | C | LASTED  |
 |------------|--------------------------------------------------------------------------------------------------------|---|---------|
-| tidb/19845 | [expression:fix FORMAT compatibility issue #11206](https://github.com/pingcap/tidb/pull/19845)         | Y | 108d16h |
-| tidb/20117 | [optimizer: fix issue on incorrect result of natural join](https://github.com/pingcap/tidb/pull/20117) | Y | 94d20h  |
+| tidb/19845 | [expression:fix FORMAT compatibility issue #11206](https://github.com/pingcap/tidb/pull/19845)         | Y | 111d16h |
+| tidb/20117 | [optimizer: fix issue on incorrect result of natural join](https://github.com/pingcap/tidb/pull/20117) | Y | 97d21h  |
 
 
 ## Reviewed in Last 7 Days
 
-|   REPO    |                                        PR                                         | C | D | R  |
-|-----------|-----------------------------------------------------------------------------------|---|---|----|
-| tics/1303 | [Fix random failure for mpp execution](https://github.com/pingcap/tics/pull/1303) |   | 2 | 3h |
+|    REPO    |                                        PR                                         | C | D |   R   |
+|------------|-----------------------------------------------------------------------------------|---|---|-------|
+| tidb/21631 | [tests: add mpp mock test, part 2](https://github.com/pingcap/tidb/pull/21631)    |   | 3 | 15d1h |
+| tics/1303  | [Fix random failure for mpp execution](https://github.com/pingcap/tics/pull/1303) |   | 5 | 3h    |
 
 
 </details> 
@@ -341,19 +337,19 @@
 
 |    REPO    |                                                            PR                                                            | C | LASTED  |
 |------------|--------------------------------------------------------------------------------------------------------------------------|---|---------|
-| tidb/18312 | [expression: fix compatible problem with mysql when parse datetime](https://github.com/pingcap/tidb/pull/18312)          |   | 176d17h |
-| tidb/21676 | [expression: fix compatibility of extract day_time unit functions (#21601)](https://github.com/pingcap/tidb/pull/21676)  |   | 13d17h  |
-| tidb/21850 | [expression: add implicit eval int and real for function dayname (#21806)](https://github.com/pingcap/tidb/pull/21850)   |   | 7d19h   |
-| tidb/21853 | [expression: fix compatibility behaviors in time_format with MySQL (#21559)](https://github.com/pingcap/tidb/pull/21853) |   | 7d19h   |
+| tidb/18312 | [expression: fix compatible problem with mysql when parse datetime](https://github.com/pingcap/tidb/pull/18312)          |   | 179d17h |
+| tidb/21676 | [expression: fix compatibility of extract day_time unit functions (#21601)](https://github.com/pingcap/tidb/pull/21676)  |   | 16d17h  |
+| tidb/21850 | [expression: add implicit eval int and real for function dayname (#21806)](https://github.com/pingcap/tidb/pull/21850)   |   | 10d19h  |
+| tidb/21853 | [expression: fix compatibility behaviors in time_format with MySQL (#21559)](https://github.com/pingcap/tidb/pull/21853) |   | 10d19h  |
 
 
 ## Reviewed in Last 7 Days
 
 |    REPO    |                                                              PR                                                              | C | D |   R   |
 |------------|------------------------------------------------------------------------------------------------------------------------------|---|---|-------|
-| tidb/21960 | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type. (#21849)](https://github.com/pingcap/tidb/pull/21960) |   | 2 | 1h    |
-| tidb/21849 | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type.](https://github.com/pingcap/tidb/pull/21849)          |   | 4 | 4d7h  |
-| tidb/21310 | [types: convert string to MySQL BIT correctly](https://github.com/pingcap/tidb/pull/21310)                                   |   | 4 | 25d9h |
+| tidb/21960 | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type. (#21849)](https://github.com/pingcap/tidb/pull/21960) |   | 5 | 1h    |
+| tidb/21849 | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type.](https://github.com/pingcap/tidb/pull/21849)          |   | 7 | 4d7h  |
+| tidb/21310 | [types: convert string to MySQL BIT correctly](https://github.com/pingcap/tidb/pull/21310)                                   |   | 7 | 25d9h |
 
 
 </details> 
@@ -366,99 +362,93 @@
 
 |     REPO     |                                                                    PR                                                                     | C | LASTED  |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------|---|---------|
-| tidb/14729   | [planner: fix constant propagation for PredicatePushDown](https://github.com/pingcap/tidb/pull/14729)                                     | Y | 317d18h |
-| docs-cn/4913 | [explain: add indexes](https://github.com/pingcap/docs-cn/pull/4913)                                                                      |   | 38d18h  |
-| tidb/17414   | [add curCost based join reorder algorithm](https://github.com/pingcap/tidb/pull/17414)                                                    |   | 212d18h |
-| tidb/19347   | [executor: support new syntax `create/drop binding for digest` for tidb dashboard usage](https://github.com/pingcap/tidb/pull/19347)      |   | 125d23h |
-| tidb/19698   | [*: update test cases to support new collation enabled by default](https://github.com/pingcap/tidb/pull/19698)                            |   | 113d23h |
-| tidb/20044   | [expression: Add column nullability checking before "refine args"](https://github.com/pingcap/tidb/pull/20044)                            | Y | 99d7h   |
-| tidb/20444   | [expression: add json_merge_patch](https://github.com/pingcap/tidb/pull/20444)                                                            |   | 71d21h  |
-| tidb/20465   | [expression: add uuidShortFunction](https://github.com/pingcap/tidb/pull/20465)                                                           |   | 70d19h  |
-| tidb/20505   | [*: Add metrics for oom-action and sql memory usage.](https://github.com/pingcap/tidb/pull/20505)                                         |   | 66d19h  |
-| tidb/20618   | [planner: fix update generated columns error](https://github.com/pingcap/tidb/pull/20618)                                                 |   | 61d20h  |
-| tidb/20642   | [executor: modify admin executors to support partitioned table with global index](https://github.com/pingcap/tidb/pull/20642)             |   | 59d15h  |
-| tidb/20825   | [executor: add diagnosis rule to check Transparent Huge Pages(THP) enabled (#20611)](https://github.com/pingcap/tidb/pull/20825)          |   | 50d18h  |
-| tidb/20865   | [executor:Add runtime information for UnionScanExec](https://github.com/pingcap/tidb/pull/20865)                                          |   | 49d18h  |
-| tidb/20898   | [executor: modify the error message of insert time value (#20847)](https://github.com/pingcap/tidb/pull/20898)                            |   | 48d17h  |
-| tidb/20903   | [planner: fix confused and unnecessary double-projection in plans.](https://github.com/pingcap/tidb/pull/20903)                           |   | 48d17h  |
-| tidb/20938   | [planner: fix update statement not blocked by primary (#20842)](https://github.com/pingcap/tidb/pull/20938)                               |   | 45d17h  |
-| tidb/21018   | [planner: don't push down null sensitive join conditions (#19620)](https://github.com/pingcap/tidb/pull/21018)                            |   | 42d17h  |
-| tidb/21051   | [executor: change read slow-log file module to concurrent](https://github.com/pingcap/tidb/pull/21051)                                    |   | 41d14h  |
-| tidb/21137   | [executor: specially handle empty input for apply's outer child aggregate (#20544)](https://github.com/pingcap/tidb/pull/21137)           |   | 35d20h  |
-| tidb/21195   | [brie: integrate lightning to suport IMPORT statement](https://github.com/pingcap/tidb/pull/21195)                                        |   | 31d23h  |
-| tidb/21275   | [*: rewrite origin SQL with default DB for SQL bindings](https://github.com/pingcap/tidb/pull/21275)                                      |   | 29d22h  |
-| tidb/21310   | [types: convert string to MySQL BIT correctly](https://github.com/pingcap/tidb/pull/21310)                                                |   | 28d22h  |
-| tidb/21334   | [*: make rollback work on user-defined variables](https://github.com/pingcap/tidb/pull/21334)                                             |   | 28d14h  |
-| tidb/21347   | [session: make rollback work on global variables](https://github.com/pingcap/tidb/pull/21347)                                             |   | 27d19h  |
-| tidb/21401   | [expression: incompatibility with MySQL for ADDTIME()](https://github.com/pingcap/tidb/pull/21401)                                        |   | 24d11h  |
-| tidb/21404   | [planner: fix unexpected bad plan when IndexJoin inner side estRow is 0. (#21084)](https://github.com/pingcap/tidb/pull/21404)            |   | 23d22h  |
-| tidb/21444   | [planner: ignore anonymous index while tiflash replica is available](https://github.com/pingcap/tidb/pull/21444)                          |   | 22d12h  |
-| tidb/21487   | [*: ensure TABLE statement works](https://github.com/pingcap/tidb/pull/21487)                                                             |   | 21d4h   |
-| tidb/21641   | [executor: Fix pessimistic lock doesn't work on the partition table for subquery/joins](https://github.com/pingcap/tidb/pull/21641)       |   | 14d18h  |
-| tidb/21651   | [planner: allow filter condition pushing down to IndexScan for prefix index](https://github.com/pingcap/tidb/pull/21651)                  |   | 14d14h  |
-| tidb/21680   | [planner: report error when ORDER BY conflicts with DISTINCT (#21286)](https://github.com/pingcap/tidb/pull/21680)                        |   | 13d16h  |
-| tidb/21711   | [expression: Fix unexpected panic when using IF function. (#21132)](https://github.com/pingcap/tidb/pull/21711)                           |   | 10d17h  |
-| tidb/21777   | [session/bootstrap: disable clustered index by default](https://github.com/pingcap/tidb/pull/21777)                                       |   | 9d23h   |
-| tidb/21808   | [planner: fix the fail when we compare multi fields in the subquery (#21699)](https://github.com/pingcap/tidb/pull/21808)                 |   | 9d18h   |
-| tidb/21842   | [planner: Shuffle hash agg](https://github.com/pingcap/tidb/pull/21842)                                                                   |   | 8d10h   |
-| tidb/21850   | [expression: add implicit eval int and real for function dayname (#21806)](https://github.com/pingcap/tidb/pull/21850)                    |   | 7d19h   |
-| tidb/21853   | [expression: fix compatibility behaviors in time_format with MySQL (#21559)](https://github.com/pingcap/tidb/pull/21853)                  |   | 7d19h   |
-| tidb/21868   | [bindinfo: sync concurrent ops on mysql.bind_info from multiple tidb instances (#21629)](https://github.com/pingcap/tidb/pull/21868)      |   | 7d6h    |
-| tidb/21870   | [types: report error for json object with key length >= 65536 (#21779)](https://github.com/pingcap/tidb/pull/21870)                       |   | 6d22h   |
-| tidb/21877   | [planner: fix correlated aggregates which should be evaluated in outer query (#21431)](https://github.com/pingcap/tidb/pull/21877)        |   | 6d19h   |
-| tidb/21924   | [expression: fix type infer for tidb's builtin compare(least and greatest) (#21150)](https://github.com/pingcap/tidb/pull/21924)          |   | 2d19h   |
-| tidb/21931   | [*: support baseline capture for prepared statements (#21271)](https://github.com/pingcap/tidb/pull/21931)                                |   | 2d18h   |
-| tidb/21941   | [bindinfo: enforce default_db to lower case for SQL bind operations (#21861)](https://github.com/pingcap/tidb/pull/21941)                 |   | 2d15h   |
-| tidb/21954   | [planner/cascades: add rule `PushSelDownApply`](https://github.com/pingcap/tidb/pull/21954)                                               |   | 1d23h   |
-| tidb/21963   | [ddl: add charset info in show create table if column is generated (#20347)](https://github.com/pingcap/tidb/pull/21963)                  | Y | 1d18h   |
-| tidb/21968   | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21968)                                     |   | 1d17h   |
-| tidb/21969   | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21969)                                     |   | 1d17h   |
-| tidb/21970   | [planner: generate correct query block name and offset for update / delete (#21823)](https://github.com/pingcap/tidb/pull/21970)          |   | 1d17h   |
-| tidb/21972   | [executor: throw error when prepared statement is execute, deallocate or prepare (#21962)](https://github.com/pingcap/tidb/pull/21972)    |   | 1d16h   |
-| tidb/21976   | [planner: report error for invalid window specs which are not used (#21083)](https://github.com/pingcap/tidb/pull/21976)                  |   | 1d16h   |
-| tidb/22010   | [go.mod: update br to release 5.0](https://github.com/pingcap/tidb/pull/22010)                                                            |   | 17h     |
-| tidb/22019   | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22019) |   | 14h     |
-| tidb/22022   | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22022) |   | 0h      |
+| tidb/14729   | [planner: fix constant propagation for PredicatePushDown](https://github.com/pingcap/tidb/pull/14729)                                     | Y | 320d18h |
+| docs-cn/4913 | [explain: add indexes](https://github.com/pingcap/docs-cn/pull/4913)                                                                      |   | 41d18h  |
+| tidb/17414   | [add curCost based join reorder algorithm](https://github.com/pingcap/tidb/pull/17414)                                                    |   | 215d18h |
+| tidb/19347   | [executor: support new syntax `create/drop binding for digest` for tidb dashboard usage](https://github.com/pingcap/tidb/pull/19347)      |   | 128d23h |
+| tidb/19698   | [*: update test cases to support new collation enabled by default](https://github.com/pingcap/tidb/pull/19698)                            |   | 116d23h |
+| tidb/20044   | [expression: Add column nullability checking before "refine args"](https://github.com/pingcap/tidb/pull/20044)                            | Y | 102d7h  |
+| tidb/20444   | [expression: add json_merge_patch](https://github.com/pingcap/tidb/pull/20444)                                                            |   | 74d21h  |
+| tidb/20465   | [expression: add uuidShortFunction](https://github.com/pingcap/tidb/pull/20465)                                                           |   | 73d19h  |
+| tidb/20505   | [*: Add metrics for oom-action and sql memory usage.](https://github.com/pingcap/tidb/pull/20505)                                         |   | 69d19h  |
+| tidb/20618   | [planner: fix update generated columns error](https://github.com/pingcap/tidb/pull/20618)                                                 |   | 64d20h  |
+| tidb/20642   | [executor: modify admin executors to support partitioned table with global index](https://github.com/pingcap/tidb/pull/20642)             |   | 62d15h  |
+| tidb/20825   | [executor: add diagnosis rule to check Transparent Huge Pages(THP) enabled (#20611)](https://github.com/pingcap/tidb/pull/20825)          |   | 53d18h  |
+| tidb/20865   | [executor:Add runtime information for UnionScanExec](https://github.com/pingcap/tidb/pull/20865)                                          |   | 52d18h  |
+| tidb/20898   | [executor: modify the error message of insert time value (#20847)](https://github.com/pingcap/tidb/pull/20898)                            |   | 51d18h  |
+| tidb/20903   | [planner: fix confused and unnecessary double-projection in plans.](https://github.com/pingcap/tidb/pull/20903)                           |   | 51d17h  |
+| tidb/20938   | [planner: fix update statement not blocked by primary (#20842)](https://github.com/pingcap/tidb/pull/20938)                               |   | 48d17h  |
+| tidb/21018   | [planner: don't push down null sensitive join conditions (#19620)](https://github.com/pingcap/tidb/pull/21018)                            |   | 45d17h  |
+| tidb/21051   | [executor: change read slow-log file module to concurrent](https://github.com/pingcap/tidb/pull/21051)                                    |   | 44d14h  |
+| tidb/21137   | [executor: specially handle empty input for apply's outer child aggregate (#20544)](https://github.com/pingcap/tidb/pull/21137)           |   | 38d20h  |
+| tidb/21195   | [brie: integrate lightning to suport IMPORT statement](https://github.com/pingcap/tidb/pull/21195)                                        |   | 34d23h  |
+| tidb/21275   | [*: rewrite origin SQL with default DB for SQL bindings](https://github.com/pingcap/tidb/pull/21275)                                      |   | 32d22h  |
+| tidb/21310   | [types: convert string to MySQL BIT correctly](https://github.com/pingcap/tidb/pull/21310)                                                |   | 31d22h  |
+| tidb/21334   | [*: make rollback work on user-defined variables](https://github.com/pingcap/tidb/pull/21334)                                             |   | 31d14h  |
+| tidb/21347   | [session: make rollback work on global variables](https://github.com/pingcap/tidb/pull/21347)                                             |   | 30d20h  |
+| tidb/21401   | [expression: incompatibility with MySQL for ADDTIME()](https://github.com/pingcap/tidb/pull/21401)                                        |   | 27d11h  |
+| tidb/21404   | [planner: fix unexpected bad plan when IndexJoin inner side estRow is 0. (#21084)](https://github.com/pingcap/tidb/pull/21404)            |   | 26d22h  |
+| tidb/21444   | [planner: ignore anonymous index while tiflash replica is available](https://github.com/pingcap/tidb/pull/21444)                          |   | 25d12h  |
+| tidb/21487   | [*: ensure TABLE statement works](https://github.com/pingcap/tidb/pull/21487)                                                             |   | 24d5h   |
+| tidb/21641   | [executor: Fix pessimistic lock doesn't work on the partition table for subquery/joins](https://github.com/pingcap/tidb/pull/21641)       |   | 17d18h  |
+| tidb/21651   | [planner: allow filter condition pushing down to IndexScan for prefix index](https://github.com/pingcap/tidb/pull/21651)                  |   | 17d14h  |
+| tidb/21680   | [planner: report error when ORDER BY conflicts with DISTINCT (#21286)](https://github.com/pingcap/tidb/pull/21680)                        |   | 16d16h  |
+| tidb/21711   | [expression: Fix unexpected panic when using IF function. (#21132)](https://github.com/pingcap/tidb/pull/21711)                           |   | 13d17h  |
+| tidb/21808   | [planner: fix the fail when we compare multi fields in the subquery (#21699)](https://github.com/pingcap/tidb/pull/21808)                 |   | 12d18h  |
+| tidb/21842   | [planner: Shuffle hash agg](https://github.com/pingcap/tidb/pull/21842)                                                                   |   | 11d10h  |
+| tidb/21850   | [expression: add implicit eval int and real for function dayname (#21806)](https://github.com/pingcap/tidb/pull/21850)                    |   | 10d19h  |
+| tidb/21853   | [expression: fix compatibility behaviors in time_format with MySQL (#21559)](https://github.com/pingcap/tidb/pull/21853)                  |   | 10d19h  |
+| tidb/21868   | [bindinfo: sync concurrent ops on mysql.bind_info from multiple tidb instances (#21629)](https://github.com/pingcap/tidb/pull/21868)      |   | 10d6h   |
+| tidb/21870   | [types: report error for json object with key length >= 65536 (#21779)](https://github.com/pingcap/tidb/pull/21870)                       |   | 9d22h   |
+| tidb/21877   | [planner: fix correlated aggregates which should be evaluated in outer query (#21431)](https://github.com/pingcap/tidb/pull/21877)        |   | 9d19h   |
+| tidb/21924   | [expression: fix type infer for tidb's builtin compare(least and greatest) (#21150)](https://github.com/pingcap/tidb/pull/21924)          |   | 5d19h   |
+| tidb/21931   | [*: support baseline capture for prepared statements (#21271)](https://github.com/pingcap/tidb/pull/21931)                                |   | 5d18h   |
+| tidb/21941   | [bindinfo: enforce default_db to lower case for SQL bind operations (#21861)](https://github.com/pingcap/tidb/pull/21941)                 |   | 5d15h   |
+| tidb/21954   | [planner/cascades: add rule `PushSelDownApply`](https://github.com/pingcap/tidb/pull/21954)                                               |   | 4d23h   |
+| tidb/21968   | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21968)                                     |   | 4d17h   |
+| tidb/21969   | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21969)                                     |   | 4d17h   |
+| tidb/21970   | [planner: generate correct query block name and offset for update / delete (#21823)](https://github.com/pingcap/tidb/pull/21970)          |   | 4d17h   |
+| tidb/21972   | [executor: throw error when prepared statement is execute, deallocate or prepare (#21962)](https://github.com/pingcap/tidb/pull/21972)    |   | 4d16h   |
+| tidb/21976   | [planner: report error for invalid window specs which are not used (#21083)](https://github.com/pingcap/tidb/pull/21976)                  |   | 4d16h   |
+| tidb/22022   | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22022) |   | 3d0h    |
+| tidb/22037   | [planner: fix incorrect range for prefix index range scan](https://github.com/pingcap/tidb/pull/22037)                                    |   | 2d13h   |
+| tidb/22038   | [select into outfile `untime error: index out of range`](https://github.com/pingcap/tidb/pull/22038)                                      |   | 2d13h   |
 
 
 ## Reviewed in Last 7 Days
 
 |      REPO      |                                                                     PR                                                                      | C | D |   R    |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------|---|---|--------|
-| tidb/21953     | [executor, session, sessionctx: make last_plan_from_cache and last_plan_from_binding read-only](https://github.com/pingcap/tidb/pull/21953) |   | 1 | 1d5h   |
-| tidb/22006     | [config: disable statistics feedback by default (#21923)](https://github.com/pingcap/tidb/pull/22006)                                       |   | 1 | 0h     |
-| tidb/21338     | [expression: fix different types compare error](https://github.com/pingcap/tidb/pull/21338)                                                 |   | 1 | 27d7h  |
-| tidb/21237     | [executor: fix a bug that can not insert null into a not null column in the empty SQL mode](https://github.com/pingcap/tidb/pull/21237)     |   | 1 | 30d3h  |
-| tidb/22003     | [config: disable statistics feedback by default (#21923)](https://github.com/pingcap/tidb/pull/22003)                                       |   | 1 | 1h     |
-| docs-cn/5156   | [errorcode: Add TiFlashServerBusy and TiFlashServerTimeout.](https://github.com/pingcap/docs-cn/pull/5156)                                  |   | 1 | 20h    |
-| tidb-test/1114 | [mysql_test: update window_functions for #21083](https://github.com/pingcap/tidb-test/pull/1114)                                            |   | 2 | 27d1h  |
-| tidb/21604     | [expression, json: fix converting from string to decimal (#21592)](https://github.com/pingcap/tidb/pull/21604)                              |   | 2 | 14d0h  |
-| tidb/21466     | [bindinfo: physically delete previous binding when recreating a binding (#21349)](https://github.com/pingcap/tidb/pull/21466)               |   | 2 | 20d0h  |
-| tidb/21823     | [planner: generate correct query block name and offset for update / delete](https://github.com/pingcap/tidb/pull/21823)                     |   | 2 | 7d21h  |
-| tidb/20929     | [types:  Add a limitation about float data type](https://github.com/pingcap/tidb/pull/20929)                                                |   | 2 | 44d0h  |
-| tidb/21962     | [executor: throw error when prepared statement is execute, deallocate or prepare](https://github.com/pingcap/tidb/pull/21962)               |   | 2 | 0h     |
-| tidb/21813     | [expression: handle tp.flen overflow in to_base64 function (#20947)](https://github.com/pingcap/tidb/pull/21813)                            |   | 2 | 7d22h  |
-| tidb/21960     | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type. (#21849)](https://github.com/pingcap/tidb/pull/21960)                |   | 2 | 1h     |
-| tidb/21936     | [expression: fix wrong type inferring for ceiling function. (#21920)](https://github.com/pingcap/tidb/pull/21936)                           |   | 2 | 19h    |
-| tidb/21958     | [expression: fix comparing json with string (#21903)](https://github.com/pingcap/tidb/pull/21958)                                           |   | 2 | 1h     |
-| tidb/21903     | [expression: fix comparing json with string](https://github.com/pingcap/tidb/pull/21903)                                                    |   | 2 | 1d18h  |
-| tidb/21832     | [planner: ignore ORDER BY when there is aggregate without GROUP BY](https://github.com/pingcap/tidb/pull/21832)                             |   | 2 | 6d21h  |
-| tidb/21926     | [tikv: distinguish server timeout and server busy error for TiKV and TiFlash (#21109)](https://github.com/pingcap/tidb/pull/21926)          |   | 3 | 1h     |
-| tidb/21849     | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type.](https://github.com/pingcap/tidb/pull/21849)                         |   | 3 | 5d1h   |
-| tidb/21923     | [config: disable statistics feedback by default](https://github.com/pingcap/tidb/pull/21923)                                                |   | 3 | 1h     |
-| tidb-test/1135 | [mysql_test: add tests for agg as outer child of apply](https://github.com/pingcap/tidb-test/pull/1135)                                     |   | 3 | 20h    |
-| tidb/21920     | [expression: fix wrong type inferring for ceiling function.](https://github.com/pingcap/tidb/pull/21920)                                    |   | 3 | 0h     |
-| tidb-test/1137 | [make greatest and least type infer mysql-compatible](https://github.com/pingcap/tidb-test/pull/1137)                                       |   | 3 | 16h    |
-| tidb/21150     | [expression: fix type infer for tidb's builtin compare(least and greatest)](https://github.com/pingcap/tidb/pull/21150)                     |   | 3 | 32d17h |
-| tidb/21902     | [planner: prevent agg push down if it is in the outer child of apply](https://github.com/pingcap/tidb/pull/21902)                           |   | 4 | 17h    |
-| tidb/21776     | [planner, privilege: check for table not exists](https://github.com/pingcap/tidb/pull/21776)                                                |   | 4 | 6d7h   |
-| tidb/21064     | [planner, executor: fix cast not check error](https://github.com/pingcap/tidb/pull/21064)                                                   |   | 4 | 35d15h |
-| tidb/21874     | [expression:truncate decimal value instead of return error (#21691)](https://github.com/pingcap/tidb/pull/21874)                            |   | 4 | 3d0h   |
-| community/373  | [sig-planner: add reviewers](https://github.com/pingcap/community/pull/373)                                                                 |   | 4 | 3d22h  |
-| tidb/21783     | [util: fix bad number error with DISTINCT when dividing long decimals](https://github.com/pingcap/tidb/pull/21783)                          |   | 7 | 3d4h   |
-| tidb-test/1124 | [mysql_test: update window_functions for pr/21431](https://github.com/pingcap/tidb-test/pull/1124)                                          |   | 7 | 9d3h   |
-| tidb/21431     | [planner: fix correlated aggregates which should be evaluated in outer query](https://github.com/pingcap/tidb/pull/21431)                   |   | 7 | 15d23h |
-| tidb/21691     | [expression:truncate decimal value instead of return error](https://github.com/pingcap/tidb/pull/21691)                                     |   | 7 | 4d1h   |
+| tidb/21338     | [expression: fix different types compare error](https://github.com/pingcap/tidb/pull/21338)                                                 |   | 3 | 28d8h  |
+| tidb/21953     | [executor, session, sessionctx: make last_plan_from_cache and last_plan_from_binding read-only](https://github.com/pingcap/tidb/pull/21953) |   | 4 | 1d5h   |
+| tidb/22006     | [config: disable statistics feedback by default (#21923)](https://github.com/pingcap/tidb/pull/22006)                                       |   | 4 | 0h     |
+| tidb/21237     | [executor: fix a bug that can not insert null into a not null column in the empty SQL mode](https://github.com/pingcap/tidb/pull/21237)     |   | 4 | 30d3h  |
+| tidb/22003     | [config: disable statistics feedback by default (#21923)](https://github.com/pingcap/tidb/pull/22003)                                       |   | 4 | 1h     |
+| docs-cn/5156   | [errorcode: Add TiFlashServerBusy and TiFlashServerTimeout.](https://github.com/pingcap/docs-cn/pull/5156)                                  |   | 4 | 20h    |
+| tidb-test/1114 | [mysql_test: update window_functions for #21083](https://github.com/pingcap/tidb-test/pull/1114)                                            |   | 5 | 27d1h  |
+| tidb/21604     | [expression, json: fix converting from string to decimal (#21592)](https://github.com/pingcap/tidb/pull/21604)                              |   | 5 | 14d0h  |
+| tidb/21466     | [bindinfo: physically delete previous binding when recreating a binding (#21349)](https://github.com/pingcap/tidb/pull/21466)               |   | 5 | 20d0h  |
+| tidb/21823     | [planner: generate correct query block name and offset for update / delete](https://github.com/pingcap/tidb/pull/21823)                     |   | 5 | 7d21h  |
+| tidb/20929     | [types:  Add a limitation about float data type](https://github.com/pingcap/tidb/pull/20929)                                                |   | 5 | 44d0h  |
+| tidb/21962     | [executor: throw error when prepared statement is execute, deallocate or prepare](https://github.com/pingcap/tidb/pull/21962)               |   | 5 | 0h     |
+| tidb/21813     | [expression: handle tp.flen overflow in to_base64 function (#20947)](https://github.com/pingcap/tidb/pull/21813)                            |   | 5 | 7d22h  |
+| tidb/21960     | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type. (#21849)](https://github.com/pingcap/tidb/pull/21960)                |   | 5 | 1h     |
+| tidb/21936     | [expression: fix wrong type inferring for ceiling function. (#21920)](https://github.com/pingcap/tidb/pull/21936)                           |   | 5 | 19h    |
+| tidb/21958     | [expression: fix comparing json with string (#21903)](https://github.com/pingcap/tidb/pull/21958)                                           |   | 5 | 1h     |
+| tidb/21903     | [expression: fix comparing json with string](https://github.com/pingcap/tidb/pull/21903)                                                    |   | 5 | 1d18h  |
+| tidb/21832     | [planner: ignore ORDER BY when there is aggregate without GROUP BY](https://github.com/pingcap/tidb/pull/21832)                             |   | 5 | 6d21h  |
+| tidb/21926     | [tikv: distinguish server timeout and server busy error for TiKV and TiFlash (#21109)](https://github.com/pingcap/tidb/pull/21926)          |   | 6 | 1h     |
+| tidb/21849     | [types: Regard `TypeNewDecimal` as not a `hasVariantFieldLength` type.](https://github.com/pingcap/tidb/pull/21849)                         |   | 6 | 5d1h   |
+| tidb/21923     | [config: disable statistics feedback by default](https://github.com/pingcap/tidb/pull/21923)                                                |   | 6 | 1h     |
+| tidb-test/1135 | [mysql_test: add tests for agg as outer child of apply](https://github.com/pingcap/tidb-test/pull/1135)                                     |   | 6 | 20h    |
+| tidb/21920     | [expression: fix wrong type inferring for ceiling function.](https://github.com/pingcap/tidb/pull/21920)                                    |   | 6 | 0h     |
+| tidb-test/1137 | [make greatest and least type infer mysql-compatible](https://github.com/pingcap/tidb-test/pull/1137)                                       |   | 6 | 16h    |
+| tidb/21150     | [expression: fix type infer for tidb's builtin compare(least and greatest)](https://github.com/pingcap/tidb/pull/21150)                     |   | 6 | 32d17h |
+| tidb/21902     | [planner: prevent agg push down if it is in the outer child of apply](https://github.com/pingcap/tidb/pull/21902)                           |   | 7 | 17h    |
+| tidb/21776     | [planner, privilege: check for table not exists](https://github.com/pingcap/tidb/pull/21776)                                                |   | 7 | 6d7h   |
+| tidb/21064     | [planner, executor: fix cast not check error](https://github.com/pingcap/tidb/pull/21064)                                                   |   | 7 | 35d15h |
+| tidb/21874     | [expression:truncate decimal value instead of return error (#21691)](https://github.com/pingcap/tidb/pull/21874)                            |   | 7 | 3d0h   |
+| community/373  | [sig-planner: add reviewers](https://github.com/pingcap/community/pull/373)                                                                 |   | 7 | 3d22h  |
 
 
 </details> 
@@ -489,77 +479,79 @@
 
 |     REPO     |                                                                          PR                                                                          | C | LASTED  |
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---|---------|
-| docs-cn/5164 | [statistics: add docs for version 2](https://github.com/pingcap/docs-cn/pull/5164)                                                                   |   | 19h     |
-| tidb/16305   | [expression: separate signatures for `ModInt`](https://github.com/pingcap/tidb/pull/16305)                                                           | Y | 256d0h  |
-| parser/1138  | [*: create / drop extended stats by ALTER TABLE](https://github.com/pingcap/parser/pull/1138)                                                        |   | 13h     |
-| tidb/16967   | [executor: Refactor Shuffle and implement parallel sort (executor part)](https://github.com/pingcap/tidb/pull/16967)                                 | Y | 236d10h |
-| tidb/17396   | [types: improve StrToDate performance](https://github.com/pingcap/tidb/pull/17396)                                                                   | Y | 213d10h |
-| tidb/18882   | [planner, executor: add explain for `MetricSummaryTableExtractor`](https://github.com/pingcap/tidb/pull/18882)                                       | Y | 147d17h |
-| tidb/19029   | [types: fix unexpected NOT_NULL flags](https://github.com/pingcap/tidb/pull/19029)                                                                   |   | 140d22h |
-| tidb/19120   | [executor: Concurrently fetch chunks and insert them to a concurrent hash table in hash build](https://github.com/pingcap/tidb/pull/19120)           |   | 135d21h |
-| tidb/19292   | [planner: suppport left join in join reorder](https://github.com/pingcap/tidb/pull/19292)                                                            |   | 127d17h |
-| tidb/19957   | [executor: add builtin aggregate function `json_arrayagg`](https://github.com/pingcap/tidb/pull/19957)                                               | Y | 104d14h |
-| tidb/20011   | [statistics: fix incorrect total count used in index selectivity computation](https://github.com/pingcap/tidb/pull/20011)                            |   | 100d15h |
-| tidb/20316   | [docs/design: add design doc for index usage information](https://github.com/pingcap/tidb/pull/20316)                                                |   | 85d17h  |
-| tidb/20354   | [planner: rename relational operators (#14575)](https://github.com/pingcap/tidb/pull/20354)                                                          | Y | 78d5h   |
-| tidb/20399   | [*: make 'tidb_enable_change_column_type' available as a session variable](https://github.com/pingcap/tidb/pull/20399)                               |   | 74d16h  |
-| tidb/20689   | [expression: make TIME function compatible with MySQL (#19158)](https://github.com/pingcap/tidb/pull/20689)                                          |   | 57d20h  |
-| tidb/20708   | [*: separate auto_increment ID allocator from _tidb_rowid allocator](https://github.com/pingcap/tidb/pull/20708)                                     |   | 56d20h  |
-| tidb/20750   | [executor, infoschema, planner: optimize query cluster_slow_query](https://github.com/pingcap/tidb/pull/20750)                                       |   | 52d23h  |
-| tidb/20972   | [expression: POC implementation of Vitess hashing algorithm.](https://github.com/pingcap/tidb/pull/20972)                                            |   | 44d1h   |
-| tidb/21018   | [planner: don't push down null sensitive join conditions (#19620)](https://github.com/pingcap/tidb/pull/21018)                                       |   | 42d17h  |
-| tidb/21137   | [executor: specially handle empty input for apply's outer child aggregate (#20544)](https://github.com/pingcap/tidb/pull/21137)                      |   | 35d20h  |
-| tidb/21149   | [executor:Add runtime stat for IndexMergeReaderExecutor (#20653)](https://github.com/pingcap/tidb/pull/21149)                                        |   | 35d14h  |
-| tidb/21304   | [executor: Add the HashAggExec runtime information (#20577)](https://github.com/pingcap/tidb/pull/21304)                                             |   | 29d12h  |
-| tidb/21318   | [planner, expression: use the range of column types to simplify expressions](https://github.com/pingcap/tidb/pull/21318)                             |   | 28d19h  |
-| tidb/21359   | [*: add runtime stats for split region statement](https://github.com/pingcap/tidb/pull/21359)                                                        |   | 27d13h  |
-| tidb/21408   | [statistics: fix a bug which causes panic when using the clustered index and the new collation (#21379)](https://github.com/pingcap/tidb/pull/21408) |   | 23d20h  |
-| tidb/21424   | [sessionctx: move set variable to sysvar struct](https://github.com/pingcap/tidb/pull/21424)                                                         |   | 23d5h   |
-| tidb/21464   | [server: return results of ongoing queries when graceful shutdown (#19669)](https://github.com/pingcap/tidb/pull/21464)                              |   | 21d20h  |
-| tidb/21471   | [session: fix ineffective EXPLAIN FOR CONNECTION statement (#21044)](https://github.com/pingcap/tidb/pull/21471)                                     |   | 21d17h  |
-| tidb/21476   | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21476)                                                |   | 21d15h  |
-| tidb/21477   | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21477)                                                |   | 21d15h  |
-| tidb/21508   | [execution: fix dayofweek('0000-00-00') behavior](https://github.com/pingcap/tidb/pull/21508)                                                        |   | 20d10h  |
-| tidb/21525   | [expression: fix compatibility behaviors in zero datetime with MySQL (#21220)](https://github.com/pingcap/tidb/pull/21525)                           |   | 17d20h  |
-| tidb/21610   | [*: remove needless InInsertStmt (#19787)](https://github.com/pingcap/tidb/pull/21610)                                                               |   | 15d15h  |
-| tidb/21665   | [executor: fix LEAD and LAG's default value can not adapt to field type (#20747)](https://github.com/pingcap/tidb/pull/21665)                        |   | 13d19h  |
-| tidb/21680   | [planner: report error when ORDER BY conflicts with DISTINCT (#21286)](https://github.com/pingcap/tidb/pull/21680)                                   |   | 13d16h  |
-| tidb/21711   | [expression: Fix unexpected panic when using IF function. (#21132)](https://github.com/pingcap/tidb/pull/21711)                                      |   | 10d17h  |
-| tidb/21845   | [ddl, planner, types: add M>=D checking for decimal column definition with default value](https://github.com/pingcap/tidb/pull/21845)                |   | 7d23h   |
-| tidb/21868   | [bindinfo: sync concurrent ops on mysql.bind_info from multiple tidb instances (#21629)](https://github.com/pingcap/tidb/pull/21868)                 |   | 7d6h    |
-| tidb/21876   | [planner: bypass the DNF restriction if index merge hint is specified (#20799)](https://github.com/pingcap/tidb/pull/21876)                          |   | 6d19h   |
-| tidb/21895   | [executor: fix load data in file get wrong result #20854](https://github.com/pingcap/tidb/pull/21895)                                                |   | 3d20h   |
-| tidb/21924   | [expression: fix type infer for tidb's builtin compare(least and greatest) (#21150)](https://github.com/pingcap/tidb/pull/21924)                     |   | 2d19h   |
-| tidb/21930   | [planner: propagate NDV of column groups across plan nodes (#17854)](https://github.com/pingcap/tidb/pull/21930)                                     |   | 2d18h   |
-| tidb/21931   | [*: support baseline capture for prepared statements (#21271)](https://github.com/pingcap/tidb/pull/21931)                                           |   | 2d18h   |
-| tidb/21968   | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21968)                                                |   | 1d17h   |
-| tidb/21969   | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21969)                                                |   | 1d17h   |
-| tidb/21971   | [executor: fix `insert ignore` into not exists partition (#21904)](https://github.com/pingcap/tidb/pull/21971)                                       |   | 1d17h   |
-| tidb/21977   | [expression: log functions that can not be pushed to cop](https://github.com/pingcap/tidb/pull/21977)                                                |   | 1d16h   |
-| tidb/21982   | [executor: improve the runtime stats of index lookup reader](https://github.com/pingcap/tidb/pull/21982)                                             |   | 1d14h   |
-| tidb/22019   | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22019)            |   | 14h     |
-| tidb/22021   | [distsql: fix cop stats string display when there is only 1 rpc (#21901) (#21999)](https://github.com/pingcap/tidb/pull/22021)                       |   | 0h      |
+| docs-cn/5164 | [statistics: add docs for version 2](https://github.com/pingcap/docs-cn/pull/5164)                                                                   |   | 3d19h   |
+| tidb/16305   | [expression: separate signatures for `ModInt`](https://github.com/pingcap/tidb/pull/16305)                                                           | Y | 259d0h  |
+| parser/1138  | [*: create / drop extended stats by ALTER TABLE](https://github.com/pingcap/parser/pull/1138)                                                        |   | 3d13h   |
+| tidb/16967   | [executor: Refactor Shuffle and implement parallel sort (executor part)](https://github.com/pingcap/tidb/pull/16967)                                 | Y | 239d10h |
+| tidb/17396   | [types: improve StrToDate performance](https://github.com/pingcap/tidb/pull/17396)                                                                   | Y | 216d10h |
+| tidb/18882   | [planner, executor: add explain for `MetricSummaryTableExtractor`](https://github.com/pingcap/tidb/pull/18882)                                       | Y | 150d17h |
+| tidb/19029   | [types: fix unexpected NOT_NULL flags](https://github.com/pingcap/tidb/pull/19029)                                                                   |   | 143d22h |
+| tidb/19120   | [executor: Concurrently fetch chunks and insert them to a concurrent hash table in hash build](https://github.com/pingcap/tidb/pull/19120)           |   | 138d21h |
+| tidb/19292   | [planner: suppport left join in join reorder](https://github.com/pingcap/tidb/pull/19292)                                                            |   | 130d17h |
+| tidb/19957   | [executor: add builtin aggregate function `json_arrayagg`](https://github.com/pingcap/tidb/pull/19957)                                               | Y | 107d14h |
+| tidb/20011   | [statistics: fix incorrect total count used in index selectivity computation](https://github.com/pingcap/tidb/pull/20011)                            |   | 103d15h |
+| tidb/20316   | [docs/design: add design doc for index usage information](https://github.com/pingcap/tidb/pull/20316)                                                |   | 88d17h  |
+| tidb/20354   | [planner: rename relational operators (#14575)](https://github.com/pingcap/tidb/pull/20354)                                                          | Y | 81d5h   |
+| tidb/20399   | [*: make 'tidb_enable_change_column_type' available as a session variable](https://github.com/pingcap/tidb/pull/20399)                               |   | 77d16h  |
+| tidb/20689   | [expression: make TIME function compatible with MySQL (#19158)](https://github.com/pingcap/tidb/pull/20689)                                          |   | 60d20h  |
+| tidb/20708   | [*: separate auto_increment ID allocator from _tidb_rowid allocator](https://github.com/pingcap/tidb/pull/20708)                                     |   | 59d20h  |
+| tidb/20750   | [executor, infoschema, planner: optimize query cluster_slow_query](https://github.com/pingcap/tidb/pull/20750)                                       |   | 55d23h  |
+| tidb/20972   | [expression: POC implementation of Vitess hashing algorithm.](https://github.com/pingcap/tidb/pull/20972)                                            |   | 47d1h   |
+| tidb/21018   | [planner: don't push down null sensitive join conditions (#19620)](https://github.com/pingcap/tidb/pull/21018)                                       |   | 45d17h  |
+| tidb/21137   | [executor: specially handle empty input for apply's outer child aggregate (#20544)](https://github.com/pingcap/tidb/pull/21137)                      |   | 38d20h  |
+| tidb/21149   | [executor:Add runtime stat for IndexMergeReaderExecutor (#20653)](https://github.com/pingcap/tidb/pull/21149)                                        |   | 38d14h  |
+| tidb/21304   | [executor: Add the HashAggExec runtime information (#20577)](https://github.com/pingcap/tidb/pull/21304)                                             |   | 32d12h  |
+| tidb/21318   | [planner, expression: use the range of column types to simplify expressions](https://github.com/pingcap/tidb/pull/21318)                             |   | 31d19h  |
+| tidb/21359   | [*: add runtime stats for split region statement](https://github.com/pingcap/tidb/pull/21359)                                                        |   | 30d13h  |
+| tidb/21401   | [expression: incompatibility with MySQL for ADDTIME()](https://github.com/pingcap/tidb/pull/21401)                                                   |   | 27d11h  |
+| tidb/21408   | [statistics: fix a bug which causes panic when using the clustered index and the new collation (#21379)](https://github.com/pingcap/tidb/pull/21408) |   | 26d20h  |
+| tidb/21424   | [sessionctx: move set variable to sysvar struct](https://github.com/pingcap/tidb/pull/21424)                                                         |   | 26d5h   |
+| tidb/21464   | [server: return results of ongoing queries when graceful shutdown (#19669)](https://github.com/pingcap/tidb/pull/21464)                              |   | 24d20h  |
+| tidb/21471   | [session: fix ineffective EXPLAIN FOR CONNECTION statement (#21044)](https://github.com/pingcap/tidb/pull/21471)                                     |   | 24d17h  |
+| tidb/21476   | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21476)                                                |   | 24d15h  |
+| tidb/21477   | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21477)                                                |   | 24d15h  |
+| tidb/21508   | [execution: fix dayofweek('0000-00-00') behavior](https://github.com/pingcap/tidb/pull/21508)                                                        |   | 23d10h  |
+| tidb/21525   | [expression: fix compatibility behaviors in zero datetime with MySQL (#21220)](https://github.com/pingcap/tidb/pull/21525)                           |   | 20d20h  |
+| tidb/21610   | [*: remove needless InInsertStmt (#19787)](https://github.com/pingcap/tidb/pull/21610)                                                               |   | 18d15h  |
+| tidb/21665   | [executor: fix LEAD and LAG's default value can not adapt to field type (#20747)](https://github.com/pingcap/tidb/pull/21665)                        |   | 16d19h  |
+| tidb/21680   | [planner: report error when ORDER BY conflicts with DISTINCT (#21286)](https://github.com/pingcap/tidb/pull/21680)                                   |   | 16d16h  |
+| tidb/21711   | [expression: Fix unexpected panic when using IF function. (#21132)](https://github.com/pingcap/tidb/pull/21711)                                      |   | 13d17h  |
+| tidb/21845   | [ddl, planner, types: add M>=D checking for decimal column definition with default value](https://github.com/pingcap/tidb/pull/21845)                |   | 10d23h  |
+| tidb/21868   | [bindinfo: sync concurrent ops on mysql.bind_info from multiple tidb instances (#21629)](https://github.com/pingcap/tidb/pull/21868)                 |   | 10d6h   |
+| tidb/21876   | [planner: bypass the DNF restriction if index merge hint is specified (#20799)](https://github.com/pingcap/tidb/pull/21876)                          |   | 9d19h   |
+| tidb/21895   | [executor: fix load data in file get wrong result #20854](https://github.com/pingcap/tidb/pull/21895)                                                |   | 6d20h   |
+| tidb/21924   | [expression: fix type infer for tidb's builtin compare(least and greatest) (#21150)](https://github.com/pingcap/tidb/pull/21924)                     |   | 5d19h   |
+| tidb/21930   | [planner: propagate NDV of column groups across plan nodes (#17854)](https://github.com/pingcap/tidb/pull/21930)                                     |   | 5d18h   |
+| tidb/21931   | [*: support baseline capture for prepared statements (#21271)](https://github.com/pingcap/tidb/pull/21931)                                           |   | 5d18h   |
+| tidb/21968   | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21968)                                                |   | 4d17h   |
+| tidb/21969   | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21969)                                                |   | 4d17h   |
+| tidb/21971   | [executor: fix `insert ignore` into not exists partition (#21904)](https://github.com/pingcap/tidb/pull/21971)                                       |   | 4d17h   |
+| tidb/21977   | [expression: log functions that can not be pushed to cop](https://github.com/pingcap/tidb/pull/21977)                                                |   | 4d16h   |
+| tidb/21982   | [executor: improve the runtime stats of index lookup reader](https://github.com/pingcap/tidb/pull/21982)                                             |   | 4d14h   |
+| tidb/22021   | [distsql: fix cop stats string display when there is only 1 rpc (#21901) (#21999)](https://github.com/pingcap/tidb/pull/22021)                       |   | 3d0h    |
+| tidb/22033   | [statistics: redesign the schema for `mysql.stats_extended`](https://github.com/pingcap/tidb/pull/22033)                                             |   | 2d17h   |
+| tidb/22042   | [executor:return warning when load data meet no partition for incompatiable mysql,but err and abort](https://github.com/pingcap/tidb/pull/22042)     |   | 11h     |
 
 
 ## Reviewed in Last 7 Days
 
 |    REPO    |                                                                PR                                                                | C | D |   R    |
 |------------|----------------------------------------------------------------------------------------------------------------------------------|---|---|--------|
-| tidb/20580 | [statistics: add bucket ndv for index histogram](https://github.com/pingcap/tidb/pull/20580)                                     |   | 1 | 63d5h  |
-| tidb/21782 | [bindinfo: refine logs of SQL bind (#21351)](https://github.com/pingcap/tidb/pull/21782)                                         |   | 1 | 9d6h   |
-| tidb/22007 | [statistics, executor: refactor statistics on columns (#21817)](https://github.com/pingcap/tidb/pull/22007)                      |   | 1 | 0h     |
-| tidb/22006 | [config: disable statistics feedback by default (#21923)](https://github.com/pingcap/tidb/pull/22006)                            |   | 1 | 0h     |
-| tidb/21970 | [planner: generate correct query block name and offset for update / delete (#21823)](https://github.com/pingcap/tidb/pull/21970) |   | 1 | 17h    |
-| tidb/21817 | [statistics, executor: refactor statistics on columns](https://github.com/pingcap/tidb/pull/21817)                               |   | 2 | 8d3h   |
-| tidb/21941 | [bindinfo: enforce default_db to lower case for SQL bind operations (#21861)](https://github.com/pingcap/tidb/pull/21941)        |   | 2 | 21h    |
-| tidb/21862 | [executor: set StmtType correctly in SummaryStmt for failed queries (#21855)](https://github.com/pingcap/tidb/pull/21862)        |   | 2 | 5d21h  |
-| tidb/21861 | [bindinfo: enforce default_db to lower case for SQL bind operations](https://github.com/pingcap/tidb/pull/21861)                 |   | 3 | 4d22h  |
-| tidb/21467 | [planner: fix explain-hint panic for joins generated by subquery (#20675)](https://github.com/pingcap/tidb/pull/21467)           |   | 3 | 19d1h  |
-| tidb/21450 | [bindinfo: dbname check for bindings should be case insensitive (#21143)](https://github.com/pingcap/tidb/pull/21450)            |   | 3 | 19d5h  |
-| tidb/21380 | [planner: set dbName for hinted query block table alias (#21213)](https://github.com/pingcap/tidb/pull/21380)                    |   | 3 | 21d23h |
-| tidb/21271 | [*: support baseline capture for prepared statements](https://github.com/pingcap/tidb/pull/21271)                                |   | 3 | 27d5h  |
-| tidb/21275 | [*: rewrite origin SQL with default DB for SQL bindings](https://github.com/pingcap/tidb/pull/21275)                             |   | 3 | 27d2h  |
-| tidb/21923 | [config: disable statistics feedback by default](https://github.com/pingcap/tidb/pull/21923)                                     |   | 3 | 0h     |
+| tidb/20580 | [statistics: add bucket ndv for index histogram](https://github.com/pingcap/tidb/pull/20580)                                     |   | 4 | 63d5h  |
+| tidb/21782 | [bindinfo: refine logs of SQL bind (#21351)](https://github.com/pingcap/tidb/pull/21782)                                         |   | 4 | 9d6h   |
+| tidb/22007 | [statistics, executor: refactor statistics on columns (#21817)](https://github.com/pingcap/tidb/pull/22007)                      |   | 4 | 0h     |
+| tidb/22006 | [config: disable statistics feedback by default (#21923)](https://github.com/pingcap/tidb/pull/22006)                            |   | 4 | 0h     |
+| tidb/21970 | [planner: generate correct query block name and offset for update / delete (#21823)](https://github.com/pingcap/tidb/pull/21970) |   | 4 | 17h    |
+| tidb/21817 | [statistics, executor: refactor statistics on columns](https://github.com/pingcap/tidb/pull/21817)                               |   | 5 | 8d3h   |
+| tidb/21941 | [bindinfo: enforce default_db to lower case for SQL bind operations (#21861)](https://github.com/pingcap/tidb/pull/21941)        |   | 5 | 21h    |
+| tidb/21862 | [executor: set StmtType correctly in SummaryStmt for failed queries (#21855)](https://github.com/pingcap/tidb/pull/21862)        |   | 5 | 5d21h  |
+| tidb/21861 | [bindinfo: enforce default_db to lower case for SQL bind operations](https://github.com/pingcap/tidb/pull/21861)                 |   | 6 | 4d22h  |
+| tidb/21467 | [planner: fix explain-hint panic for joins generated by subquery (#20675)](https://github.com/pingcap/tidb/pull/21467)           |   | 6 | 19d1h  |
+| tidb/21450 | [bindinfo: dbname check for bindings should be case insensitive (#21143)](https://github.com/pingcap/tidb/pull/21450)            |   | 6 | 19d5h  |
+| tidb/21380 | [planner: set dbName for hinted query block table alias (#21213)](https://github.com/pingcap/tidb/pull/21380)                    |   | 6 | 21d23h |
+| tidb/21271 | [*: support baseline capture for prepared statements](https://github.com/pingcap/tidb/pull/21271)                                |   | 6 | 27d5h  |
+| tidb/21275 | [*: rewrite origin SQL with default DB for SQL bindings](https://github.com/pingcap/tidb/pull/21275)                             |   | 6 | 27d2h  |
+| tidb/21923 | [config: disable statistics feedback by default](https://github.com/pingcap/tidb/pull/21923)                                     |   | 6 | 0h     |
 
 
 </details> 
@@ -590,16 +582,16 @@
 
 |    REPO    |                                                  PR                                                   | C | LASTED |
 |------------|-------------------------------------------------------------------------------------------------------|---|--------|
-| tidb/22006 | [config: disable statistics feedback by default (#21923)](https://github.com/pingcap/tidb/pull/22006) |   | 19h    |
+| tidb/22006 | [config: disable statistics feedback by default (#21923)](https://github.com/pingcap/tidb/pull/22006) |   | 3d19h  |
 
 
 ## Reviewed in Last 7 Days
 
 |     REPO     |                                              PR                                              | C | D |   R   |
 |--------------|----------------------------------------------------------------------------------------------|---|---|-------|
-| docs-cn/5164 | [statistics: add docs for version 2](https://github.com/pingcap/docs-cn/pull/5164)           |   | 1 | 5h    |
-| tidb/20580   | [statistics: add bucket ndv for index histogram](https://github.com/pingcap/tidb/pull/20580) |   | 2 | 62d0h |
-| tidb/21923   | [config: disable statistics feedback by default](https://github.com/pingcap/tidb/pull/21923) |   | 3 | 1h    |
+| docs-cn/5164 | [statistics: add docs for version 2](https://github.com/pingcap/docs-cn/pull/5164)           |   | 4 | 5h    |
+| tidb/20580   | [statistics: add bucket ndv for index histogram](https://github.com/pingcap/tidb/pull/20580) |   | 5 | 62d0h |
+| tidb/21923   | [config: disable statistics feedback by default](https://github.com/pingcap/tidb/pull/21923) |   | 6 | 1h    |
 
 
 </details> 
@@ -612,62 +604,63 @@
 
 |    REPO     |                                                                          PR                                                                          | C | LASTED  |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---|---------|
-| tidb/14424  | [expression: add nullable() method to check whether an expression can return null](https://github.com/pingcap/tidb/pull/14424)                       |   | 350d17h |
-| parser/1138 | [*: create / drop extended stats by ALTER TABLE](https://github.com/pingcap/parser/pull/1138)                                                        |   | 13h     |
-| tidb/14831  | [planner/cascades: add implementationRule for IndexLookUpJoin](https://github.com/pingcap/tidb/pull/14831)                                           |   | 310d17h |
-| tidb/15090  | [planner/cascades: refine the row count estimation of TiKV layer Selection](https://github.com/pingcap/tidb/pull/15090)                              |   | 296d18h |
-| tidb/15157  | [planner/cascades: implement `HashCode` method for all the LogicalPlans](https://github.com/pingcap/tidb/pull/15157)                                 | Y | 294d14h |
-| tidb/15426  | [planner/cascades: add transformation rule PushSelDownApply & refactor PushSelDownJoin](https://github.com/pingcap/tidb/pull/15426)                  |   | 282d16h |
-| tidb/16967  | [executor: Refactor Shuffle and implement parallel sort (executor part)](https://github.com/pingcap/tidb/pull/16967)                                 | Y | 236d10h |
-| tidb/17414  | [add curCost based join reorder algorithm](https://github.com/pingcap/tidb/pull/17414)                                                               |   | 212d18h |
-| tidb/17996  | [planner: push avg & distinct functions across join](https://github.com/pingcap/tidb/pull/17996)                                                     | Y | 194d11h |
-| tidb/19957  | [executor: add builtin aggregate function `json_arrayagg`](https://github.com/pingcap/tidb/pull/19957)                                               | Y | 104d14h |
-| tidb/20011  | [statistics: fix incorrect total count used in index selectivity computation](https://github.com/pingcap/tidb/pull/20011)                            |   | 100d15h |
-| tidb/20311  | [expression: fix overflow error when convert bit to int64 (#20266)](https://github.com/pingcap/tidb/pull/20311)                                      |   | 85d21h  |
-| tidb/20765  | [planner: support stable result mode](https://github.com/pingcap/tidb/pull/20765)                                                                    |   | 52d17h  |
-| tidb/21014  | [statistics: GC index usage information](https://github.com/pingcap/tidb/pull/21014)                                                                 |   | 42d18h  |
-| tidb/21018  | [planner: don't push down null sensitive join conditions (#19620)](https://github.com/pingcap/tidb/pull/21018)                                       |   | 42d17h  |
-| tidb/21137  | [executor: specially handle empty input for apply's outer child aggregate (#20544)](https://github.com/pingcap/tidb/pull/21137)                      |   | 35d20h  |
-| tidb/21207  | [planner: fix the inappropriate out-of-range range estimation rule](https://github.com/pingcap/tidb/pull/21207)                                      |   | 31d19h  |
-| tidb/21230  | [planner, executor: fix haven't track the memory usage of PointGet/BatchPointGet](https://github.com/pingcap/tidb/pull/21230)                        |   | 31d10h  |
-| tidb/21357  | [planner/core: skip TestEncodePlanPerformance to accelerate CI](https://github.com/pingcap/tidb/pull/21357)                                          |   | 27d13h  |
-| tidb/21408  | [statistics: fix a bug which causes panic when using the clustered index and the new collation (#21379)](https://github.com/pingcap/tidb/pull/21408) |   | 23d20h  |
-| tidb/21425  | [planner: natural join not consider rowid and null eq not propagate (#21328)](https://github.com/pingcap/tidb/pull/21425)                            |   | 22d22h  |
-| tidb/21476  | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21476)                                                |   | 21d15h  |
-| tidb/21477  | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21477)                                                |   | 21d15h  |
-| tidb/21487  | [*: ensure TABLE statement works](https://github.com/pingcap/tidb/pull/21487)                                                                        |   | 21d4h   |
-| tidb/21614  | [planner: do not propagate column eq with different column types (#21495)](https://github.com/pingcap/tidb/pull/21614)                               |   | 15d14h  |
-| tidb/21712  | [statistics: no more counting feedback if it is invalid](https://github.com/pingcap/tidb/pull/21712)                                                 |   | 10d17h  |
-| tidb/21714  | [planner: fix the coercibility of the cast function (#21705)](https://github.com/pingcap/tidb/pull/21714)                                            |   | 10d17h  |
-| tidb/21808  | [planner: fix the fail when we compare multi fields in the subquery (#21699)](https://github.com/pingcap/tidb/pull/21808)                            |   | 9d18h   |
-| tidb/21876  | [planner: bypass the DNF restriction if index merge hint is specified (#20799)](https://github.com/pingcap/tidb/pull/21876)                          |   | 6d19h   |
-| tidb/21877  | [planner: fix correlated aggregates which should be evaluated in outer query (#21431)](https://github.com/pingcap/tidb/pull/21877)                   |   | 6d19h   |
-| tidb/21930  | [planner: propagate NDV of column groups across plan nodes (#17854)](https://github.com/pingcap/tidb/pull/21930)                                     |   | 2d18h   |
-| tidb/21931  | [*: support baseline capture for prepared statements (#21271)](https://github.com/pingcap/tidb/pull/21931)                                           |   | 2d18h   |
-| tidb/21941  | [bindinfo: enforce default_db to lower case for SQL bind operations (#21861)](https://github.com/pingcap/tidb/pull/21941)                            |   | 2d15h   |
-| tidb/21957  | [planner: fix unknown columns in join using below agg (#21922)](https://github.com/pingcap/tidb/pull/21957)                                          |   | 1d23h   |
-| tidb/21964  | [planner: add plancodec id for all type TableScan/IndexScan. (#21935)](https://github.com/pingcap/tidb/pull/21964)                                   |   | 1d18h   |
-| tidb/21970  | [planner: generate correct query block name and offset for update / delete (#21823)](https://github.com/pingcap/tidb/pull/21970)                     |   | 1d17h   |
-| tidb/21976  | [planner: report error for invalid window specs which are not used (#21083)](https://github.com/pingcap/tidb/pull/21976)                             |   | 1d16h   |
-| tidb/22019  | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22019)            |   | 14h     |
-| tidb/22022  | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22022)            |   | 0h      |
+| tidb/14424  | [expression: add nullable() method to check whether an expression can return null](https://github.com/pingcap/tidb/pull/14424)                       |   | 353d17h |
+| parser/1138 | [*: create / drop extended stats by ALTER TABLE](https://github.com/pingcap/parser/pull/1138)                                                        |   | 3d13h   |
+| tidb/14831  | [planner/cascades: add implementationRule for IndexLookUpJoin](https://github.com/pingcap/tidb/pull/14831)                                           |   | 313d17h |
+| tidb/15090  | [planner/cascades: refine the row count estimation of TiKV layer Selection](https://github.com/pingcap/tidb/pull/15090)                              |   | 299d18h |
+| tidb/15157  | [planner/cascades: implement `HashCode` method for all the LogicalPlans](https://github.com/pingcap/tidb/pull/15157)                                 | Y | 297d14h |
+| tidb/15426  | [planner/cascades: add transformation rule PushSelDownApply & refactor PushSelDownJoin](https://github.com/pingcap/tidb/pull/15426)                  |   | 285d16h |
+| tidb/16967  | [executor: Refactor Shuffle and implement parallel sort (executor part)](https://github.com/pingcap/tidb/pull/16967)                                 | Y | 239d10h |
+| tidb/17414  | [add curCost based join reorder algorithm](https://github.com/pingcap/tidb/pull/17414)                                                               |   | 215d18h |
+| tidb/17996  | [planner: push avg & distinct functions across join](https://github.com/pingcap/tidb/pull/17996)                                                     | Y | 197d11h |
+| tidb/19957  | [executor: add builtin aggregate function `json_arrayagg`](https://github.com/pingcap/tidb/pull/19957)                                               | Y | 107d14h |
+| tidb/20011  | [statistics: fix incorrect total count used in index selectivity computation](https://github.com/pingcap/tidb/pull/20011)                            |   | 103d15h |
+| tidb/20311  | [expression: fix overflow error when convert bit to int64 (#20266)](https://github.com/pingcap/tidb/pull/20311)                                      |   | 88d21h  |
+| tidb/20765  | [planner: support stable result mode](https://github.com/pingcap/tidb/pull/20765)                                                                    |   | 55d17h  |
+| tidb/21014  | [statistics: GC index usage information](https://github.com/pingcap/tidb/pull/21014)                                                                 |   | 45d18h  |
+| tidb/21018  | [planner: don't push down null sensitive join conditions (#19620)](https://github.com/pingcap/tidb/pull/21018)                                       |   | 45d17h  |
+| tidb/21137  | [executor: specially handle empty input for apply's outer child aggregate (#20544)](https://github.com/pingcap/tidb/pull/21137)                      |   | 38d20h  |
+| tidb/21207  | [planner: fix the inappropriate out-of-range range estimation rule](https://github.com/pingcap/tidb/pull/21207)                                      |   | 34d19h  |
+| tidb/21230  | [planner, executor: fix haven't track the memory usage of PointGet/BatchPointGet](https://github.com/pingcap/tidb/pull/21230)                        |   | 34d10h  |
+| tidb/21357  | [planner/core: skip TestEncodePlanPerformance to accelerate CI](https://github.com/pingcap/tidb/pull/21357)                                          |   | 30d14h  |
+| tidb/21408  | [statistics: fix a bug which causes panic when using the clustered index and the new collation (#21379)](https://github.com/pingcap/tidb/pull/21408) |   | 26d20h  |
+| tidb/21425  | [planner: natural join not consider rowid and null eq not propagate (#21328)](https://github.com/pingcap/tidb/pull/21425)                            |   | 25d22h  |
+| tidb/21476  | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21476)                                                |   | 24d15h  |
+| tidb/21477  | [planner: check for decimal format in cast expr (#20836)](https://github.com/pingcap/tidb/pull/21477)                                                |   | 24d15h  |
+| tidb/21487  | [*: ensure TABLE statement works](https://github.com/pingcap/tidb/pull/21487)                                                                        |   | 24d5h   |
+| tidb/21614  | [planner: do not propagate column eq with different column types (#21495)](https://github.com/pingcap/tidb/pull/21614)                               |   | 18d14h  |
+| tidb/21712  | [statistics: no more counting feedback if it is invalid](https://github.com/pingcap/tidb/pull/21712)                                                 |   | 13d17h  |
+| tidb/21714  | [planner: fix the coercibility of the cast function (#21705)](https://github.com/pingcap/tidb/pull/21714)                                            |   | 13d17h  |
+| tidb/21808  | [planner: fix the fail when we compare multi fields in the subquery (#21699)](https://github.com/pingcap/tidb/pull/21808)                            |   | 12d18h  |
+| tidb/21876  | [planner: bypass the DNF restriction if index merge hint is specified (#20799)](https://github.com/pingcap/tidb/pull/21876)                          |   | 9d19h   |
+| tidb/21877  | [planner: fix correlated aggregates which should be evaluated in outer query (#21431)](https://github.com/pingcap/tidb/pull/21877)                   |   | 9d19h   |
+| tidb/21930  | [planner: propagate NDV of column groups across plan nodes (#17854)](https://github.com/pingcap/tidb/pull/21930)                                     |   | 5d18h   |
+| tidb/21931  | [*: support baseline capture for prepared statements (#21271)](https://github.com/pingcap/tidb/pull/21931)                                           |   | 5d18h   |
+| tidb/21941  | [bindinfo: enforce default_db to lower case for SQL bind operations (#21861)](https://github.com/pingcap/tidb/pull/21941)                            |   | 5d15h   |
+| tidb/21957  | [planner: fix unknown columns in join using below agg (#21922)](https://github.com/pingcap/tidb/pull/21957)                                          |   | 4d23h   |
+| tidb/21964  | [planner: add plancodec id for all type TableScan/IndexScan. (#21935)](https://github.com/pingcap/tidb/pull/21964)                                   |   | 4d18h   |
+| tidb/21970  | [planner: generate correct query block name and offset for update / delete (#21823)](https://github.com/pingcap/tidb/pull/21970)                     |   | 4d17h   |
+| tidb/21976  | [planner: report error for invalid window specs which are not used (#21083)](https://github.com/pingcap/tidb/pull/21976)                             |   | 4d16h   |
+| tidb/22022  | [planner/codec: fix issue of decode plan error cause by without escape special char (#21937)](https://github.com/pingcap/tidb/pull/22022)            |   | 3d0h    |
+| tidb/22033  | [statistics: redesign the schema for `mysql.stats_extended`](https://github.com/pingcap/tidb/pull/22033)                                             |   | 2d17h   |
+| tidb/22036  | [ddl: fix default decimal Flen value](https://github.com/pingcap/tidb/pull/22036)                                                                    |   | 2d16h   |
 
 
 ## Reviewed in Last 7 Days
 
 |      REPO      |                                                                  PR                                                                  | C | D |   R    |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------|---|---|--------|
-| tidb/22007     | [statistics, executor: refactor statistics on columns (#21817)](https://github.com/pingcap/tidb/pull/22007)                          |   | 1 | 0h     |
-| tidb/21868     | [bindinfo: sync concurrent ops on mysql.bind_info from multiple tidb instances (#21629)](https://github.com/pingcap/tidb/pull/21868) |   | 1 | 6d10h  |
-| tidb/21963     | [ddl: add charset info in show create table if column is generated (#20347)](https://github.com/pingcap/tidb/pull/21963)             | Y | 1 | 22h    |
-| tidb/21817     | [statistics, executor: refactor statistics on columns](https://github.com/pingcap/tidb/pull/21817)                                   |   | 1 | 8d20h  |
-| tidb/21834     | [planner: enhanced index range calculation plan](https://github.com/pingcap/tidb/pull/21834)                                         |   | 3 | 6d4h   |
-| tidb/21922     | [planner: fix unknown columns in join using below agg](https://github.com/pingcap/tidb/pull/21922)                                   |   | 3 | 1h     |
-| tidb/21840     | [executor: support forbiding cross dc read for pointGet](https://github.com/pingcap/tidb/pull/21840)                                 |   | 3 | 5d17h  |
-| tidb/21902     | [planner: prevent agg push down if it is in the outer child of apply](https://github.com/pingcap/tidb/pull/21902)                    |   | 4 | 3h     |
-| tidb/21083     | [planner: report error for invalid window specs which are not used](https://github.com/pingcap/tidb/pull/21083)                      |   | 4 | 35d2h  |
-| tidb-test/1114 | [mysql_test: update window_functions for #21083](https://github.com/pingcap/tidb-test/pull/1114)                                     |   | 4 | 25d1h  |
-| tidb/21650     | [ddl, distsql: Support forbiding cross txnScope query all *Reader Executor](https://github.com/pingcap/tidb/pull/21650)              |   | 4 | 10d19h |
+| tidb/22007     | [statistics, executor: refactor statistics on columns (#21817)](https://github.com/pingcap/tidb/pull/22007)                          |   | 4 | 0h     |
+| tidb/21868     | [bindinfo: sync concurrent ops on mysql.bind_info from multiple tidb instances (#21629)](https://github.com/pingcap/tidb/pull/21868) |   | 4 | 6d10h  |
+| tidb/21963     | [ddl: add charset info in show create table if column is generated (#20347)](https://github.com/pingcap/tidb/pull/21963)             | Y | 4 | 22h    |
+| tidb/21817     | [statistics, executor: refactor statistics on columns](https://github.com/pingcap/tidb/pull/21817)                                   |   | 4 | 8d20h  |
+| tidb/21834     | [planner: enhanced index range calculation plan](https://github.com/pingcap/tidb/pull/21834)                                         |   | 6 | 6d4h   |
+| tidb/21922     | [planner: fix unknown columns in join using below agg](https://github.com/pingcap/tidb/pull/21922)                                   |   | 6 | 1h     |
+| tidb/21840     | [executor: support forbiding cross dc read for pointGet](https://github.com/pingcap/tidb/pull/21840)                                 |   | 6 | 5d17h  |
+| tidb/21902     | [planner: prevent agg push down if it is in the outer child of apply](https://github.com/pingcap/tidb/pull/21902)                    |   | 7 | 3h     |
+| tidb/21083     | [planner: report error for invalid window specs which are not used](https://github.com/pingcap/tidb/pull/21083)                      |   | 7 | 35d2h  |
+| tidb-test/1114 | [mysql_test: update window_functions for #21083](https://github.com/pingcap/tidb-test/pull/1114)                                     |   | 7 | 25d1h  |
+| tidb/21650     | [ddl, distsql: Support forbiding cross txnScope query all *Reader Executor](https://github.com/pingcap/tidb/pull/21650)              |   | 7 | 10d19h |
 
 
 </details> 
@@ -680,44 +673,44 @@
 
 |    REPO    |                                                           PR                                                           | C | LASTED  |
 |------------|------------------------------------------------------------------------------------------------------------------------|---|---------|
-| tidb/15462 | [executor: implement `graceHashJoin`](https://github.com/pingcap/tidb/pull/15462)                                      | Y | 281d17h |
-| tidb/17996 | [planner: push avg & distinct functions across join](https://github.com/pingcap/tidb/pull/17996)                       | Y | 194d11h |
-| tidb/19807 | [executor: parallel evaluation for hash aggregate distinct](https://github.com/pingcap/tidb/pull/19807)                |   | 111d11h |
-| tidb/19957 | [executor: add builtin aggregate function `json_arrayagg`](https://github.com/pingcap/tidb/pull/19957)                 | Y | 104d14h |
-| tidb/20044 | [expression: Add column nullability checking before "refine args"](https://github.com/pingcap/tidb/pull/20044)         | Y | 99d7h   |
-| tidb/20861 | [executor:add runtime information for StreamAggExec](https://github.com/pingcap/tidb/pull/20861)                       |   | 49d19h  |
-| tidb/21381 | [*: optimize analyze cluster index table](https://github.com/pingcap/tidb/pull/21381)                                  |   | 24d17h  |
-| tidb/21487 | [*: ensure TABLE statement works](https://github.com/pingcap/tidb/pull/21487)                                          |   | 21d4h   |
-| tidb/21541 | [executor: Nested prepare stmt should not be prepared](https://github.com/pingcap/tidb/pull/21541)                     |   | 17d12h  |
-| tidb/21631 | [tests: add mpp mock test, part 2](https://github.com/pingcap/tidb/pull/21631)                                         |   | 14d21h  |
-| tidb/21839 | [planner/core: add 'split table using statistics' statement](https://github.com/pingcap/tidb/pull/21839)               |   | 8d15h   |
-| tidb/21916 | [server: double type column from table should ignore its decimal (#21788)](https://github.com/pingcap/tidb/pull/21916) |   | 2d23h   |
-| tidb/21945 | [distsql: fix cop stats string display when there is only 1 rpc (#21901)](https://github.com/pingcap/tidb/pull/21945)  |   | 2d14h   |
-| tidb/21957 | [planner: fix unknown columns in join using below agg (#21922)](https://github.com/pingcap/tidb/pull/21957)            |   | 1d23h   |
-| tidb/21968 | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21968)                  |   | 1d17h   |
-| tidb/21969 | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21969)                  |   | 1d17h   |
-| tidb/21988 | [*: Move tikv gc configuration to sysvars](https://github.com/pingcap/tidb/pull/21988)                                 |   | 1d2h    |
-| tidb/22014 | [executor: fix unstable test Issue16696 (#22009)](https://github.com/pingcap/tidb/pull/22014)                          |   | 17h     |
+| tidb/15462 | [executor: implement `graceHashJoin`](https://github.com/pingcap/tidb/pull/15462)                                      | Y | 284d18h |
+| tidb/17996 | [planner: push avg & distinct functions across join](https://github.com/pingcap/tidb/pull/17996)                       | Y | 197d11h |
+| tidb/19807 | [executor: parallel evaluation for hash aggregate distinct](https://github.com/pingcap/tidb/pull/19807)                |   | 114d11h |
+| tidb/19957 | [executor: add builtin aggregate function `json_arrayagg`](https://github.com/pingcap/tidb/pull/19957)                 | Y | 107d14h |
+| tidb/20044 | [expression: Add column nullability checking before "refine args"](https://github.com/pingcap/tidb/pull/20044)         | Y | 102d7h  |
+| tidb/20861 | [executor:add runtime information for StreamAggExec](https://github.com/pingcap/tidb/pull/20861)                       |   | 52d19h  |
+| tidb/21381 | [*: optimize analyze cluster index table](https://github.com/pingcap/tidb/pull/21381)                                  |   | 27d17h  |
+| tidb/21487 | [*: ensure TABLE statement works](https://github.com/pingcap/tidb/pull/21487)                                          |   | 24d5h   |
+| tidb/21541 | [executor: Nested prepare stmt should not be prepared](https://github.com/pingcap/tidb/pull/21541)                     |   | 20d12h  |
+| tidb/21839 | [planner/core: add 'split table using statistics' statement](https://github.com/pingcap/tidb/pull/21839)               |   | 11d15h  |
+| tidb/21916 | [server: double type column from table should ignore its decimal (#21788)](https://github.com/pingcap/tidb/pull/21916) |   | 5d23h   |
+| tidb/21945 | [distsql: fix cop stats string display when there is only 1 rpc (#21901)](https://github.com/pingcap/tidb/pull/21945)  |   | 5d14h   |
+| tidb/21957 | [planner: fix unknown columns in join using below agg (#21922)](https://github.com/pingcap/tidb/pull/21957)            |   | 4d23h   |
+| tidb/21968 | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21968)                  |   | 4d17h   |
+| tidb/21969 | [types:  Add a limitation about float data type (#20929)](https://github.com/pingcap/tidb/pull/21969)                  |   | 4d17h   |
+| tidb/21988 | [*: Move tikv gc configuration to sysvars](https://github.com/pingcap/tidb/pull/21988)                                 |   | 4d2h    |
+| tidb/22014 | [executor: fix unstable test Issue16696 (#22009)](https://github.com/pingcap/tidb/pull/22014)                          |   | 3d17h   |
+| tidb/22035 | [ddl: concurrent safe api for using rule bundles cache](https://github.com/pingcap/tidb/pull/22035)                    |   | 2d16h   |
 
 
 ## Reviewed in Last 7 Days
 
 |     REPO     |                                                                 PR                                                                  | C | D |    R    |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------|---|---|---------|
-| tidb/21338   | [expression: fix different types compare error](https://github.com/pingcap/tidb/pull/21338)                                         |   | 1 | 27d3h   |
-| tidb/21340   | [executor: initialize expensive query handler on domain creation](https://github.com/pingcap/tidb/pull/21340)                       |   | 2 | 26d5h   |
-| tidb/21603   | [tidb-server: throw error when starting with multi advertise address](https://github.com/pingcap/tidb/pull/21603)                   |   | 2 | 13d22h  |
-| tidb/21228   | [executor: return the result immediately when combining LIMIT row_count with DISTINCT](https://github.com/pingcap/tidb/pull/21228)  |   | 2 | 29d18h  |
-| tidb/21155   | [util/chunk: fix slice out of bound panic](https://github.com/pingcap/tidb/pull/21155)                                              |   | 2 | 33d16h  |
-| tidb/21230   | [planner, executor: fix haven't track the memory usage of PointGet/BatchPointGet](https://github.com/pingcap/tidb/pull/21230)       |   | 2 | 29d14h  |
-| tidb/20015   | [expression: handle zero date in `date_add()`](https://github.com/pingcap/tidb/pull/20015)                                          | Y | 2 | 98d14h  |
-| tidb/21514   | [expression: modify the mean result of time type](https://github.com/pingcap/tidb/pull/21514)                                       |   | 4 | 14d19h  |
-| tidb/21788   | [server: double type column from table should ignore its decimal](https://github.com/pingcap/tidb/pull/21788)                       |   | 4 | 6d2h    |
-| tidb/15416   | [expression: fix functions format_bytes and format_nano_time incorrectly use varbinary](https://github.com/pingcap/tidb/pull/15416) | Y | 4 | 279d5h  |
-| tidb/18312   | [expression: fix compatible problem with mysql when parse datetime](https://github.com/pingcap/tidb/pull/18312)                     |   | 4 | 172d23h |
-| tidb/21566   | [chunk: fix min/max for enum/set is incompatible with MySQL](https://github.com/pingcap/tidb/pull/21566)                            |   | 4 | 12d21h  |
-| docs-cn/5131 | [Added introduction version description](https://github.com/pingcap/docs-cn/pull/5131)                                              |   | 4 | 1h      |
-| tidb/20503   | [expression: compatible with mysql's NO_ZERO_DATE in date-related functions](https://github.com/pingcap/tidb/pull/20503)            |   | 4 | 63d13h  |
+| tidb/21338   | [expression: fix different types compare error](https://github.com/pingcap/tidb/pull/21338)                                         |   | 4 | 27d3h   |
+| tidb/21340   | [executor: initialize expensive query handler on domain creation](https://github.com/pingcap/tidb/pull/21340)                       |   | 5 | 26d5h   |
+| tidb/21603   | [tidb-server: throw error when starting with multi advertise address](https://github.com/pingcap/tidb/pull/21603)                   |   | 5 | 13d22h  |
+| tidb/21228   | [executor: return the result immediately when combining LIMIT row_count with DISTINCT](https://github.com/pingcap/tidb/pull/21228)  |   | 5 | 29d18h  |
+| tidb/21155   | [util/chunk: fix slice out of bound panic](https://github.com/pingcap/tidb/pull/21155)                                              |   | 5 | 33d16h  |
+| tidb/21230   | [planner, executor: fix haven't track the memory usage of PointGet/BatchPointGet](https://github.com/pingcap/tidb/pull/21230)       |   | 5 | 29d14h  |
+| tidb/20015   | [expression: handle zero date in `date_add()`](https://github.com/pingcap/tidb/pull/20015)                                          | Y | 5 | 98d14h  |
+| tidb/21514   | [expression: modify the mean result of time type](https://github.com/pingcap/tidb/pull/21514)                                       |   | 7 | 14d19h  |
+| tidb/21788   | [server: double type column from table should ignore its decimal](https://github.com/pingcap/tidb/pull/21788)                       |   | 7 | 6d2h    |
+| tidb/15416   | [expression: fix functions format_bytes and format_nano_time incorrectly use varbinary](https://github.com/pingcap/tidb/pull/15416) | Y | 7 | 279d5h  |
+| tidb/18312   | [expression: fix compatible problem with mysql when parse datetime](https://github.com/pingcap/tidb/pull/18312)                     |   | 7 | 172d23h |
+| tidb/21566   | [chunk: fix min/max for enum/set is incompatible with MySQL](https://github.com/pingcap/tidb/pull/21566)                            |   | 7 | 12d21h  |
+| docs-cn/5131 | [Added introduction version description](https://github.com/pingcap/docs-cn/pull/5131)                                              |   | 7 | 1h      |
+| tidb/20503   | [expression: compatible with mysql's NO_ZERO_DATE in date-related functions](https://github.com/pingcap/tidb/pull/20503)            |   | 7 | 63d13h  |
 
 
 </details> 
