@@ -12,7 +12,7 @@
 | qw4990        |  2 ( 0) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | rebelice      |  2 ( 0) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | time-and-fate |  0 ( 0) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| winoros       |  2 ( 0) | 1 | 0 | 0 | 0 | 4 | 1 | 0 | 6 |
+| winoros       |  2 ( 0) | 1 | 1 | 0 | 0 | 0 | 4 | 1 | 7 |
 | wshwsh12      |  0 ( 0) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 
@@ -23,7 +23,7 @@
 
 |     REPO     |                                                PR                                                | C | LASTED |
 |--------------|--------------------------------------------------------------------------------------------------|---|--------|
-| docs-cn/6948 | [spm: add description for baseline capture filter](https://github.com/pingcap/docs-cn/pull/6948) |   | 20d17h |
+| docs-cn/6948 | [spm: add description for baseline capture filter](https://github.com/pingcap/docs-cn/pull/6948) |   | 21d18h |
 
 
 ## Reviewed in Last 7 Days
@@ -60,8 +60,8 @@
 
 |     REPO     |                                              PR                                               | C | LASTED  |
 |--------------|-----------------------------------------------------------------------------------------------|---|---------|
-| docs-cn/5561 | [Add sql optimization-related docs to toc](https://github.com/pingcap/docs-cn/pull/5561)      |   | 204d15h |
-| docs-cn/6716 | [sysvar: add doc for tidb-restricted-read-only](https://github.com/pingcap/docs-cn/pull/6716) |   | 54d18h  |
+| docs-cn/5561 | [Add sql optimization-related docs to toc](https://github.com/pingcap/docs-cn/pull/5561)      |   | 205d15h |
+| docs-cn/6716 | [sysvar: add doc for tidb-restricted-read-only](https://github.com/pingcap/docs-cn/pull/6716) |   | 55d18h  |
 
 
 ## Reviewed in Last 7 Days
@@ -152,9 +152,9 @@
 
 |    REPO    |                                                         PR                                                         | C | LASTED |
 |------------|--------------------------------------------------------------------------------------------------------------------|---|--------|
-| tikv/10616 | [copr: fix Max/Min bug when comparing signed and unsigned int64 (#10167)](https://github.com/tikv/tikv/pull/10616) |   | 53d21h |
-| tikv/10617 | [copr: fix Max/Min bug when comparing signed and unsigned int64 (#10167)](https://github.com/tikv/tikv/pull/10617) |   | 53d21h |
-| tikv/10893 | [copr: fix float64 overflow check in plus/minus real function (#10337)](https://github.com/tikv/tikv/pull/10893)   | Y | 12d13h |
+| tikv/10616 | [copr: fix Max/Min bug when comparing signed and unsigned int64 (#10167)](https://github.com/tikv/tikv/pull/10616) |   | 54d21h |
+| tikv/10617 | [copr: fix Max/Min bug when comparing signed and unsigned int64 (#10167)](https://github.com/tikv/tikv/pull/10617) |   | 54d21h |
+| tikv/10893 | [copr: fix float64 overflow check in plus/minus real function (#10337)](https://github.com/tikv/tikv/pull/10893)   | Y | 13d13h |
 
 
 ## Reviewed in Last 7 Days
@@ -191,8 +191,8 @@
 
 |     REPO     |                                                           PR                                                            | C | LASTED  |
 |--------------|-------------------------------------------------------------------------------------------------------------------------|---|---------|
-| docs-cn/5561 | [Add sql optimization-related docs to toc](https://github.com/pingcap/docs-cn/pull/5561)                                |   | 204d15h |
-| parser/1329  | [parser: support ANALYZE TABLE t PREDICATE COLUMNS / COLUMN c1 [, c2] ...](https://github.com/pingcap/parser/pull/1329) |   | 11d15h  |
+| docs-cn/5561 | [Add sql optimization-related docs to toc](https://github.com/pingcap/docs-cn/pull/5561)                                |   | 205d15h |
+| parser/1329  | [parser: support ANALYZE TABLE t PREDICATE COLUMNS / COLUMN c1 [, c2] ...](https://github.com/pingcap/parser/pull/1329) |   | 12d15h  |
 
 
 ## Reviewed in Last 7 Days
@@ -211,8 +211,8 @@
 
 |     REPO     |                                                                 PR                                                                  | C | LASTED  |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------|---|---------|
-| docs/5185    | [sql-statements, information-schema: add `END_TIME` field for table `ANALYZE_STATUS`](https://github.com/pingcap/docs/pull/5185)    |   | 166d17h |
-| docs-cn/5916 | [sql-statements, information-schema: add `END_TIME` field for table `ANALYZE_STATUS`](https://github.com/pingcap/docs-cn/pull/5916) |   | 166d17h |
+| docs/5185    | [sql-statements, information-schema: add `END_TIME` field for table `ANALYZE_STATUS`](https://github.com/pingcap/docs/pull/5185)    |   | 167d17h |
+| docs-cn/5916 | [sql-statements, information-schema: add `END_TIME` field for table `ANALYZE_STATUS`](https://github.com/pingcap/docs-cn/pull/5916) |   | 167d17h |
 
 
 ## Reviewed in Last 7 Days
@@ -249,20 +249,21 @@
 
 |     REPO     |                                                                 PR                                                                  | C | LASTED  |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------|---|---------|
-| docs-cn/5916 | [sql-statements, information-schema: add `END_TIME` field for table `ANALYZE_STATUS`](https://github.com/pingcap/docs-cn/pull/5916) |   | 166d17h |
-| docs/5783    | [migration: Add information about Vitess to TiDB migration](https://github.com/pingcap/docs/pull/5783)                              |   | 92d5h   |
+| docs-cn/5916 | [sql-statements, information-schema: add `END_TIME` field for table `ANALYZE_STATUS`](https://github.com/pingcap/docs-cn/pull/5916) |   | 167d17h |
+| docs/5783    | [migration: Add information about Vitess to TiDB migration](https://github.com/pingcap/docs/pull/5783)                              |   | 93d5h   |
 
 
 ## Reviewed in Last 7 Days
 
 |    REPO    |                                                                         PR                                                                         | C | D |   R    |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---|---|--------|
-| tidb/28038 | [*: collect column stats usage and periodically dump to the system table](https://github.com/pingcap/tidb/pull/28038)                              |   | 1 | 5h     |
-| tidb/26733 | [statistics: fix the fomula for checking outdated stats (#26728)](https://github.com/pingcap/tidb/pull/26733)                                      |   | 5 | 42d17h |
-| tidb/27836 | [planner: fix wrong plan caused by shallow copy schema columns (#27798)](https://github.com/pingcap/tidb/pull/27836)                               |   | 5 | 3d21h  |
-| tidb/27305 | [statistics: fix a error check to prevent nil dereference (#27295)](https://github.com/pingcap/tidb/pull/27305)                                    |   | 5 | 23d22h |
-| tidb/27299 | [statistics: fix "data too long" error when dumping stats from table with new collation data (#27033)](https://github.com/pingcap/tidb/pull/27299) |   | 5 | 23d23h |
-| tidb/27849 | [session: add system table mysql.column_stats_usage](https://github.com/pingcap/tidb/pull/27849)                                                   |   | 6 | 1d23h  |
+| tidb/27928 | [sessionctx, statistics: remove unused StatementContext.mu.histogramsNotLoad](https://github.com/pingcap/tidb/pull/27928)                          |   | 1 | 6d11h  |
+| tidb/28038 | [*: collect column stats usage and periodically dump to the system table](https://github.com/pingcap/tidb/pull/28038)                              |   | 2 | 5h     |
+| tidb/26733 | [statistics: fix the fomula for checking outdated stats (#26728)](https://github.com/pingcap/tidb/pull/26733)                                      |   | 6 | 42d17h |
+| tidb/27836 | [planner: fix wrong plan caused by shallow copy schema columns (#27798)](https://github.com/pingcap/tidb/pull/27836)                               |   | 6 | 3d21h  |
+| tidb/27305 | [statistics: fix a error check to prevent nil dereference (#27295)](https://github.com/pingcap/tidb/pull/27305)                                    |   | 6 | 23d22h |
+| tidb/27299 | [statistics: fix "data too long" error when dumping stats from table with new collation data (#27033)](https://github.com/pingcap/tidb/pull/27299) |   | 6 | 23d23h |
+| tidb/27849 | [session: add system table mysql.column_stats_usage](https://github.com/pingcap/tidb/pull/27849)                                                   |   | 7 | 1d23h  |
 
 
 </details> 
