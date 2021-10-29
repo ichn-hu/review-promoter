@@ -9,7 +9,7 @@ on:
     branches: [ master ]
   schedule:
     # run every 10 a.m. on weekdays, which is UTC 2 a.m + 8
-    - cron:  '0 2 * * 1-5'
+#     - cron:  '0 2 * * 1-5'
 
 jobs:
 
